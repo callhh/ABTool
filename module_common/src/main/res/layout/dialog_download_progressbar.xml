@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/dialog_shape_white_corners_4dp"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_dp_4"
+            android:background="@color/blue_1189FF"/>
+
+        <com.callhh.module_common.view.RxProgressBar
+            android:id="@+id/round_fliker_progressbar"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginBottom="@dimen/space_dp_42"
+            android:layout_marginTop="@dimen/space_dp_40"
+            android:layout_marginLeft="@dimen/space_dp_10"
+            android:layout_marginRight="@dimen/space_dp_10"
+            app:loadingColor="#40c4ff"
+            app:radius="20dp"
+            app:stopColor="#ff9800"
+            app:textSize="12sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

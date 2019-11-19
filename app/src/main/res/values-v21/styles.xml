@@ -1,0 +1,12 @@
+<resources>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!--statusBarColor为透明颜色-->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <!--透明状态栏-->
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+</resources>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MyBaseProject</string>
+    <string name="app_slogan">我的基础项目</string>
+
+    <!--  通用的字符串  -->
+    <string name="app_tab_one">首页1</string>
+    <string name="app_tab_two">首页2</string>
+    <string name="app_tab_three">首页3</string>
+    <string name="app_tab_four">首页4</string>
+    <string name="app_tab_five">首页5</string>
+
+    <!--  其他字符串  -->
+
+</resources>

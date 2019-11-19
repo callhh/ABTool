@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/space_dp_48"
+              android:layout_gravity="bottom"
+              android:orientation="vertical">
+
+    <com.callhh.module_common.view.ShadowLayout
+        android:id="@+id/shadowLayout"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/transparent"
+        app:shadowColor="@color/gray_ccc"
+        app:shadowDx="0dp"
+        app:shadowDy="1dp"
+        app:shadowRadius="2dp"
+        app:shadowShape="rectangle"
+        app:shadowSide="top"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_dp_48"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/space_dp_4">
+
+        <TextView
+            android:id="@+id/tvTabOne"
+            style="@style/tv_homepage_tab_style"
+            android:drawableTop="@drawable/selector_tab_one"
+            android:text="@string/app_tab_one"/>
+
+        <TextView
+            android:id="@+id/tvTabTwo"
+            style="@style/tv_homepage_tab_style"
+            android:drawableTop="@drawable/selector_tab_one"
+            android:text="@string/app_tab_two"/>
+
+        <TextView
+            android:id="@+id/tvTabThree"
+            style="@style/tv_homepage_tab_style"
+            android:drawableTop="@drawable/selector_tab_one"
+            android:text="@string/app_tab_three"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,133 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId rootProject.ext.applicationId
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+        ndk {
+            //选择要添加的对应 cpu 类型的 .so 库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a', "x86"
+            // 还可以添加 'x86_64', 'mips', 'mips64'
+        }
+        // dex突破65535的限制
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    signingConfigs {
+//        config {
+//            keyAlias 'RECEPTION'
+//            keyPassword 'APPreception123456'
+//            storeFile file('/sx_reception_keystore.jks')
+//            storePassword 'APPreception123456'
+//        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'
+        }
+    }
+
+    // 关闭检索功能
+    // 解决 App is not indexable by Google Search; consider adding at least one Activity with an ACTION-VIEW的warning
+    lintOptions {
+        disable 'GoogleAppIndexingWarning'
+        baseline file("lint-baseline.xml")
+    }
+
+    compileOptions {
+        // 支持使用lambda表达式
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+
+        buildTypes {
+            debug {
+                debuggable true
+//                signingConfig signingConfigs.config
+            }
+            release {
+                // 对代码进行混淆和压缩
+                minifyEnabled false
+                // 是否清理无用资源，必须先开启minifyEnabled，依赖关系
+                shrinkResources false
+                //是否启用zipAlign压缩
+                zipAlignEnabled true
+                //加载默认混淆配置文件 progudard-android.txt在sdk目录里面，不用管，proguard.cfg是我们自己配<span></span>的混淆文件
+                proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            }
+        }
+        configurations.all {
+            resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+                def requested = details.requested
+                if (requested.group == 'com.android.support') {
+                    if (!requested.name.startsWith("multidex")) {
+                        details.useVersion '28.0.0'//默认使用的版本
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':module_common')
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation rootProject.ext.kotlinx_coroutines_core
+    implementation rootProject.ext.kotlinx_coroutines_android
+    implementation rootProject.ext.appCompat
+    implementation rootProject.ext.design
+    implementation rootProject.ext.recyclerView
+    implementation rootProject.ext.supportAnnotations
+    implementation rootProject.ext.appMultidex
+    implementation rootProject.ext.constraintLayout
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation rootProject.ext.junit
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    implementation 'com.jakewharton:butterknife:8.5.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.16'
+    implementation 'com.github.akarnokd:rxjava2-interop:0.8.0'
+    implementation 'com.jakewharton.rxbinding:rxbinding:0.4.0'
+    implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
+    implementation 'com.zhy:percent-support-extends:1.1.1'
+    implementation 'com.zhy:okhttputils:2.6.2'
+    implementation 'com.squareup.okhttp3:okhttp:3.13.1'
+    implementation 'com.squareup.okio:okio:2.2.2'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.44'
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-16'
+    implementation 'com.youth.banner:banner:1.4.10'
+    implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
+    implementation 'com.contrarywind:Android-PickerView:4.1.6'
+    implementation 'cn.bingoogolapple:bga-photopicker:1.2.8@aar'
+    implementation 'cn.bingoogolapple:bga-baseadapter:1.2.7@aar'
+
+}

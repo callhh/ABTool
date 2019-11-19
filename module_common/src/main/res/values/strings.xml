@@ -1,0 +1,78 @@
+<resources>
+    <string name="img_desc">img_description</string>
+    <string name="app_color_string">#FEAA00</string>
+
+    <!--通用的字符串-->
+    <string name="success">成功</string>
+    <string name="fail">失败</string>
+    <string name="share">分享</string>
+    <string name="copy">复制</string>
+    <string name="copy_success">复制成功</string>
+    <string name="copy_fail">复制失败</string>
+    <string name="message">消息</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="save">保存</string>
+    <string name="sure">确认</string>
+    <string name="cancel">取消</string>
+    <string name="setting">设置</string>
+    <string name="search">搜索</string>
+    <string name="exit">退出</string>
+    <string name="menu">菜单</string>
+    <string name="update_now">立即更新</string>
+    <string name="app_mycenter">个人中心</string>
+    <string name="app_exit_tips">再按一次退出应用</string>
+    
+    <!--  ablut 登录注册  -->
+    <string name="login">登录</string>
+    <string name="login_third">第三方登录</string>
+    <string name="login_immediately">立即登录</string>
+    <string name="register">注册</string>
+    <string name="register_immediately">立即注册</string>
+    <string name="login_other">其他登录方式</string>
+    <string name="input_phone_num">请输入手机号</string>
+    <string name="input_verification_code">请输入验证码</string>
+    <string name="send_verification_code">发送验证码</string>
+    <string name="input_pw_tips">*密码需由英文与数字组成，最少6位</string>
+    <string name="input_pw">请输入密码</string>
+    <string name="input_pw_new">请输入新密码</string>
+    <string name="input_pw_new_confirm">请再次确认密码</string>
+    <string name="forfet_pw">忘记密码?</string>
+    <string name="retrieve_pw">找回密码</string>
+    <string name="input_valid_phone_notice">请输入正确的手机号码</string>
+    <string name="input_valid_ver_code_notice">短信验证码不能为空，请重新输入</string>
+    <string name="input_real_name_notice">真实姓名不能为空</string>
+    <string name="input_id_card_notice">请输入正确的身份证号码</string>
+
+    <!--  ablut dialog  -->
+    <string name="common_tips_text">温馨提示</string>
+    <string name="common_tips_delete">确认要删除?</string>
+    <string name="common_map_navigation">导航</string>
+    <string name="common_map_baidu">百度地图</string>
+    <string name="common_map_gaode">高德地图</string>
+    <string name="common_map_tenxun">腾讯地图</string>
+
+    <!-- http网络请求状态的提示:网络异常、请求或登陆超时、无内容、内容无更多等 -->
+    <string name="request_loading">加载中...</string>
+    <string name="request_error_no_network">网络不给力，请检查网络后重试</string>
+    <string name="request_error_unknown">数据异常，请稍后重试</string>
+    <string name="request_error_timeout">网络请求超时，请稍后重试</string>
+    <string name="request_error_login_timeout">登录超时，请重新登录</string>
+    <string name="request_error_no_wifi_to_reload">重新加载</string>
+    <string name="request_error_share_fail">发送分享异常，请稍后重试</string>
+    <string name="request_success_no_more_data">没有更多了</string>
+    <string name="request_success_no_contents">空空如也，请稍后重试</string>
+    <string name="request_succ_tips_common_no_data">查无数据,请稍后重试</string>
+    <string name="request_succ_tips_search_no_data">没有查到您需要的数据\n换个关键词试试哦</string>
+    <string name="request_succ_tips_list_no_data">您还没有相关任务\n下拉刷新试试</string>
+
+    <!--申请危险权限的提示-->
+    <string name="permission_apply">申请权限</string>
+    <string name="permission_apply_go">前往</string>
+    <string name="request_tips_text">使用App需要获取存储空间、地图定位等权限，请允许我们开启相关系统功能，以便您正常使用App哦！</string>
+    <string name="request_camera">选取图片需要使用相机功能，请允许App开启相机，以便扫描二维码哦！</string>
+    <string name="request_camera_saomiao">扫描需要使用系统相机功能，请允许App开启该功能，以便扫描二维码哦！</string>
+    <string name="permission_to_setting_tips">我们需要相关权限，才能正常使用App功能，点击前往，将跳转至应用权限设置页面，请开启【存储】【电话】权限。 开启后请重启App使用，避免异常问题！</string>
+
+
+</resources>

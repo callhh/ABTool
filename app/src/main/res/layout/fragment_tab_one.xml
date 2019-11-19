@@ -1,0 +1,28 @@
+<com.callhh.module_common.view.MyScrollViewSlidingRebound xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_f7f7f7"
+    android:fitsSystemWindows="true">
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTitlebarTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_dp_48"
+            android:background="@color/app_color"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_18" />
+
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+</com.callhh.module_common.view.MyScrollViewSlidingRebound>
