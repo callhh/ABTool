@@ -3,6 +3,7 @@ package com.callhh.module_common.util;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.content.Context;
+import android.support.v4.view.ViewCompat;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
@@ -11,6 +12,8 @@ import android.view.animation.CycleInterpolator;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.ScaleAnimation;
 import android.view.animation.TranslateAnimation;
+import android.widget.ImageView;
+
 import com.callhh.module_common.R;
 
 
@@ -151,6 +154,25 @@ public class AnimUtils {
         animation.setInterpolator(new LinearInterpolator());
         animation.setFillAfter(true);
         view.startAnimation(animation);
+    }
+
+    /**
+     * 设置view缩放XY轴大小
+     * 缩放动画：放大
+     *
+     * @param imageView view控件
+     */
+    public static void setViewScaleXYBig(ImageView imageView) {
+        ViewCompat.animate(imageView).scaleX(1.3f).scaleY(1.3f).setDuration(300).start();
+    }
+
+    /**
+     * 缩放动画：变小
+     *
+     * @param imageView view控件
+     */
+    public static void setViewScaleXYSmall(ImageView imageView) {
+        ViewCompat.animate(imageView).scaleX(1f).scaleY(1f).setDuration(300).start();
     }
 
 }

@@ -55,7 +55,7 @@ public class ApiRequestHelper {
 //        params.put("timestamp", SPUtils.getLoginTimeStamp());//登录时的时间戳
         boolean islogin = SPUtils.getIslogin();
         if (islogin) {
-            params.put("X-XSRF-TOKEN", SPUtils.getUserToken());
+            params.put("token", SPUtils.getUserToken());
         }
         return params;
     }

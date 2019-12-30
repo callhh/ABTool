@@ -11,8 +11,13 @@ public class ApiConstants {
     /**
      * 正式环境base url
      */
-    public static String BASE_URL = "http://api.tattle.com/api/"; //正式环境
-//    public static String BASE_URL = "http://api.tattle.com/api/"; // 开发测试环境
+    public static String BASE_URL = "http://www.wexiami.cn/"; //正式环境
+//    public static String BASE_URL = "http://www.wexiami.cn/"; // 开发测试环境
+
+    /**
+     * 图片基础路径，正式环境
+     */
+    public static String BASE_IMAGE_URL = "http://www.wexiami.cn/files/";
 
     /**
      * OkHttpUtlis设置编码格式

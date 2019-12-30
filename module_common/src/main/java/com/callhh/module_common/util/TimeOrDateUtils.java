@@ -3,6 +3,7 @@ package com.callhh.module_common.util;
 import android.annotation.SuppressLint;
 import android.text.TextUtils;
 
+import java.sql.Timestamp;
 import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -31,8 +32,6 @@ public class TimeOrDateUtils {
 
     /**
      * 获取当前时间精确到微秒
-     *
-     * @return
      */
     public static String getCurrentTime2() {
         // 2016-04-28 09:09:22
@@ -43,14 +42,32 @@ public class TimeOrDateUtils {
 
     /**
      * 获取当前的时间 hh:mm:ss
-     *
-     * @return
      */
     public static String getCurrentHour() {
         // 2016-04-28 09:09:22
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(" HH:mm:ss");
         return simpleDateFormat.format(new Date());
     }
+
+    /**
+     * String(yyyy-MM-dd HH:mm:ss)转10位时间戳
+     *
+     * @param time 时间，格式yyyy-MM-dd HH:mm:ss
+     * @return 返回10位时间戳
+     */
+    public static Integer stringToTimestamp(String time) {
+        int times = 0;
+        try {
+            times = (int) ((Timestamp.valueOf(time).getTime()) / 1000);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        if (times == 0) {
+            System.out.println("String转10位时间戳失败");
+        }
+        return times;
+    }
+
 
     /**
      * 获取日期
@@ -82,8 +99,6 @@ public class TimeOrDateUtils {
 
     /**
      * 当前时间内转换为毫秒数
-     *
-     * @return
      */
     public static long nowTimeToMile() {
         try {
@@ -150,7 +165,7 @@ public class TimeOrDateUtils {
      * @return 返回pattern模式的日期字符串
      */
     public static String getDateStringByTimeStamp(Long timeStamp, String format) {
-        String result = null;
+        String result;
         Date date = new Date(timeStamp * 1000);
         SimpleDateFormat sd = new SimpleDateFormat(format);
         result = sd.format(date);
@@ -211,16 +226,33 @@ public class TimeOrDateUtils {
     }
 
     /**
-     * 时间转换时间戳
+     * 日期时间转换时间戳，A类型
      * 2019-04-18 18:42:44 转换Long类型的时间戳 1555584164
      */
     @SuppressLint("SimpleDateFormat")
-    public static long getTimeStampToLong(String timeStamp) {
+    public static long getTimeStampToLongTypeA(String timeStamp) {
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         try {
             Date date = df.parse(timeStamp);
             long longDate = date.getTime();
             return longDate * 1000L;
+        } catch (ParseException e) {
+            e.printStackTrace();
+            return 0;
+        }
+    }
+
+    /**
+     * 日期转换时间戳，B类型
+     * 2019-04-18 转换Long类型的时间戳 1555584164
+     */
+    @SuppressLint("SimpleDateFormat")
+    public static long getTimeStampToLongTypeB(String timeStamp) {
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+        try {
+            Date date = df.parse(timeStamp);
+            long longDate = date.getTime();
+            return longDate / 1000L; //获取10位数的时间戳格式：1575129600
         } catch (ParseException e) {
             e.printStackTrace();
             return 0;
@@ -257,7 +289,7 @@ public class TimeOrDateUtils {
     public static String unitFormat(int i) {
         String retStr;
         if (i >= 0 && i < 10)
-            retStr = "0" + Integer.toString(i);
+            retStr = "0" + i;
         else
             retStr = "" + i;
         return retStr;
@@ -267,7 +299,6 @@ public class TimeOrDateUtils {
      * 字符串转换日期="yyyy-MM-dd"
      *
      * @param dateStr 字符串日期
-     * @return
      */
     @SuppressLint("SimpleDateFormat")
     public static Date parseStringToDate(String dateStr) {
@@ -294,7 +325,6 @@ public class TimeOrDateUtils {
      * 字符串转换日期="yyyy/MM/dd"
      *
      * @param dateStr 字符串日期
-     * @return
      */
     @SuppressLint("SimpleDateFormat")
     public static Date parseStringToDate2(String dateStr) {
@@ -310,7 +340,6 @@ public class TimeOrDateUtils {
      * 时分转时间戳
      *
      * @param timeStr 字符串时分,03:12
-     * @return
      */
     @SuppressLint("SimpleDateFormat")
     public static Date parseStringToDate3(String timeStr) {
@@ -331,13 +360,11 @@ public class TimeOrDateUtils {
      * 将时间戳转成日期字符串
      *
      * @param timeStamp 时间戳的值,类型为：Long
-     * @return
      */
     public static String getDateStringByTimeSTamp(Long timeStamp) {
-        String result = null;
+        String result;
         Date date = new Date(timeStamp * 1000);
-        long time = date.getTime();
-
+//        long time = date.getTime();
         SimpleDateFormat sd = new SimpleDateFormat("yyyy-MM-dd HH:mm");
         result = sd.format(date);
         return result;
@@ -379,7 +406,7 @@ public class TimeOrDateUtils {
         try {
             String res;
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy年MM月dd日HH时mm分ss秒");
-            long lt = new Long(time);
+            long lt = Long.valueOf(time);
             Date date = new Date(lt);
             res = simpleDateFormat.format(date);
             return res;
@@ -414,7 +441,7 @@ public class TimeOrDateUtils {
         try {
             String res;
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy年MM月dd日  HH:mm");
-            long lt = new Long(time);
+            long lt = Long.valueOf(time);
             Date date = new Date(lt);
             res = simpleDateFormat.format(date);
             return res;
@@ -429,12 +456,12 @@ public class TimeOrDateUtils {
      * HH时mm分ss秒，
      * strTime的时间格式必须要与formatType的时间格式相同
      *
-     * @throws ParseException
+     * @throws ParseException 解析异常
      */
     public static Date stringToDate(String strTime)
             throws ParseException {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        Date date = null;
+        Date date;
         date = formatter.parse(strTime);
         return date;
     }
@@ -445,7 +472,7 @@ public class TimeOrDateUtils {
      * formatType时间格式
      * strTime的时间格式和formatType的时间格式必须相同
      *
-     * @throws ParseException
+     * @throws ParseException 解析异常
      */
     public static long stringToLong(String strTime)
             throws ParseException {
@@ -458,8 +485,12 @@ public class TimeOrDateUtils {
         }
     }
 
-    // date类型转换为long类型
-    // date要转换的date类型的时间
+    /**
+     * date类型转换为long类型
+     *
+     * @param date 日期
+     * @return 返回long类型的时间戳
+     */
     public static long dateToLong(Date date) {
         return date.getTime();
     }
@@ -503,12 +534,82 @@ public class TimeOrDateUtils {
 //            int days = (int) ((to - from)/(1000 * 60 * 60 * 24)); //计算天数差
 //            int minutes = (int) ((to - from)/(1000 * 60)); //计算分钟差
 //            return minutes;
-            int hours = (int) ((to - from) / (1000 * 60 * 60)); //计算小时差
-            return hours;
+            return (int) ((to - from) / (1000 * 60 * 60));
         } catch (ParseException e) {
             e.printStackTrace();
             return -1;
         }
     }
 
+    private static SimpleDateFormat msFormat = new SimpleDateFormat("mm:ss");
+
+    /**
+     * MS turn every minute
+     *
+     * @param duration Millisecond
+     * @return Every minute
+     */
+    public static String timeParse(long duration) {
+        String time = "";
+        if (duration > 1000) {
+            time = timeParseMinute(duration);
+        } else {
+            long minute = duration / 60000;
+            long seconds = duration % 60000;
+            long second = Math.round((float) seconds / 1000);
+            if (minute < 10) {
+                time += "0";
+            }
+            time += minute + ":";
+            if (second < 10) {
+                time += "0";
+            }
+            time += second;
+        }
+        return time;
+    }
+
+    /**
+     * MS turn every minute
+     *
+     * @param duration Millisecond
+     * @return Every minute
+     */
+    public static String timeParseMinute(long duration) {
+        try {
+            return msFormat.format(duration);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "0:00";
+        }
+    }
+
+    /**
+     * 判断两个时间戳相差多少秒
+     *
+     * @param d 定义的时间戳
+     * @return 返回秒s
+     */
+    public static int dateDiffer(long d) {
+        try {
+            long l1 = Long.parseLong(String.valueOf(System.currentTimeMillis()).substring(0, 10));
+            long interval = l1 - d;
+            return (int) Math.abs(interval);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return -1;
+        }
+    }
+
+    /**
+     * 计算两个时间间隔
+     *
+     * @param sTime 开始时间
+     * @param eTime 结束时间
+     * @return string时间间隔
+     */
+    public static String cdTime(long sTime, long eTime) {
+        long diff = eTime - sTime;
+        return diff > 1000 ? diff / 1000 + "秒" : diff + "毫秒";
+    }
 }
