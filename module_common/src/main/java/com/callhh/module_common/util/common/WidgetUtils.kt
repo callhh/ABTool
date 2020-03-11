@@ -3,8 +3,8 @@ package com.callhh.module_common.util.common
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.os.Build
-import android.support.annotation.ColorRes
-import android.support.annotation.DrawableRes
+import androidx.annotation.ColorRes
+import androidx.annotation.DrawableRes
 
 /**
  * 组建工具类

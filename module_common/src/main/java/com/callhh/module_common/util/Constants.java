@@ -33,9 +33,9 @@ public class Constants {
     public static final String DIALOG_TIP_DOWNLOAD = "正在后台为您下载更新包，稍后请安装使用";
 
     /**
-     * code=200,请求成功
+     * code=0,请求成功
      */
-    public static final int REQUEST_SUCCESS_CODE_200 = 200;
+    public static final int REQUEST_SUCCESS_CODE = 200;
     /**
      * 请求失败:参数不合法，参数错误，入参为空等等
      */

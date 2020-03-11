@@ -6,7 +6,6 @@ package com.callhh.module_common.listener;
 
 public interface ResultCallBack<T> {
 
-//    void onResponse(T response);
     void onResponse(String response);
 
     void onError(Exception e);

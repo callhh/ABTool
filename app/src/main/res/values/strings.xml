@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">MyBaseProject</string>
-    <string name="app_slogan">我的基础项目</string>
+    <string name="app_name">HHBaseProject</string>
+    <string name="app_slogan">CALLHH基础项目</string>
 
     <!--  通用的字符串  -->
     <string name="app_tab_one">首页1</string>

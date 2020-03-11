@@ -23,6 +23,17 @@
             android:textColor="@color/white"
             android:textSize="@dimen/textsize_18" />
 
+        <TextView
+            android:id="@+id/tvOnClick"
+            android:layout_width="wrap_content"
+            android:padding="@dimen/space_dp_20"
+            android:background="@color/gray_ccc"
+            android:layout_marginTop="@dimen/space_dp_20"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="点我点我"
+            android:layout_height="wrap_content"/>
+
     </com.zhy.android.percent.support.PercentLinearLayout>
 
 </com.callhh.module_common.view.MyScrollViewSlidingRebound>

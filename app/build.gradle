@@ -4,17 +4,20 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+def config = rootProject.ext
+
+
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
+    compileSdkVersion config.app.compileSdkVersion
+    buildToolsVersion config.app.buildToolsVersion
 
     defaultConfig {
-        applicationId rootProject.ext.applicationId
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode rootProject.ext.versionCode
-        versionName rootProject.ext.versionName
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        applicationId config.app.applicationId
+        minSdkVersion config.app.minSdkVersion
+        targetSdkVersion config.app.targetSdkVersion
+        versionCode config.app.versionCode
+        versionName config.app.versionName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
         ndk {
             //选择要添加的对应 cpu 类型的 .so 库。
@@ -84,7 +87,7 @@ android {
                 def requested = details.requested
                 if (requested.group == 'com.android.support') {
                     if (!requested.name.startsWith("multidex")) {
-                        details.useVersion '28.0.0'//默认使用的版本
+                        details.useVersion '28.0.3'//默认使用的版本
                     }
                 }
             }
@@ -98,36 +101,36 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':module_common')
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation rootProject.ext.kotlinx_coroutines_core
-    implementation rootProject.ext.kotlinx_coroutines_android
-    implementation rootProject.ext.appCompat
-    implementation rootProject.ext.design
-    implementation rootProject.ext.recyclerView
-    implementation rootProject.ext.supportAnnotations
-    implementation rootProject.ext.appMultidex
-    implementation rootProject.ext.constraintLayout
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
-    testImplementation rootProject.ext.junit
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation config.dependencies.kotlin_stdlib_jdk7
+    implementation config.dependencies.kotlinx_coroutines_core
+    implementation config.dependencies.kotlinx_coroutines_android
+    implementation config.dependencies.design
+    implementation config.dependencies.appCompat
+    implementation config.dependencies.recyclerView
+    implementation config.dependencies.supportAnnotations
+    implementation config.dependencies.appMultidex
+    implementation config.dependencies.constraintLayout
+    testImplementation config.dependencies.junit
+    androidTestImplementation config.dependencies.runner
+    androidTestImplementation config.dependencies.espresso
 
-    implementation 'com.jakewharton:butterknife:8.5.1'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    implementation 'com.jakewharton:butterknife:10.2.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
     implementation 'io.reactivex.rxjava2:rxjava:2.1.16'
     implementation 'com.github.akarnokd:rxjava2-interop:0.8.0'
     implementation 'com.jakewharton.rxbinding:rxbinding:0.4.0'
-    implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
-    implementation 'com.zhy:percent-support-extends:1.1.1'
-    implementation 'com.zhy:okhttputils:2.6.2'
     implementation 'com.squareup.okhttp3:okhttp:3.13.1'
     implementation 'com.squareup.okio:okio:2.2.2'
+    implementation 'com.zhy:okhttputils:2.6.2'
+    implementation 'com.lzy.net:okgo:3.0.4'
+    implementation 'com.readystatesoftware.chuck:library:1.0.4'
+
+    implementation 'com.zhy:percent-support-extends:1.1.1'
+    implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.44'
     implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-16'
     implementation 'com.youth.banner:banner:1.4.10'
     implementation 'com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar'
     implementation 'com.contrarywind:Android-PickerView:4.1.6'
-    implementation 'cn.bingoogolapple:bga-photopicker:1.2.8@aar'
-    implementation 'cn.bingoogolapple:bga-baseadapter:1.2.7@aar'
 
 }

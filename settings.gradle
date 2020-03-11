@@ -1,2 +1,2 @@
 include ':app', ':module_common'
-rootProject.name='myBaseProject'
+rootProject.name='HHBaseProject'
