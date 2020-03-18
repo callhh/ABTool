@@ -8,7 +8,7 @@ import com.callhh.module_common.helper.HttpExceptionHelper;
  */
 public abstract class ApiResultCallBack<T> {
 
-    public void onResponse( ResponseBean<T> response) {
+    public void onResponse( T response) {
 
     }
 

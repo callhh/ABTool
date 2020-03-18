@@ -30,6 +30,8 @@ import java.net.URL;
  */
 public class ImageTools {
 
+    private static String FILE_PATH = "MyApp";
+
     /**
      * 图片压缩
      *
@@ -234,7 +236,7 @@ public class ImageTools {
         if (checkSDCardAvailable()) {
             File sdcardDir = Environment.getExternalStorageDirectory();
 
-            String path = sdcardDir.getPath() + "/onesports_app";
+            String path = sdcardDir.getPath() + FILE_PATH;
             File dir = new File(path);
             if (!dir.exists()) {
                 dir.mkdirs();
@@ -270,7 +272,7 @@ public class ImageTools {
     public static String saveImageToGallery(Bitmap bmp) {
         // 首先保存图片
         String storePath = Environment.getExternalStorageDirectory().getAbsolutePath()
-                + File.separator + "onesports_app";
+                + File.separator + FILE_PATH;
         File appDir = new File(storePath);
         if (!appDir.exists()) {
             appDir.mkdir();
@@ -349,7 +351,7 @@ public class ImageTools {
      */
     public static File compress2File(File imgFile, int destWidth, int destHeight) {
         Bitmap scaledBitmap = getScaledBitmap(imgFile.getAbsolutePath(), destWidth, destHeight);
-        File mediaStorageDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES), "/onesports");
+        File mediaStorageDir = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES), "/app");
         if (!mediaStorageDir.exists()) {
             mediaStorageDir.mkdir();
         }

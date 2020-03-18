@@ -139,7 +139,7 @@ public class RxProgressBar extends View implements Runnable {
             progressColor = loadingColor;
         }
 //        flikerBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.flicker_progressbar);
-        flikerBitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_flicker_progressbar);
+        flikerBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.ic_flicker_progressbar);
         flickerLeft = -flikerBitmap.getWidth();
         initPgBimap();
     }

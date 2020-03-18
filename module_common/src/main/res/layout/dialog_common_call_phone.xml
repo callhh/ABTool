@@ -52,8 +52,9 @@
             android:background="@drawable/dialog_shape_button_corners_left_15dp"
             android:gravity="center"
             android:text="@string/cancel"
+            android:textStyle="bold"
             android:textColor="@color/app_color"
-            android:textSize="@dimen/textsize_16"/>
+            android:textSize="@dimen/textsize_17"/>
 
         <TextView
             android:layout_width="0.5dp"

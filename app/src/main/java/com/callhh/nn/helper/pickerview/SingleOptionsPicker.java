@@ -102,16 +102,13 @@ public class SingleOptionsPicker<T> {
     public static void openOptionsPicker(Activity activity, List<String> list,
                                          final int type, final TextView textView) {
         String select = textView.getText().toString();
-        new SingleOptionsPicker(activity, select, list, new OnPickerOptionsClickListener() {
-            @Override
-            public void onOptionsSelect(int options1, int options2, int options3, View view) {
-                if (type == 1) {
-                    textView.setText(options1 + "岁");
-                } else if (type == 2) { //注意起始数值
-                    textView.setText(options1 + 80 + "CM");
-                } else if (type == 3) {
-                    textView.setText(options1 + 30 + "KG");
-                }
+        new SingleOptionsPicker(activity, select, list, (options1, options2, options3, view) -> {
+            if (type == 1) {
+                textView.setText(options1 + "岁");
+            } else if (type == 2) { //注意起始数值
+                textView.setText(options1 + 80 + "CM");
+            } else if (type == 3) {
+                textView.setText(options1 + 30 + "KG");
             }
         }).show();
     }

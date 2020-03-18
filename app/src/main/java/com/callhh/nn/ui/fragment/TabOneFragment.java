@@ -1,7 +1,6 @@
 package com.callhh.nn.ui.fragment;
 
 
-import com.callhh.module_common.listener.ApiResultCallBack;
 import com.callhh.module_common.util.common.MyLogUtils;
 import com.callhh.nn.R;
 import com.callhh.nn.base.BaseFragment;
@@ -9,9 +8,10 @@ import com.callhh.nn.bean.DemoBean;
 import com.callhh.module_common.bean.ResponseBean;
 import com.callhh.nn.util.http.ApiConstants;
 import com.callhh.nn.util.http.ApiRequestUtils;
-import com.callhh.nn.util.okgo.ApiRequestUtilSSSS;
+import com.callhh.nn.util.okgo.OkGoUtils;
+import com.callhh.nn.util.okgo.callbck.ShowDialogCallback;
+import com.lzy.okgo.model.Response;
 
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -35,7 +35,7 @@ public class TabOneFragment extends BaseFragment {
     @Override
     protected void initView() {
         MyLogUtils.logI("start TabMyFragment- 首页 ");
-        findView(mView,R.id.tvOnClick).setOnClickListener(view -> {
+        findView(mView, R.id.tvOnClick).setOnClickListener(view -> {
             loadData();
         });
 
@@ -43,33 +43,22 @@ public class TabOneFragment extends BaseFragment {
 
     private void loadData() {
         Map<String, String> params = ApiRequestUtils.getUIdParams(9);
+        OkGoUtils.postRequest(ApiConstants.BASE_URL + ApiConstants.URL_Test, this, params
+                , new ShowDialogCallback<ResponseBean<DemoBean>>(getActivity(),true) {
 
-//        OkgoUtils.postRequest(ApiConstants.URL_Test, this, params
-//                , new JsonCallback<ResponseBean<DemoBean>>() {
-//
-//                    @Override
-//                    public void onSuccess(Response<ResponseBean<DemoBean>> response) {
-//                        ResponseBean<DemoBean> body = response.body();
-//                        DemoBean result = body.data;
-//                        MyLogUtils.logI(body.msg);
-//                    }
-//
-//                    @Override
-//                    public void onError(Response<ResponseBean<DemoBean>> response) {
-//
-//                        MyLogUtils.logI(response.message());
-//
-//                    }
-//                });
-
-        ApiRequestUtilSSSS.post(getContext(),ApiConstants.URL_Test,params
-        ,true,new ApiResultCallBack<DemoBean>(){
                     @Override
-                    public void onResponse(ResponseBean<DemoBean> response) {
-                        MyLogUtils.logI( "response.msg " +response.msg);
-                        MyLogUtils.logI( "response.data.size() " +response.data.getType().size());
+                    public void onSuccess(Response<ResponseBean<DemoBean>> response) {
+                        ResponseBean<DemoBean> body = response.body();
+                        DemoBean result = body.data;
+                        MyLogUtils.logI(body.msg);
+                    }
+
+                    @Override
+                    public void onError(Response<ResponseBean<DemoBean>> response) {
+                        MyLogUtils.logI(response.message());
                     }
                 });
+
     }
 
     @Override

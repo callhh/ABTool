@@ -19,6 +19,8 @@ import android.util.Log;
 
 import com.callhh.module_common.util.common.MyLogUtils;
 import com.callhh.nn.util.okgo.exception.MyException;
+import com.google.gson.Gson;
+import com.google.gson.stream.JsonReader;
 import com.lzy.okgo.callback.AbsCallback;
 import com.lzy.okgo.request.base.Request;
 
@@ -28,6 +30,7 @@ import java.net.SocketException;
 import java.net.SocketTimeoutException;
 
 import okhttp3.Response;
+import okhttp3.ResponseBody;
 
 /**
  * ================================================
@@ -75,6 +78,8 @@ public abstract class JsonCallback<T> extends AbsCallback<T> {
 
         // 不同的业务，这里的代码逻辑都不一样，如果你不修改，那么基本不可用
         //详细自定义的原理和文档，看这里： https://github.com/jeasonlzy/okhttp-OkGo/wiki/JsonCallback
+
+
         if (type == null) {
             if (clazz == null) {
                 Type genType = getClass().getGenericSuperclass();
@@ -87,6 +92,7 @@ public abstract class JsonCallback<T> extends AbsCallback<T> {
 
         JsonConvert<T> convert = new JsonConvert<>(type);
         return convert.convertResponse(response);
+
     }
 
     @Override
@@ -99,9 +105,9 @@ public abstract class JsonCallback<T> extends AbsCallback<T> {
         Throwable exception = response.getException();
 
         if (exception instanceof SocketTimeoutException) {
-            Log.d("JsonCallback", "请求超时");
+            MyLogUtils.logI("JsonCallback  请求超时");
         } else if (exception instanceof SocketException) {
-            Log.d("JsonCallback", "服务器异常");
+            MyLogUtils.logI("JsonCallback 服务器异常");
         } else if (exception instanceof MyException) {
             //个人自定义 异常 根据后台 约定值判断异常雷系
             switch (((MyException) exception).getErrorBean().code) {

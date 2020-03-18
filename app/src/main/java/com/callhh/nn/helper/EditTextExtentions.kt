@@ -1,4 +1,4 @@
-package com.onesports.sx.reception.helper
+package com.callhh.nn.helper
 
 import android.text.Editable
 import android.text.TextWatcher
@@ -7,9 +7,11 @@ import android.text.method.PasswordTransformationMethod
 import android.widget.EditText
 
 /**
- * EditText简单封装类
+ * EditText添加事件监听封装，返回onChange()
+ * 使用：EditTextExtentions.onChange(editText,edittextString ->{  return Unit})
  */
 fun EditText.onChange(onchange: (String) -> Unit) {
+
     this.addTextChangedListener(object : TextWatcher {
         override fun afterTextChanged(s: Editable?) {
             onchange(s?.trim()?.toString() ?: "")

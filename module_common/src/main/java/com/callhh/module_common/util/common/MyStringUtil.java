@@ -474,6 +474,7 @@ public class MyStringUtil {
      * @return 转化后的结果.
      */
     public static String decodeUnicode(String theString) {
+        if (TextUtils.isEmpty(theString))return "";
         char aChar;
         int len = theString.length();
         StringBuffer outBuffer = new StringBuffer(len);
