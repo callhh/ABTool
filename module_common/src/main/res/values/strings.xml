@@ -74,5 +74,11 @@
     <string name="request_camera_saomiao">扫描需要使用系统相机功能，请允许App开启该功能，以便扫描二维码哦！</string>
     <string name="permission_to_setting_tips">我们需要相关权限，才能正常使用App功能，点击前往，将跳转至应用权限设置页面，请开启【存储】【电话】权限。 开启后请重启App使用，避免异常问题！</string>
 
+    <string name="permission_denied_tips">操作被拒绝，请到手机设置开启应用权限！</string>
+    <string name="no_wifi_status_tips">当前为非wifi状态，是否继续下载更新应用？</string>
+    <string name="download_continue">继续下载</string>
+    <string name="download_later">稍后下载</string>
+    <string name="downloading_in_the_background_tips">正在后台为您下载更新包，稍后请安装使用</string>
+
 
 </resources>

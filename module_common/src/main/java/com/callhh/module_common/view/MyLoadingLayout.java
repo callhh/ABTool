@@ -1,4 +1,4 @@
-package com.callhh.nn.view.common;
+package com.callhh.module_common.view;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -13,8 +13,8 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.callhh.module_common.R;
 import com.callhh.module_common.util.common.MyTextUtil;
-import com.callhh.nn.R;
 
 /**
  * 请求数据前的加载中布局、
@@ -173,7 +173,7 @@ public class MyLoadingLayout extends RelativeLayout implements OnClickListener {
                         mThisView.setVisibility(View.VISIBLE);
                         mLlLoading.setVisibility(View.GONE);
                         mImgErrorIcon.setVisibility(View.VISIBLE);
-                        mImgErrorIcon.setImageResource(R.drawable.ic_default_nothing);
+                        mImgErrorIcon.setImageResource(R.drawable.ic_load_fail_def_nothing);
                         mTvErrorTips.setVisibility(View.VISIBLE);
                         mTvReload.setVisibility(View.VISIBLE);
                         mTvReload.setText(getResources().getString(R.string.request_error_no_wifi_to_reload));
@@ -200,7 +200,7 @@ public class MyLoadingLayout extends RelativeLayout implements OnClickListener {
                         mThisView.setVisibility(View.VISIBLE);
                         mLlLoading.setVisibility(View.GONE);
                         mImgErrorIcon.setVisibility(View.VISIBLE);
-                        mImgErrorIcon.setImageResource(R.drawable.ic_default_nothing);
+                        mImgErrorIcon.setImageResource(R.drawable.ic_load_fail_def_nothing);
                         mTvErrorTips.setVisibility(View.VISIBLE);
                         MyTextUtil.setText(mTvErrorTips, hints);
                         mTvReload.setVisibility(View.VISIBLE);
@@ -269,16 +269,12 @@ public class MyLoadingLayout extends RelativeLayout implements OnClickListener {
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-//            case R.id.llLoadView:
-            case R.id.tvErrorTips:
-            case R.id.tvReload:
-                //如果加载失败，点击重新加载
-                if (isFailed) {
-                    setLoadingSuccess();
-                    onRetryListenner.onRetry();
-                }
-                break;
+        int id = v.getId();
+        if (id == R.id.tvErrorTips || id == R.id.tvReload) {//如果加载失败，点击重新加载
+            if (isFailed) {
+                setLoadingSuccess();
+                onRetryListenner.onRetry();
+            }
         }
     }
 

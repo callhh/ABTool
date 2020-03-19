@@ -8,7 +8,7 @@ import com.callhh.nn.util.SPUtils;
 import com.google.gson.Gson;
 import com.callhh.module_common.listener.ResultCallBack;
 import com.callhh.module_common.util.Constants;
-import com.callhh.module_common.util.common.JsonUtil;
+import com.callhh.module_common.util.common.GsonUtil;
 import com.callhh.module_common.util.common.MyLogUtils;
 import com.callhh.module_common.util.NetWorkUtils;
 import com.callhh.module_common.util.common.ToastUtil;
@@ -232,7 +232,7 @@ public class ApiRequestUtils {
     private static void sendSuccessResultCallback(final Context context, String response
             , final ResultCallBack callBack) {
         try {
-            BaseBody baseBody = JsonUtil.parseJSON(response, BaseBody.class);
+            BaseBody baseBody = GsonUtil.parseJSON(response, BaseBody.class);
             int code = baseBody.getCode();
             if (code == Constants.REQUEST_SUCCESS_CODE) {
                 //code=200 请求成功

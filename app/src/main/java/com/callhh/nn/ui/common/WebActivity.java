@@ -27,7 +27,7 @@ import com.callhh.module_common.util.common.TitleBarUtils;
 import com.callhh.nn.R;
 import com.callhh.nn.base.BaseActivity;
 import com.callhh.nn.util.ConstUtils;
-import com.callhh.nn.view.common.MyLoadingLayout;
+import com.callhh.module_common.view.MyLoadingLayout;
 
 import org.apache.commons.lang3.StringUtils;
 

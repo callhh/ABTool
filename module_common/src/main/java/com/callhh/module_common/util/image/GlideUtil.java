@@ -257,7 +257,7 @@ public class GlideUtil {
         RequestOptions requestOptions = new RequestOptions()
                 //设置等待时的图片【这个时候需要注释，否则这个会作为背景图】
 //                .placeholder(R.mipmap.img_error)
-                .error(R.drawable.ic_loading_def)
+                .error(R.drawable.ic_load_fail_def_image)
                 .centerCrop()
                 //缓存策略,跳过内存缓存【此处应该设置为false，否则列表刷新时会闪一下】
                 .skipMemoryCache(false)
@@ -282,7 +282,7 @@ public class GlideUtil {
     public void showLocalRoundCornerImage(Context context, ImageView imageView
             ,  int resourceId, int radius_dp, GlideRoundCornersTransUtils.CornerType type) {
         RequestOptions requestOptions = new RequestOptions()
-                .error(R.drawable.ic_loading_def)
+                .error(R.drawable.ic_load_fail_def_image)
                 .centerCrop()
                 .skipMemoryCache(false)
                 .diskCacheStrategy(DiskCacheStrategy.ALL)

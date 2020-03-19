@@ -52,7 +52,7 @@
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:contentDescription="@string/img_desc"
-            android:src="@drawable/ic_default_nothing"
+            android:src="@drawable/ic_load_fail_def_nothing"
             android:visibility="visible"/>
 
     </FrameLayout>
