@@ -17,7 +17,7 @@ public class EventBusUtil {
 	 * 注意：最好是放在初始化组件之后，不然页面可能会接收不到参数
 	 * @param subscriber 订阅者对象
 	 */
-	public static void regist(Object subscriber) {
+	public static void register(Object subscriber) {
 		if (!EventBus.getDefault().isRegistered(subscriber)) {
 			EventBus.getDefault().register(subscriber);
 		} else {
@@ -29,7 +29,7 @@ public class EventBusUtil {
 	 * 解除EventBus的注册 A界面 onDestory方法中解除
 	 * @param subscriber 订阅者对象
 	 */
-	public static void unregist(Object subscriber) {
+	public static void unregister(Object subscriber) {
 		EventBus.getDefault().unregister(subscriber);
 	}
 

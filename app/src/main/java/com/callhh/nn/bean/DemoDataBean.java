@@ -1,7 +1,5 @@
 package com.callhh.nn.bean;
 
-import com.callhh.nn.bean.base.BaseBody;
-
 /**
  * Created by admin on 2020/3/18
  */

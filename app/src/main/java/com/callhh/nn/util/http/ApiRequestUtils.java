@@ -3,7 +3,7 @@ package com.callhh.nn.util.http;
 import android.content.Context;
 
 import com.callhh.nn.R;
-import com.callhh.nn.bean.base.BaseBody;
+import com.callhh.nn.bean.base.BaseBean;
 import com.callhh.nn.util.SPUtils;
 import com.google.gson.Gson;
 import com.callhh.module_common.listener.ResultCallBack;
@@ -232,7 +232,7 @@ public class ApiRequestUtils {
     private static void sendSuccessResultCallback(final Context context, String response
             , final ResultCallBack callBack) {
         try {
-            BaseBody baseBody = GsonUtil.parseJSON(response, BaseBody.class);
+            BaseBean baseBody = GsonUtil.parseJSON(response, BaseBean.class);
             int code = baseBody.getCode();
             if (code == Constants.REQUEST_SUCCESS_CODE) {
                 //code=200 请求成功

@@ -17,9 +17,13 @@ import android.provider.MediaStore;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+
+import androidx.appcompat.widget.AppCompatEditText;
+
 import com.callhh.module_common.R;
 
 import java.util.List;
@@ -196,6 +200,23 @@ public class AppUtils {
                 activity.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
             }
         });
+    }
+
+
+    /**
+     * 点击空白区域，隐藏软键盘
+     */
+    public static void hideSoftKeyboardOnClickBlankArea(Activity activity) {
+        if (activity == null) return;
+        //获取当前获得焦点的View
+        View v = activity.getCurrentFocus();
+        //判断当前的焦点所在控件是否属于输入框EditTextView或者AppCompatEditText，不是就隐藏键盘
+        if (v != null && (v instanceof AppCompatEditText)) {
+            InputMethodManager im = (InputMethodManager) activity.getSystemService(Context.INPUT_METHOD_SERVICE);
+            assert im != null;
+            im.hideSoftInputFromWindow(activity.getCurrentFocus().getWindowToken()
+                    , InputMethodManager.HIDE_NOT_ALWAYS);
+        }
     }
 
     /**
