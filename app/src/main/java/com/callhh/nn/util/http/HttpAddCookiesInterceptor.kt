@@ -15,7 +15,7 @@ class HttpAddCookiesInterceptor : Interceptor {
         val originalResponse = chain.proceed(chain.request())
         val cookies = originalResponse.headers("Set-Cookie")
         val cookieStr: String
-        if (cookies != null && cookies.isNotEmpty()) {
+        if (cookies.isNotEmpty()) {
             val s = cookies[0]
             //sessionid值格式：JSESSIONID=AD5F5C9EEB16C71EC3725DBF209F6178，是键值对，不是单指值
             cookieStr = s.substring(0, s.indexOf(";"))

@@ -1,9 +1,11 @@
 package com.callhh.nn.bean;
 
+import com.callhh.module_common.bean.BaseResponseBean;
+
 /**
  * Created by admin on 2020/3/18
  */
-public class DemoDataBean extends BaseBody {
+public class DemoDataBean extends BaseResponseBean {
 
     private DemoBean data;
 
