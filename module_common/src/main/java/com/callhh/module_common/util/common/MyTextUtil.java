@@ -5,7 +5,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 /**
- * TextView、EditText等文本控件处理工具类
+ * TextView、EditText等文本控件空安全处理工具类
  */
 public class MyTextUtil {
 
@@ -59,7 +59,7 @@ public class MyTextUtil {
     public static void setEditText(EditText editText, String etContent, String defaultHints) {
         try {
             if (null == editText) return;
-            if (TextUtils.isEmpty(etContent) && NULL.equals(etContent)) {
+            if (TextUtils.isEmpty(etContent) || NULL.equals(etContent)) {
                 if (!TextUtils.isEmpty(defaultHints)) editText.setText(defaultHints);
             } else {
                 if (etContent.contains(NULL)) etContent = etContent.replace(NULL, "");
@@ -81,11 +81,15 @@ public class MyTextUtil {
     public static void setEditTextHints(EditText editText, String etContent, String defaultHints) {
         try {
             if (null == editText) return;
-            if (TextUtils.isEmpty(etContent) && NULL.equals(etContent)) {
-                if (!TextUtils.isEmpty(defaultHints)) editText.setHint(defaultHints);
+            if (TextUtils.isEmpty(etContent) || NULL.equals(etContent)) {
+                if (!TextUtils.isEmpty(defaultHints)) {
+                    editText.setText("");
+                    editText.setHint(defaultHints);
+                }
             } else {
                 if (etContent.contains(NULL)) etContent = etContent.replace(NULL, "");
-                editText.setHint(etContent);
+                editText.setText(etContent);
+                editText.setHint(defaultHints);
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -103,7 +107,7 @@ public class MyTextUtil {
             , boolean isEnabled) {
         try {
             if (null == editText) return;
-            if (TextUtils.isEmpty(etContent) && NULL.equals(etContent)) {
+            if (TextUtils.isEmpty(etContent) || NULL.equals(etContent)) {
                 if (!TextUtils.isEmpty(defaultHints)) editText.setText(defaultHints);
             } else {
                 if (etContent.contains(NULL)) etContent = etContent.replace(NULL, "");
