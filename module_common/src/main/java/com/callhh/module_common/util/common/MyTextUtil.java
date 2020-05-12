@@ -53,14 +53,14 @@ public class MyTextUtil {
      * 设置editext内容
      *
      * @param editText     控件
-     * @param etContent      提示内容
-     * @param defaultHints 默认
+     * @param etContent    提示内容
+     * @param defaultValue 默认值
      */
-    public static void setEditText(EditText editText, String etContent, String defaultHints) {
+    public static void setEditText(EditText editText, String etContent, String defaultValue) {
         try {
             if (null == editText) return;
             if (TextUtils.isEmpty(etContent) || NULL.equals(etContent)) {
-                if (!TextUtils.isEmpty(defaultHints)) editText.setText(defaultHints);
+                if (defaultValue != null) editText.setText(defaultValue);
             } else {
                 if (etContent.contains(NULL)) etContent = etContent.replace(NULL, "");
                 editText.setText(etContent);
@@ -75,14 +75,14 @@ public class MyTextUtil {
      * 设置editext提示语
      *
      * @param editText     控件
-     * @param etContent      提示内容
-     * @param defaultHints 默认
+     * @param etContent    提示内容
+     * @param defaultHints 默认值
      */
     public static void setEditTextHints(EditText editText, String etContent, String defaultHints) {
         try {
             if (null == editText) return;
             if (TextUtils.isEmpty(etContent) || NULL.equals(etContent)) {
-                if (!TextUtils.isEmpty(defaultHints)) {
+                if (defaultHints != null) {
                     editText.setText("");
                     editText.setHint(defaultHints);
                 }
@@ -98,17 +98,18 @@ public class MyTextUtil {
 
     /**
      * 设置editext内容，并限制edittext是否可再次编辑
-     * @param editText      控件
-     * @param etContent       提示内容
-     * @param defaultHints  默认
-     * @param isEnabled     是否可编辑
+     *
+     * @param editText     控件
+     * @param etContent    提示内容
+     * @param defaultValue 默认值
+     * @param isEnabled    是否可编辑
      */
-    public static void setEditTextAndIsEnabled(EditText editText, String etContent, String defaultHints
+    public static void setEditTextAndIsEnabled(EditText editText, String etContent, String defaultValue
             , boolean isEnabled) {
         try {
             if (null == editText) return;
             if (TextUtils.isEmpty(etContent) || NULL.equals(etContent)) {
-                if (!TextUtils.isEmpty(defaultHints)) editText.setText(defaultHints);
+                if (defaultValue != null) editText.setText(defaultValue);
             } else {
                 if (etContent.contains(NULL)) etContent = etContent.replace(NULL, "");
                 editText.setText(etContent);
@@ -120,6 +121,5 @@ public class MyTextUtil {
             e.printStackTrace();
         }
     }
-
 
 }
