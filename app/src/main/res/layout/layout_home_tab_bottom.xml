@@ -6,7 +6,7 @@
               android:layout_gravity="bottom"
               android:orientation="vertical">
 
-    <com.callhh.module_common.view.ShadowLayout
+    <com.callhh.module_common.widget.ShadowLayout
         android:id="@+id/shadowLayout"
         android:layout_width="match_parent"
         android:layout_height="2dp"

@@ -106,4 +106,7 @@
     <color name="tab_bottom_normal">#999999</color>
     <color name="tab_bottom_selected">#3F51B5</color>
 
+    <color name="shadow_default_color">#1a000000</color>
+    <color name="shadow_card_default_color">#ffffff</color>
+
 </resources>

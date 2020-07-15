@@ -5,6 +5,9 @@
         name="tattle"
         path="Download"/>
 
+    <!--  物理路径相当于Context.getExternalFilesDir(String) + /path/  -->
+    <external-files-path name="sincetech" path="Download" />
+
     <!--<root-path
         name="app"
         path="app"/>-->

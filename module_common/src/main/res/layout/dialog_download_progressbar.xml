@@ -16,7 +16,7 @@
             android:layout_height="@dimen/space_dp_4"
             android:background="@color/blue_1189FF"/>
 
-        <com.callhh.module_common.view.RxProgressBar
+        <com.callhh.module_common.widget.RxProgressBar
             android:id="@+id/round_fliker_progressbar"
             android:layout_width="match_parent"
             android:layout_height="30dp"

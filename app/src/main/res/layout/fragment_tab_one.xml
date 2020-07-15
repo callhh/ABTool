@@ -1,4 +1,4 @@
-<com.callhh.module_common.view.MyScrollViewSlidingRebound xmlns:android="http://schemas.android.com/apk/res/android"
+<com.callhh.module_common.widget.MyScrollViewSlidingRebound xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -23,17 +23,27 @@
             android:textColor="@color/white"
             android:textSize="@dimen/textsize_18" />
 
+        <com.callhh.module_common.widget.ShadowViewCard
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/space_dp_48"
+            android:layout_marginTop="@dimen/space_dp_20"
+            android:background="#80e0b975"
+            app:shadowBottomHeight="10dp"
+            app:shadowCardColor="#000000"
+            app:shadowColorBg="#000000"
+            app:shadowRadiusNum="32" />
+
         <TextView
             android:id="@+id/tvOnClick"
             android:layout_width="wrap_content"
-            android:padding="@dimen/space_dp_20"
-            android:background="@color/gray_ccc"
-            android:layout_marginTop="@dimen/space_dp_20"
-            android:gravity="center"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="点我点我"
-            android:layout_height="wrap_content"/>
+            android:layout_marginTop="@dimen/space_dp_20"
+            android:background="@color/gray_ccc"
+            android:gravity="center"
+            android:padding="@dimen/space_dp_20"
+            android:text="点我点我" />
 
     </com.zhy.android.percent.support.PercentLinearLayout>
 
-</com.callhh.module_common.view.MyScrollViewSlidingRebound>
+</com.callhh.module_common.widget.MyScrollViewSlidingRebound>

@@ -1,4 +1,4 @@
-package com.callhh.module_common.view;
+package com.callhh.module_common.widget;
 
 import android.content.Context;
 import android.graphics.Canvas;

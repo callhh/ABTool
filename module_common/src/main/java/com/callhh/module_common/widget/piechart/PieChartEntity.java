@@ -1,4 +1,4 @@
-package com.callhh.module_common.view.piechart;
+package com.callhh.module_common.widget.piechart;
 
 /**
  * Created by callhh

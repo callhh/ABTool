@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.text.TextUtils;
 
 import java.sql.Timestamp;
+import java.text.DateFormat;
 import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -368,6 +369,22 @@ public class TimeOrDateUtils {
         SimpleDateFormat sd = new SimpleDateFormat("yyyy-MM-dd HH:mm");
         result = sd.format(date);
         return result;
+    }
+
+    /**
+     * 不规则的日期string转换标准的string日期格式："yyyy-MM-dd"
+     * 如:2020-7-1 -> 2020-07-01
+     */
+    @SuppressLint("SimpleDateFormat")
+    public static String formatStringToStandardDate(String dateString) {
+        Date date = null;
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        try {
+            date = dateFormat.parse(dateString);
+        }catch (ParseException e){
+            e.printStackTrace();
+        }
+        return new SimpleDateFormat("yyyy-MM-dd").format(date);
     }
 
     /**

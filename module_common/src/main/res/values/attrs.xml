@@ -40,6 +40,26 @@
             <flag name="bottom" value="0x1000"/>
         </attr>
     </declare-styleable>
+    <!-- 自定义阴影效果 -->
+    <declare-styleable name="ShadowViewCard">
+        <!--圆角度-->
+        <attr name="shadowRound" format="dimension" />
+        <!--阴影的高度-->
+        <attr name="shadowLeftHeight" format="dimension" />
+        <attr name="shadowTopHeight" format="dimension" />
+        <attr name="shadowRightHeight" format="dimension" />
+        <attr name="shadowBottomHeight" format="dimension" />
+        <!--上方阴影的偏离度-->
+        <attr name="shadowOffsetY" format="dimension" />
+        <attr name="shadowOffsetX" format="dimension" />
+        <!--阴影颜色 end-->
+        <attr name="shadowCardColor" format="color" />
+        <!--阴影颜色 start-->
+        <attr name="shadowColorBg" format="color" />
+        <!--阴影颜色模糊度，越大越模糊-->
+        <attr name="shadowRadiusNum" format="integer" />
+    </declare-styleable>
+
 
     <!--  自定义更新下载中ProgressBar -->
     <declare-styleable name="FlikerProgressBar">

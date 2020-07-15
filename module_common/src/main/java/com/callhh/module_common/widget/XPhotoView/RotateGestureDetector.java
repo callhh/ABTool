@@ -1,4 +1,4 @@
-package com.callhh.module_common.view.XPhotoView;
+package com.callhh.module_common.widget.XPhotoView;
 
 import android.view.MotionEvent;
 

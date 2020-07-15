@@ -20,7 +20,7 @@ import androidx.appcompat.app.AlertDialog;
 
 import com.callhh.module_common.R;
 import com.callhh.module_common.util.MyScreenUtils;
-import com.callhh.module_common.view.RxProgressBar;
+import com.callhh.module_common.widget.RxProgressBar;
 
 
 /**

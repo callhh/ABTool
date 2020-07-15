@@ -1,4 +1,4 @@
-package com.callhh.module_common.view.piechart;
+package com.callhh.module_common.widget.piechart;
 
 /**
  * 饼图属性接口

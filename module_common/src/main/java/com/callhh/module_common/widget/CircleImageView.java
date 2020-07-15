@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.callhh.module_common.view;
+package com.callhh.module_common.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
