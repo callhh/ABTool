@@ -41,8 +41,8 @@ public class WebActivity extends BaseActivity {
 
     @BindView(R.id.tvTitlebarTitle)
     TextView mTvTitlebarTitle;
-    @BindView(R.id.imgRightButton)
-    ImageView mImgRightButton;
+    @BindView(R.id.ivRightButton)
+    ImageView mIvRightButton;
     @BindView(R.id.progressBar)
     ProgressBar mProgressBar;
     @BindView(R.id.webView)
@@ -79,7 +79,7 @@ public class WebActivity extends BaseActivity {
             TitleBarUtils.setCommonIconTitle(mActivity, mWebTitle
                     , -1, this);
         }
-        mImgRightButton.setVisibility(View.GONE);
+        mIvRightButton.setVisibility(View.GONE);
         MyLogUtils.logI("WebActivity  webUrl: " + mWebUrl);
         setWebListener();
     }
@@ -193,10 +193,10 @@ public class WebActivity extends BaseActivity {
         MyWebViewUtils.destroyWebView(mWebView);
     }
 
-    @OnClick({R.id.imgRightButton})
+    @OnClick({R.id.ivRightButton})
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.imgRightButton:
+            case R.id.ivRightButton:
                 //分享
 //                DialogUtil.shareDialog(mActivity,WebActivity.this);
                 break;

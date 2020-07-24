@@ -27,7 +27,7 @@ public class TitleBarUtils {
                                       String rightTitle, OnClickListener rightListener) {
         try {
             initView(activity, title);
-            activity.findViewById(R.id.imgRightButton).setVisibility(View.GONE);
+            activity.findViewById(R.id.ivRightButton).setVisibility(View.GONE);
             TextView tvRightBtn = activity.findViewById(R.id.tvRightButton);
             MyTextUtil.setText(tvRightBtn, rightTitle);
             if (null != rightListener) {
@@ -52,7 +52,7 @@ public class TitleBarUtils {
             initView(activity, title);
             //影藏右边的文本控件，显示ImageView图标控件
             activity.findViewById(R.id.tvRightButton).setVisibility(View.GONE);
-            ImageView imgRightBtn = activity.findViewById(R.id.imgRightButton);
+            ImageView imgRightBtn = activity.findViewById(R.id.ivRightButton);
             imgRightBtn.setVisibility(View.VISIBLE);
             if (imageId != -1)
                 imgRightBtn.setImageResource(imageId);
@@ -81,7 +81,7 @@ public class TitleBarUtils {
         try {
             ImageView imgBack = activity.findViewById(R.id.imgBackButton);
             TextView tvTitle = activity.findViewById(R.id.tvTitlebarTitle);
-            activity.findViewById(R.id.imgRightButton).setVisibility(View.GONE);
+            activity.findViewById(R.id.ivRightButton).setVisibility(View.GONE);
             TextView tvRightBtn = activity.findViewById(R.id.tvRightButton);
             MyTextUtil.setText(tvTitle, title);
             if (leftIsHide) {

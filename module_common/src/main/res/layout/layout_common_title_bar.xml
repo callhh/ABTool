@@ -39,7 +39,7 @@
         android:visibility="visible" />
 
     <ImageView
-        android:id="@+id/imgRightButton"
+        android:id="@+id/ivRightButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="@dimen/space_dp_5"
