@@ -39,7 +39,7 @@ public class MyTextUtil {
         try {
             if (null == textView) return;
             if (TextUtils.isEmpty(content)) {
-                if (!TextUtils.isEmpty(defaultHints)) textView.setText(defaultHints);
+                if (defaultHints != null) textView.setText(defaultHints);
             } else {
                 if (content.contains(NULL)) content = content.replace(NULL, "");
                 textView.setText(content);
@@ -89,7 +89,7 @@ public class MyTextUtil {
             } else {
                 if (etContent.contains(NULL)) etContent = etContent.replace(NULL, "");
                 editText.setText(etContent);
-                editText.setHint(defaultHints);
+                editText.setSelection(etContent.length());//光标设置在文字后面
             }
         } catch (Exception e) {
             e.printStackTrace();
