@@ -22,7 +22,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="callhh" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6fd37389-0d4c-4a15-a831-b69c1f8b0809" name="Default Changelist" comment="提交测试1" />
+    <list default="true" id="6fd37389-0d4c-4a15-a831-b69c1f8b0809" name="Default Changelist" comment="提交测试2" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -325,7 +325,8 @@
     <MESSAGE value="优化TitleBarUtil类" />
     <MESSAGE value="优化AESUtil类" />
     <MESSAGE value="提交测试1" />
-    <option name="LAST_COMMIT_MESSAGE" value="提交测试1" />
+    <MESSAGE value="提交测试2" />
+    <option name="LAST_COMMIT_MESSAGE" value="提交测试2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
