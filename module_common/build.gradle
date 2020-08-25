@@ -62,7 +62,7 @@ buildscript{
         jcenter()
         mavenCentral()
     }
-    dependdencies{
+    dependencies{
         classpath 'com.novoda:bintray-release:0.9.1'
     }
 }
