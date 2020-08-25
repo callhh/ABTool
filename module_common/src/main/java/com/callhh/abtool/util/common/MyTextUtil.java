@@ -76,7 +76,7 @@ public class MyTextUtil {
      *
      * @param editText     控件
      * @param etContent    提示内容
-     * @param defaultHints 默认值
+     * @param defaultHints 默认提示内容
      */
     public static void setEditTextHints(EditText editText, String etContent, String defaultHints) {
         try {
