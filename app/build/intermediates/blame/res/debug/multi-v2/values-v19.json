@@ -1,0 +1,45 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v19\\values-v19.xml",
+            "map": [
+                {
+                    "source": "D:\\android\\project\\myBaseProject\\app\\src\\main\\res\\values-v19\\dimens.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "90,149,206",
+                        "endColumns": "57,55,48",
+                        "endOffsets": "143,200,250"
+                    },
+                    "to": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,113,169",
+                        "endColumns": "57,55,48",
+                        "endOffsets": "108,164,213"
+                    }
+                },
+                {
+                    "source": "D:\\android\\project\\myBaseProject\\app\\src\\main\\res\\values-v19\\styles.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "19",
+                        "endLines": "12",
+                        "endColumns": "12",
+                        "endOffsets": "486"
+                    },
+                    "to": {
+                        "startLines": "5",
+                        "startColumns": "4",
+                        "startOffsets": "218",
+                        "endLines": "15",
+                        "endColumns": "12",
+                        "endOffsets": "675"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="status_bar_height">24dp</dimen>
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!--透明状态栏-->
+        <item name="android:windowTranslucentStatus">true</item>
+        <!--透明导航栏-->
+        <item name="android:windowTranslucentNavigation">true</item>
+
+        <!--<item name="android:windowFullscreen">true</item>-->
+        <!--<item name="android:windowContentOverlay">@null</item>-->
+    </style>
+</resources>

@@ -1,0 +1,36 @@
+{
+    "logs": [
+        {
+            "outputFile": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en\\values-en.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-2\\files-2.1\\9cfb7d9f6b411cdcbe657b9333271cc4\\jetified-BaseRecyclerViewAdapterHelper-2.9.44\\res\\values-en\\values-en.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,111,174",
+                        "endColumns": "55,62,52",
+                        "endOffsets": "106,169,222"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-2\\files-2.1\\73a48d3bf7d91b8fec1170cd05388aea\\Android-PickerView-4.1.6\\res\\values-en\\values-en.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,108,153,200,249,296,345,399",
+                        "endColumns": "52,44,46,48,46,48,53,45",
+                        "endOffsets": "103,148,195,244,291,340,394,440"
+                    },
+                    "to": {
+                        "startLines": "5,6,7,8,9,10,11,12",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "227,280,325,372,421,468,517,571",
+                        "endColumns": "52,44,46,48,46,48,53,45",
+                        "endOffsets": "275,320,367,416,463,512,566,612"
+                    }
+                }
+            ]
+        }
+    ]
+}

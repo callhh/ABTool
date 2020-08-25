@@ -1,0 +1,46 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.callhh.abtool.test" >
+4
+5    <uses-sdk
+5-->D:\android\project\myBaseProject\module_common\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger114964211744617134.xml:5:5-74
+6        android:minSdkVersion="19"
+6-->D:\android\project\myBaseProject\module_common\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger114964211744617134.xml:5:15-41
+7        android:targetSdkVersion="29" />
+7-->D:\android\project\myBaseProject\module_common\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger114964211744617134.xml:5:42-71
+8
+9    <instrumentation
+9-->D:\android\project\myBaseProject\module_common\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger114964211744617134.xml:11:5-15:72
+10        android:name="androidx.test.runner.AndroidJUnitRunner"
+10-->D:\android\project\myBaseProject\module_common\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger114964211744617134.xml:11:22-76
+11        android:functionalTest="false"
+11-->D:\android\project\myBaseProject\module_common\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger114964211744617134.xml:14:22-52
+12        android:handleProfiling="false"
+12-->D:\android\project\myBaseProject\module_common\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger114964211744617134.xml:13:22-53
+13        android:label="Tests for com.callhh.abtool.test"
+13-->D:\android\project\myBaseProject\module_common\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger114964211744617134.xml:15:22-70
+14        android:targetPackage="com.callhh.abtool.test" />
+14-->D:\android\project\myBaseProject\module_common\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger114964211744617134.xml:12:22-68
+15
+16    <uses-permission android:name="android.permission.INTERNET" />
+16-->[__tested_artifact__::module_common] D:\android\project\myBaseProject\module_common\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-67
+16-->[__tested_artifact__::module_common] D:\android\project\myBaseProject\module_common\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:22-64
+17    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+17-->[__tested_artifact__::module_common] D:\android\project\myBaseProject\module_common\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-79
+17-->[__tested_artifact__::module_common] D:\android\project\myBaseProject\module_common\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:22-76
+18    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+18-->[__tested_artifact__::module_common] D:\android\project\myBaseProject\module_common\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:5-76
+18-->[__tested_artifact__::module_common] D:\android\project\myBaseProject\module_common\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:22-73
+19
+20    <application
+20-->D:\android\project\myBaseProject\module_common\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger114964211744617134.xml:7:5-9:19
+21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+21-->[androidx.core:core:1.3.0] C:\Users\admin\.gradle\caches\transforms-2\files-2.1\56440d2a123f4be30d316a1781cafe69\core-1.3.0\AndroidManifest.xml:24:18-86
+22        android:debuggable="true" >
+22-->D:\android\project\myBaseProject\module_common\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger114964211744617134.xml:7:18-43
+23        <uses-library android:name="android.test.runner" />
+23-->D:\android\project\myBaseProject\module_common\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger114964211744617134.xml:8:9-60
+23-->D:\android\project\myBaseProject\module_common\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger114964211744617134.xml:8:23-57
+24    </application>
+25
+26</manifest>

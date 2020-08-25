@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- setup点击状态的背景颜色-->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/selector_text_white_to_gray1"/>
+            <!-- 右边圆角半径 -->
+            <corners android:bottomRightRadius="15dp"/>
+        </shape>
+    </item>
+
+</layer-list>

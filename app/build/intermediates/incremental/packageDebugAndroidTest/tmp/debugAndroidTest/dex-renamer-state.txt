@@ -1,0 +1,7 @@
+#Tue Aug 25 16:05:28 CST 2020
+base.0=D\:\\android\\project\\myBaseProject\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeDexDebugAndroidTest\\out\\classes.dex
+path.1=classes2.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=D\:\\android\\project\\myBaseProject\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeDexDebugAndroidTest\\out\\classes2.dex
