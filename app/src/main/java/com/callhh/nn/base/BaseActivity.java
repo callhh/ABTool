@@ -8,10 +8,10 @@ import android.view.View;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.callhh.module_common.util.ActivityManager;
-import com.callhh.module_common.util.AppUtils;
-import com.callhh.module_common.util.common.MyLogUtils;
-import com.callhh.module_common.util.common.ToastUtil;
+import com.callhh.abtool.util.ActivityManager;
+import com.callhh.abtool.util.AppUtils;
+import com.callhh.abtool.util.common.MyLogUtils;
+import com.callhh.abtool.util.common.ToastUtil;
 import com.callhh.nn.R;
 
 import butterknife.ButterKnife;

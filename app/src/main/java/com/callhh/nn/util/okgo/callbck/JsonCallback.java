@@ -15,12 +15,8 @@
  */
 package com.callhh.nn.util.okgo.callbck;
 
-import android.util.Log;
-
-import com.callhh.module_common.util.common.MyLogUtils;
+import com.callhh.abtool.util.common.MyLogUtils;
 import com.callhh.nn.util.okgo.exception.MyException;
-import com.google.gson.Gson;
-import com.google.gson.stream.JsonReader;
 import com.lzy.okgo.callback.AbsCallback;
 import com.lzy.okgo.request.base.Request;
 
@@ -30,7 +26,6 @@ import java.net.SocketException;
 import java.net.SocketTimeoutException;
 
 import okhttp3.Response;
-import okhttp3.ResponseBody;
 
 /**
  * ================================================

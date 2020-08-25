@@ -3,7 +3,7 @@ package com.callhh.nn.util.http;
 import android.text.TextUtils;
 
 
-import com.callhh.module_common.util.common.MyLogUtils;
+import com.callhh.abtool.util.common.MyLogUtils;
 
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.NotNull;

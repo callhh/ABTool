@@ -1,20 +1,15 @@
 package com.callhh.nn.util.okgo;
 
 
-import android.text.format.Formatter;
-
-import com.callhh.module_common.helper.HttpExceptionHelper;
-import com.callhh.module_common.util.NetWorkUtils;
-import com.callhh.module_common.util.common.MyLogUtils;
-import com.callhh.module_common.util.common.ToastUtil;
+import com.callhh.abtool.util.NetWorkUtils;
+import com.callhh.abtool.util.common.MyLogUtils;
+import com.callhh.abtool.util.common.ToastUtil;
 import com.callhh.nn.R;
 import com.callhh.nn.base.BaseApplication;
 import com.callhh.nn.util.okgo.callbck.JsonCallback;
 import com.callhh.nn.util.okgo.callbck.ShowDialogCallback;
 import com.lzy.okgo.OkGo;
 
-import java.io.File;
-import java.util.ArrayList;
 import java.util.Map;
 
 

@@ -1,6 +1,6 @@
 package com.callhh.nn.util.okgo.exception;
 
-import com.callhh.module_common.bean.BaseResponseBean;
+import com.callhh.abtool.bean.BaseResponseBean;
 import com.google.gson.Gson;
 
 /**

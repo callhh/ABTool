@@ -1,4 +1,4 @@
-<com.callhh.module_common.widget.MyScrollViewSlidingRebound xmlns:android="http://schemas.android.com/apk/res/android"
+<com.callhh.abtool.widget.MyScrollViewSlidingRebound xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -23,7 +23,7 @@
             android:textColor="@color/white"
             android:textSize="@dimen/textsize_18" />
 
-        <com.callhh.module_common.widget.ShadowViewCard
+        <com.callhh.abtool.widget.ShadowViewCard
             android:layout_width="match_parent"
             android:layout_height="@dimen/space_dp_48"
             android:layout_marginTop="@dimen/space_dp_20"
@@ -46,4 +46,4 @@
 
     </com.zhy.android.percent.support.PercentLinearLayout>
 
-</com.callhh.module_common.widget.MyScrollViewSlidingRebound>
+</com.callhh.abtool.widget.MyScrollViewSlidingRebound>

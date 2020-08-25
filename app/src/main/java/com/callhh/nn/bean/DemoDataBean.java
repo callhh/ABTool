@@ -1,6 +1,6 @@
 package com.callhh.nn.bean;
 
-import com.callhh.module_common.bean.BaseResponseBean;
+import com.callhh.abtool.bean.BaseResponseBean;
 
 /**
  * Created by admin on 2020/3/18

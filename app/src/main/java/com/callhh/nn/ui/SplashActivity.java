@@ -10,11 +10,11 @@ import android.view.View;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.callhh.module_common.util.AppUtils;
-import com.callhh.module_common.util.Constants;
-import com.callhh.module_common.util.PermissionUtils;
-import com.callhh.module_common.util.common.DialogUtil;
-import com.callhh.module_common.util.common.MyLogUtils;
+import com.callhh.abtool.util.AppUtils;
+import com.callhh.abtool.util.Constants;
+import com.callhh.abtool.util.PermissionUtils;
+import com.callhh.abtool.util.common.DialogUtil;
+import com.callhh.abtool.util.common.MyLogUtils;
 import com.callhh.nn.R;
 import com.callhh.nn.util.SPUtils;
 import com.tbruyelle.rxpermissions2.RxPermissions;

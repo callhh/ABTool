@@ -1,6 +1,6 @@
 package com.callhh.nn.util.http
 
-import com.callhh.module_common.util.common.MyLogUtils
+import com.callhh.abtool.util.common.MyLogUtils
 import okhttp3.Interceptor
 import okhttp3.Response
 

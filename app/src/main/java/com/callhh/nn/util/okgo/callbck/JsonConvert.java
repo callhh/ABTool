@@ -1,8 +1,8 @@
 package com.callhh.nn.util.okgo.callbck;
 
 
-import com.callhh.module_common.bean.BaseResponseBean;
-import com.callhh.module_common.bean.ResponseBean;
+import com.callhh.abtool.bean.BaseResponseBean;
+import com.callhh.abtool.bean.ResponseBean;
 import com.callhh.nn.util.okgo.HttpResponseStatus;
 import com.callhh.nn.util.okgo.exception.MyException;
 import com.google.gson.stream.JsonReader;

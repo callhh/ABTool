@@ -1,11 +1,11 @@
 package com.callhh.nn.ui.fragment;
 
 
-import com.callhh.module_common.util.common.MyLogUtils;
+import com.callhh.abtool.util.common.MyLogUtils;
 import com.callhh.nn.R;
 import com.callhh.nn.base.BaseFragment;
 import com.callhh.nn.bean.DemoBean;
-import com.callhh.module_common.bean.ResponseBean;
+import com.callhh.abtool.bean.ResponseBean;
 import com.callhh.nn.util.http.ApiConstants;
 import com.callhh.nn.util.http.ApiRequestUtils;
 import com.callhh.nn.util.okgo.OkGoUtils;

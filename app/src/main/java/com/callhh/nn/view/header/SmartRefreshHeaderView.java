@@ -13,8 +13,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.callhh.module_common.util.common.MyLogUtils;
-import com.callhh.module_common.util.common.MyTextUtil;
+import com.callhh.abtool.util.common.MyLogUtils;
+import com.callhh.abtool.util.common.MyTextUtil;
 import com.callhh.nn.R;
 import com.scwang.smartrefresh.layout.api.RefreshHeader;
 import com.scwang.smartrefresh.layout.api.RefreshKernel;

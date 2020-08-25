@@ -18,16 +18,16 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 
-import com.callhh.module_common.util.AppUtils;
-import com.callhh.module_common.util.MyWebViewUtils;
-import com.callhh.module_common.util.NetWorkUtils;
-import com.callhh.module_common.util.common.MyLogUtils;
-import com.callhh.module_common.util.common.MyTextUtil;
-import com.callhh.module_common.util.common.TitleBarUtils;
+import com.callhh.abtool.util.AppUtils;
+import com.callhh.abtool.util.MyWebViewUtils;
+import com.callhh.abtool.util.NetWorkUtils;
+import com.callhh.abtool.util.common.MyLogUtils;
+import com.callhh.abtool.util.common.MyTextUtil;
+import com.callhh.abtool.util.common.TitleBarUtils;
 import com.callhh.nn.R;
 import com.callhh.nn.base.BaseActivity;
 import com.callhh.nn.util.ConstUtils;
-import com.callhh.module_common.widget.MyLoadingLayout;
+import com.callhh.abtool.widget.MyLoadingLayout;
 
 import org.apache.commons.lang3.StringUtils;
 
@@ -111,7 +111,7 @@ public class WebActivity extends BaseActivity {
             mMyLoading.setLoadingSuccess();
             mWebView.loadUrl(mWebUrl);
         } else {
-            mMyLoading.setLoadedFailHints(getResources().getString(com.callhh.module_common.R.string.request_error_no_network));
+            mMyLoading.setLoadedFailHints(getResources().getString(com.callhh.abtool.R.string.request_error_no_network));
         }
     }
 

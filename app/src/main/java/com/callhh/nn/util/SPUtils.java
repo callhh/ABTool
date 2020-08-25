@@ -5,8 +5,8 @@ import android.content.SharedPreferences;
 import android.text.TextUtils;
 import android.util.Base64;
 
-import com.callhh.module_common.util.ActivityManager;
-import com.callhh.module_common.util.common.MyLogUtils;
+import com.callhh.abtool.util.ActivityManager;
+import com.callhh.abtool.util.common.MyLogUtils;
 import com.callhh.nn.base.BaseApplication;
 
 import java.io.ByteArrayInputStream;

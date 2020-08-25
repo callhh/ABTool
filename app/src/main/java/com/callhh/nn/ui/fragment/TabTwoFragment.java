@@ -1,7 +1,7 @@
 package com.callhh.nn.ui.fragment;
 
 
-import com.callhh.module_common.util.common.MyLogUtils;
+import com.callhh.abtool.util.common.MyLogUtils;
 import com.callhh.nn.R;
 import com.callhh.nn.base.BaseFragment;
 
