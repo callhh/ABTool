@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llTitleBar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/space_dp_48"
+    android:background="@color/app_color"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/imgBackButton"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/img_desc"
+        android:padding="@dimen/space_dp_15"
+        android:src="@drawable/ic_arrow_to_left_wihte" />
+
+    <TextView
+        android:id="@+id/tvTitlebarTitle"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_18"
+        tools:text="标题" />
+
+    <TextView
+        android:id="@+id/tvRightButton"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="@dimen/space_dp_12"
+        android:textColor="@color/white"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/ivRightButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/space_dp_5"
+        android:contentDescription="@string/img_desc"
+        android:padding="@dimen/space_dp_12"
+        android:src="@drawable/ic_more_menu"
+        android:visibility="gone" />
+
+</LinearLayout>

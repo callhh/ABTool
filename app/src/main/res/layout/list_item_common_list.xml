@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/space_dp_2">
+
+    <TextView
+        android:id="@+id/tvTimes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_dp_4"
+        android:layout_marginBottom="@dimen/space_dp_6"
+        android:ellipsize="end"
+        android:maxLines="1"
+        tools:text="通用时间：xx-xx-xx"
+        android:text=""
+        android:textColor="@color/black_444444"
+        android:textSize="@dimen/textsize_13"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tvContents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/space_dp_15"
+        android:lineSpacingExtra="@dimen/space_dp_2"
+        android:textIsSelectable="true"
+        android:text=""
+        tools:text="通用内容：xxx"
+        android:textColor="@color/black_bb111111"
+        android:textSize="@dimen/textsize_15" />
+
+    <View
+        style="@style/view_h_line"/>
+
+</LinearLayout>

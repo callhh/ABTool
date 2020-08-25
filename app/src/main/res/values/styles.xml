@@ -1,0 +1,212 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <!-- Activity主题 -->
+    <style name="ActivityTheme" parent="AppTheme">
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <!--设置冷启动页面主体-->
+    <style name="splashScreenTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/img_bg_splash</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="AppLoginTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--在Android 4.4之前的版本上运行，直接跟随系统主题-->
+        <item name="windowActionBar">false</item>
+    </style>
+
+    <!--设置状态栏透明-->
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.FullScreen" parent="AppTheme">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <!--主题：全屏、透明、无标题栏，场景：微信登录页-->
+    <style name="AppTheme_Transparent_FullScreen" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <!-- dialog对话框通用风格，背景是全透明-适合用于网络请求'加载中'的风格 -->
+    <style name="myLoadingDialog" parent="@android:style/Theme.Holo.Dialog">
+        <!-- 是否有边框 -->
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!--是否在悬浮Activity之上  -->
+        <item name="android:windowIsFloating">true</item>
+        <!--阴影  -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--透明背景-->
+        <item name="android:background">@android:color/transparent</item>
+        <!--窗口背景透明-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--弹窗背景是否变暗,if true 整个Dialog的大背景就是半透明的黑色，如果设置为false就是全透明。 -->
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    </style>
+
+    <!-- dialog对话框通用风格，背景是半透明的黑色 -->
+    <style name="myDialog" parent="@android:style/Theme.Holo.Dialog">
+        <!-- 是否有边框 -->
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!--是否在悬浮Activity之上  -->
+        <item name="android:windowIsFloating">true</item>
+        <!--阴影  -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--透明背景-->
+        <item name="android:background">@android:color/transparent</item>
+        <!--窗口背景透明-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--弹窗背景是否变暗,if true 整个Dialog的大背景就是半透明的黑色，如果设置为false就是全透明。 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+    </style>
+
+    <!--位于上方划出dialog的背景-->
+    <style name="noticeDialogStyle" parent="@android:style/Theme.Dialog">
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 浮于Activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- Dialog以外的区域模糊效果 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--点击dialog以外区域关闭弹窗-->
+        <item name="android:windowCloseOnTouchOutside">false</item>
+        <!-- Dialog进入及退出动画 -->
+        <item name="android:windowAnimationStyle">@style/notice_dialog_animation</item>
+    </style>
+
+    <!-- 公告/通知弹窗动画 -顶部滑入或滑出 -->
+    <style name="notice_dialog_animation" parent="@android:style/Animation.Dialog">
+        <item name="@android:windowEnterAnimation">@anim/dialog_top_in</item>
+        <item name="@android:windowExitAnimation">@anim/dialog_top_out</item>
+    </style>
+
+    <!-- 对话框显示或取消的弹出动画样式 -底部滑入或滑出 -->
+    <style name="dialog_get_pic_style" parent="android:Animation">
+        <item name="@android:windowEnterAnimation">@anim/dialog_enter_bottom_slide_upward</item>
+        <item name="@android:windowExitAnimation">@anim/dialog_exit_top_slide</item>
+    </style>
+
+    <style name="dialogWindowAnim" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/dialog_slide_in_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/dialog_slide_out_from_bottom</item>
+    </style>
+
+    <!-- 加载框的progressBar的样式 -->
+    <style name="progressBar_rotate_circle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:indeterminateDrawable">@drawable/shape_rotate_loading</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+    <!--progressBar的样式，场景:刷新组件头部-->
+    <style name="progressBar_rotate_circle_loading" parent="@android:style/Theme.Dialog">
+        <item name="android:indeterminateDrawable">@drawable/progressbar_rotate_circle</item>
+    </style>
+
+    <!-- 通用的view属性-填充内容 -->
+    <style name="common_attribute_match_parent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    <!-- 通用的view属性-适应内容 -->
+    <style name="common_attribute_wrap_content">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!-- view分割线通用的宽0.6dp，高match_parent -->
+    <style name="view_line_common_width_height">
+        <item name="android:layout_width">0.6dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <!-- view分割线通用的高0.6dp，宽match_parent -->
+    <style name="view_line_common_height_width">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.6dp</item>
+    </style>
+
+    <!--横向分割线-->
+    <style name="view_h_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.6dp</item>
+        <item name="android:background">@color/gray_e8e8e8</item>
+    </style>
+
+    <style name="view_h_line_marginleft_18dp">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.6dp</item>
+        <item name="android:background">@color/gray_e8e8e8</item>
+        <item name="android:layout_marginLeft">@dimen/space_dp_18</item>
+    </style>
+    <!--竖向分割线-->
+    <style name="view_v_line">
+        <item name="android:layout_width">0.6dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/gray_e8e8e8</item>
+    </style>
+
+    <!-- 通用的横向下划线，距左边20dp(场景：设置、我的、个人信息等页面) -->
+    <style name="view_h_line_marginleft_20dp" parent="@style/view_line_common_height_width">
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginLeft">@dimen/space_dp_20</item>
+        <item name="android:background">@color/gray_e8e8e8</item>
+    </style>
+
+    <style name="tv_dialog_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--首页底部tab样式-->
+    <style name="tv_homepage_tab_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/selector_tab_text</item>
+        <item name="android:textSize">@dimen/textsize_11</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ll_homepage_tab_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+
+</resources>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--圆形图片控件-->
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension"/>
+        <attr name="civ_border_color" format="color"/>
+        <attr name="civ_border_overlay" format="boolean"/>
+        <!-- {@deprecated Use civ_circlebackground_color instead.} -->
+        <attr name="civ_fill_color" format="color"/>
+        <attr name="civ_circle_background_color" format="color"/>
+    </declare-styleable>
+    <!--带分组浮动的RecyclerView-->
+    <declare-styleable name="GroupRecyclerView">
+        <attr name="group_height" format="dimension"/>
+        <attr name="group_child_offset" format="dimension"/>
+        <attr name="group_background" format="color"/>
+        <attr name="group_text_color" format="color"/>
+        <attr name="group_text_size" format="dimension"/>
+        <attr name="group_center" format="boolean"/>
+        <attr name="group_padding_left" format="dimension"/>
+        <attr name="group_padding_right" format="dimension"/>
+        <attr name="group_has_header" format="boolean"/>
+    </declare-styleable>
+
+    <!-- ShadowLayout 阴影 -->
+    <declare-styleable name="ShadowLayout">
+        <attr name="shadowColor" format="color"/>
+        <attr name="shadowRadius" format="dimension"/>
+        <attr name="shadowDx" format="dimension"/>
+        <attr name="shadowDy" format="dimension"/>
+        <attr name="shadowShape">
+            <flag name="rectangle" value="0x0001"/>
+            <flag name="oval" value="0x0010"/>
+        </attr>
+        <attr name="shadowSide">
+            <flag name="all" value="0x1111"/>
+            <flag name="left" value="0x0001"/>
+            <flag name="top" value="0x0010"/>
+            <flag name="right" value="0x0100"/>
+            <flag name="bottom" value="0x1000"/>
+        </attr>
+    </declare-styleable>
+    <!-- 自定义阴影效果 -->
+    <declare-styleable name="ShadowViewCard">
+        <!--圆角度-->
+        <attr name="shadowRound" format="dimension" />
+        <!--阴影的高度-->
+        <attr name="shadowLeftHeight" format="dimension" />
+        <attr name="shadowTopHeight" format="dimension" />
+        <attr name="shadowRightHeight" format="dimension" />
+        <attr name="shadowBottomHeight" format="dimension" />
+        <!--上方阴影的偏离度-->
+        <attr name="shadowOffsetY" format="dimension" />
+        <attr name="shadowOffsetX" format="dimension" />
+        <!--阴影颜色 end-->
+        <attr name="shadowCardColor" format="color" />
+        <!--阴影颜色 start-->
+        <attr name="shadowColorBg" format="color" />
+        <!--阴影颜色模糊度，越大越模糊-->
+        <attr name="shadowRadiusNum" format="integer" />
+    </declare-styleable>
+
+
+    <!--  自定义更新下载中ProgressBar -->
+    <declare-styleable name="FlikerProgressBar">
+        <attr name="textSize" format="dimension"/>
+        <attr name="loadingColor" format="color"/>
+        <attr name="stopColor" format="color"/>
+        <attr name="finishColor" format="color"/>
+        <attr name="radius" format="dimension"/>
+        <attr name="borderWidth" format="dimension"/>
+    </declare-styleable>
+
+</resources>

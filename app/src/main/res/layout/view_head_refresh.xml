@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/space_dp_80"
+    android:background="@color/app_color"
+    android:gravity="center"
+    android:paddingTop="@dimen/space_dp_12">
+
+    <LinearLayout
+        android:id="@+id/llTextTips"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingLeft="@dimen/space_dp_15"
+        android:paddingRight="@dimen/space_dp_15"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvTitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/pink_fff2da"
+            android:textSize="@dimen/textsize_18"/>
+
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="1"
+            android:layout_marginTop="@dimen/space_dp_3"
+            android:text="@string/app_slogan"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textsize_13"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintRight_toLeftOf="@+id/llTextTips">
+
+        <ImageView
+            android:id="@+id/imgArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            android:contentDescription="@string/img_desc"
+            android:src="@drawable/ic_arrow_down"
+            android:visibility="visible"/>
+
+        <ImageView
+            android:id="@+id/imgProgressView"
+            android:layout_width="@dimen/space_dp_34"
+            android:layout_height="@dimen/space_dp_34"
+            android:layout_gravity="center"
+            android:contentDescription="@string/img_desc"
+            android:src="@drawable/ic_loading_show"
+            android:visibility="gone"/>
+
+        <!--<ProgressBar-->
+        <!--android:id="@+id/progressBar"-->
+        <!--android:visibility="visible"-->
+        <!--android:layout_gravity="center"-->
+        <!--style="@style/progressBar_rotate_circle_loading"-->
+        <!--android:layout_width="@dimen/space_dp_26"-->
+        <!--android:layout_height="@dimen/space_dp_26"-->
+        <!--android:indeterminateDuration="350"/>-->
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

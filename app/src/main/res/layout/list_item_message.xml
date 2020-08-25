@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/llItemLayout"
+    android:background="@drawable/shape_corners_4_solid_white_stroke_green_e4ebe5"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/space_dp_12"
+    android:layout_marginEnd="@dimen/space_dp_10"
+    android:layout_marginStart="@dimen/space_dp_10"
+    android:padding="@dimen/space_dp_12">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="任务"
+            android:textColor="@color/black_bb111111"
+            android:textSize="@dimen/textsize_16" />
+
+        <TextView
+            android:id="@+id/tvCreateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center|end"
+            android:textColor="@color/black_888888"
+            android:text=""
+            tools:text="2019-02-12 11:30" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_dp_10"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:text="任务"
+            android:textColor="@color/black_666666"
+            android:textSize="@dimen/textsize_15"
+            tools:text="请到xxx机场接送美国代表团" />
+
+        <TextView
+            android:id="@+id/tvRightButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_stroke_red"
+            android:gravity="center|end"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/space_dp_8"
+            android:paddingStart="@dimen/space_dp_8"
+            android:paddingTop="@dimen/space_dp_3"
+            android:paddingEnd="@dimen/space_dp_8"
+            android:paddingBottom="@dimen/space_dp_3"
+            android:textSize="@dimen/textsize_12"
+            android:text="查看详情"
+            android:textColor="@color/selector_text_red_to_gray"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+</LinearLayout>

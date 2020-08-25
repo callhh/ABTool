@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+
+    <external-path
+        name="tattle"
+        path="Download"/>
+
+    <!--  物理路径相当于Context.getExternalFilesDir(String) + /path/  -->
+    <external-files-path name="sincetech" path="Download" />
+
+    <!--<root-path
+        name="app"
+        path="app"/>-->
+
+    <!--
+    paths这个元素内可以包含以下一个或多个，具体如下：
+    <files-path name="name" path="path" />
+    物理路径相当于Context.getFilesDir() + /path/
+
+    <cache-path name="name" path="path" />
+    物理路径相当于Context.getCacheDir() + /path/
+
+    <external-path name="name" path="path" />
+    物理路径相当于Environment.getExternalStorageDirectory() + /path/
+
+    <external-files-path name="name" path="path" />
+    物理路径相当于Context.getExternalFilesDir(String) + /path/
+
+    <external-cache-path name="name" path="path" />
+    物理路径相当于Context.getExternalCacheDir() + /path/
+    -->
+</paths>
