@@ -27,6 +27,7 @@ import androidx.appcompat.widget.AppCompatEditText;
 import com.callhh.abtool.R;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Activity工具类
@@ -235,39 +236,39 @@ public class AppUtils {
     /**
      * 获得手机的设备IMEI序列号,需要权限动态申请
      */
-    @SuppressLint("HardwareIds")
-    public static String getSystemDeviceId(Context context) {
-        String deviceId = "";
-        try {
-            TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
-            if (null != tm)
-                if (PermissionUtils.checkPermission(context, Manifest.permission.READ_PHONE_STATE)) {
-                    deviceId = tm.getDeviceId();
-                }
-        } catch (SecurityException e) {
-            e.printStackTrace();
-        }
-        return deviceId;
-    }
+//    @SuppressLint("HardwareIds")
+//    public static String getSystemDeviceId(Context context) {
+//        String deviceId = "";
+//        try {
+//            TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+//            if (null != tm)
+//                if (PermissionUtils.checkPermission(context, Manifest.permission.READ_PHONE_STATE)) {
+//                    deviceId = tm.getDeviceId();
+//                }
+//        } catch (SecurityException e) {
+//            e.printStackTrace();
+//        }
+//        return deviceId;
+//    }
 
     /**
      * 获取手机系列号
      */
-    @SuppressLint("HardwareIds")
-    public static String getSystemSimSerialNumber(Context context) {
-        String simSerialNumber = null;
-        try {
-            TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
-            if (null != tm) {
-                if (PermissionUtils.checkPermission(context, Manifest.permission.READ_PHONE_STATE)) {
-                    simSerialNumber = tm.getSimSerialNumber();
-                }
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return simSerialNumber;
-    }
+//    @SuppressLint("HardwareIds")
+//    public static String getSystemSimSerialNumber(Context context) {
+//        String simSerialNumber = null;
+//        try {
+//            TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+//            if (null != tm) {
+//                if (PermissionUtils.checkPermission(context, Manifest.permission.READ_PHONE_STATE)) {
+//                    simSerialNumber = tm.getSimSerialNumber();
+//                }
+//            }
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//        return simSerialNumber;
+//    }
 
     /**
      * 获取手机厂商
@@ -356,21 +357,28 @@ public class AppUtils {
     }
 
     /**
-     * 判断应用是否在后台
+     * 判断程序是否在后台运行
+     * @param context
+     * @return  true 表示在后台运行
      */
-    public static boolean isApplicationBroughtToBackground(final Context context) {
-        ActivityManager am = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
-        if (null != am) {
-            List<ActivityManager.RunningTaskInfo> tasks = am.getRunningTasks(1);
-            if (!tasks.isEmpty()) {
-                ComponentName topActivity = tasks.get(0).topActivity;
-                if (!topActivity.getPackageName().equals(context.getPackageName())) {
-                    return true;
-                }
+    public static boolean isRunBackground(Context context) {
+        ActivityManager activityManager = (ActivityManager) context.getApplicationContext()
+                .getSystemService(Context.ACTIVITY_SERVICE);
+        String packageName = context.getApplicationContext().getPackageName();
+        //获取Android设备中所有正在运行的App
+        List<ActivityManager.RunningAppProcessInfo> appProcesses = activityManager
+                .getRunningAppProcesses();
+        if (appProcesses == null) return true;
+        for (ActivityManager.RunningAppProcessInfo appProcess : appProcesses) {
+            // The name of the process that this object is associated with.
+            if (appProcess.processName.equals(packageName) && appProcess.importance ==
+                    ActivityManager.RunningAppProcessInfo.IMPORTANCE_FOREGROUND) {
+                return false;
             }
         }
-        return false;
+        return true;
     }
+
 
     /**
      * 判断GPS是否开启，GPS或者AGPS开启一个就认为是开启的

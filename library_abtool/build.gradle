@@ -49,15 +49,8 @@ dependencies {
 
 }
 
-publish{
-    userOrg = 'callhh'
-    groupId = 'com.callhh.abtool'
-    artifactId = 'abtool'
-    publishVersion = '1.0.0'
-    desc = 'Make Android Basic Module Tool'
-    website = 'https://github.com/callhh/ABTool.git'
-}
-
+//使用第三方插件 bintray-release 并配置必要参数信息，即可将代码发布倒jcenter仓库
+//如下配置表示将bintray-release插件引入library模块中
 buildscript{
     repositories{
         jcenter()
@@ -66,4 +59,16 @@ buildscript{
     dependencies{
         classpath 'com.novoda:bintray-release:0.9.1'
     }
+}
+
+//在library/build.gradle文件中加入一段publish闭包来配置一些必要参数
+//使用示例：implementation 'com.callhh.abtool:abtool:1.0.0'
+//更新或修复“开源库”，只需要升级publish闭包中的版本号
+publish{
+    userOrg = 'callhh'
+    groupId = 'com.callhh.abtool'
+    artifactId = 'abtool'
+    publishVersion = '1.0.0'
+    desc = 'Make Android Basic Module Tool'
+    website = 'https://github.com/callhh/ABTool'
 }
