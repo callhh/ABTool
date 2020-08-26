@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/HHBaseProject.iml" filepath="$PROJECT_DIR$/HHBaseProject.iml" group="HHBaseProject" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="HHBaseProject/app" />
-      <module fileurl="file://$PROJECT_DIR$/module_common/module_common.iml" filepath="$PROJECT_DIR$/module_common/module_common.iml" group="HHBaseProject/module_common" />
+      <module fileurl="file://$PROJECT_DIR$/library_abtool/library_abtool.iml" filepath="$PROJECT_DIR$/library_abtool/library_abtool.iml" group="HHBaseProject/library_abtool" />
       <module fileurl="file://$PROJECT_DIR$/.idea/myBaseProject.iml" filepath="$PROJECT_DIR$/.idea/myBaseProject.iml" />
     </modules>
   </component>

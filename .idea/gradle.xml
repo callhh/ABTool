@@ -11,7 +11,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/module_common" />
+            <option value="$PROJECT_DIR$/library_abtool" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

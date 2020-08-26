@@ -99,7 +99,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation project(':module_common')
+    implementation project(':library_abtool')
 
     implementation config.dependencies.kotlin_stdlib_jdk7
     implementation config.dependencies.kotlinx_coroutines_core
@@ -111,16 +111,17 @@ dependencies {
     implementation config.dependencies.appMultidex
     implementation config.dependencies.constraintLayout
     testImplementation config.dependencies.junit
-    androidTestImplementation config.dependencies.runner
+    androidTestImplementation config.dependencies.test_junit
+    androidTestImplementation config.dependencies.test_ext
     androidTestImplementation config.dependencies.espresso
 
     implementation 'com.jakewharton:butterknife:10.2.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
-    implementation 'io.reactivex.rxjava2:rxjava:2.1.16'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.17'
     implementation 'com.github.akarnokd:rxjava2-interop:0.8.0'
     implementation 'com.jakewharton.rxbinding:rxbinding:0.4.0'
-    implementation 'com.squareup.okhttp3:okhttp:3.13.1'
-    implementation 'com.squareup.okio:okio:2.2.2'
+    implementation 'com.squareup.okhttp3:okhttp:4.4.0'
+    implementation 'com.squareup.okio:okio:2.4.3'
     implementation 'com.zhy:okhttputils:2.6.2'
     implementation 'com.lzy.net:okgo:3.0.4'
     implementation 'com.readystatesoftware.chuck:library:1.0.4'

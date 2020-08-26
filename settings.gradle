@@ -1,2 +1,2 @@
-include ':app', ':module_common'
+include ':app', ':library_abtool'
 rootProject.name='HHBaseProject'

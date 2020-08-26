@@ -25,7 +25,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\anim_dialog_right_in.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\anim\\dialog_right_in.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\anim\\dialog_right_in.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_list_pressed_holo_dark.9.png.flat",
@@ -145,7 +145,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_layer_list_web_progress.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\drawable\\layer_list_web_progress.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\drawable\\layer_list_web_progress.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_chuck_ic_search_white_24dp.png.flat",
@@ -237,7 +237,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\anim_activity_close.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\anim\\activity_close.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\anim\\activity_close.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ic_menu_overflow_material.xml.flat",
@@ -301,11 +301,11 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_dialog_shape_bg_white_radius_15dp.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\drawable\\dialog_shape_bg_white_radius_15dp.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\drawable\\dialog_shape_bg_white_radius_15dp.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\anim_dialog_top_in.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\anim\\dialog_top_in.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\anim\\dialog_top_in.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_tint_seek_thumb.xml.flat",
@@ -313,11 +313,11 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_img_bg_update.png.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\img_bg_update.png"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\img_bg_update.png"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_dialog_shape_bottom_circular_bead.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\drawable\\dialog_shape_bottom_circular_bead.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\drawable\\dialog_shape_bottom_circular_bead.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_tab_right.xml.flat",
@@ -325,7 +325,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\anim_activity_open.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\anim\\activity_open.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\anim\\activity_open.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_avd_show_password.xml.flat",
@@ -393,7 +393,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\anim_dialog_slide_out_from_bottom.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\anim\\dialog_slide_out_from_bottom.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\anim\\dialog_slide_out_from_bottom.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
@@ -445,7 +445,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_loading.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\layout\\layout_loading.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\layout\\layout_loading.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_text_cursor_material.xml.flat",
@@ -525,11 +525,11 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_download_progressbar.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\layout\\dialog_download_progressbar.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\layout\\dialog_download_progressbar.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_shape_bg_f8f8f8_corners_5dp.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\drawable\\shape_bg_f8f8f8_corners_5dp.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\drawable\\shape_bg_f8f8f8_corners_5dp.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_mode_bar.xml.flat",
@@ -541,7 +541,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_ic_arrow_to_left_wihte.png.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\ic_arrow_to_left_wihte.png"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\ic_arrow_to_left_wihte.png"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\interpolator_btn_checkbox_checked_mtrl_animation_interpolator_1.xml.flat",
@@ -605,7 +605,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_shape_stroke_red.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\drawable\\shape_stroke_red.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\drawable\\shape_stroke_red.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ab_share_pack_mtrl_alpha.9.png.flat",
@@ -681,7 +681,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_ic_load_fail_def_image.png.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\ic_load_fail_def_image.png"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\ic_load_fail_def_image.png"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_text_select_handle_right_mtrl_light.png.flat",
@@ -733,7 +733,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\anim_loading_animation.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\anim\\loading_animation.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\anim\\loading_animation.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ratingbar_indicator_material.xml.flat",
@@ -797,7 +797,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_ic_close_white.png.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\ic_close_white.png"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\ic_close_white.png"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_popup_background_mtrl_mult.9.png.flat",
@@ -837,7 +837,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_common_title_bar.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\layout\\layout_common_title_bar.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\layout\\layout_common_title_bar.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_brvah_quick_view_load_more.xml.flat",
@@ -917,7 +917,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_shape_rotate_loading.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\drawable\\shape_rotate_loading.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\drawable\\shape_rotate_loading.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_b_05.png.flat",
@@ -1009,7 +1009,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_shape_bg_gradient_common_button.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\drawable\\shape_bg_gradient_common_button.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\drawable\\shape_bg_gradient_common_button.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_layout_snackbar_include.xml.flat",
@@ -1041,7 +1041,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\anim_start_exit.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\anim\\start_exit.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\anim\\start_exit.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_chuck_ic_search_white_24dp.png.flat",
@@ -1061,7 +1061,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_ic_close_orange.png.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\ic_close_orange.png"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\ic_close_orange.png"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_menu_paste_mtrl_am_alpha.png.flat",
@@ -1089,7 +1089,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bg_toast.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\drawable\\bg_toast.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\drawable\\bg_toast.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_btn_radio_off_mtrl.xml.flat",
@@ -1105,7 +1105,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_dialog_shape_white_corners_4dp.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\drawable\\dialog_shape_white_corners_4dp.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\drawable\\dialog_shape_white_corners_4dp.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_design_navigation_item.xml.flat",
@@ -1261,7 +1261,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_shape_bg_gradient_button.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\drawable\\shape_bg_gradient_button.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\drawable\\shape_bg_gradient_button.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_tab_top.xml.flat",
@@ -1321,7 +1321,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\anim_dialog_left_in.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\anim\\dialog_left_in.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\anim\\dialog_left_in.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
@@ -1433,7 +1433,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\anim_dialog_left_out.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\anim\\dialog_left_out.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\anim\\dialog_left_out.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
@@ -1445,7 +1445,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_common_hint.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\layout\\dialog_common_hint.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\layout\\dialog_common_hint.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_black_16dp.png.flat",
@@ -1477,7 +1477,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\anim_dialog_bottom_in.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\anim\\dialog_bottom_in.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\anim\\dialog_bottom_in.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_design_ic_visibility_off.png.flat",
@@ -1517,7 +1517,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_ic_arrow_to_right_wihte.png.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\ic_arrow_to_right_wihte.png"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\ic_arrow_to_right_wihte.png"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
@@ -1537,7 +1537,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\anim_dialog_slide_in_from_bottom.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\anim\\dialog_slide_in_from_bottom.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\anim\\dialog_slide_in_from_bottom.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",
@@ -1565,11 +1565,11 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_dialog_shape_bg_gradient_black.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\drawable\\dialog_shape_bg_gradient_black.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\drawable\\dialog_shape_bg_gradient_black.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_common_call_phone.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\layout\\dialog_common_call_phone.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\layout\\dialog_common_call_phone.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\color_design_error.xml.flat",
@@ -1673,7 +1673,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_loading_dialog_fullscreen.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\layout\\layout_loading_dialog_fullscreen.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\layout\\layout_loading_dialog_fullscreen.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_abc_btn_colored_borderless_text_material.xml.flat",
@@ -1765,7 +1765,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_selector_common_state_pressed_bg.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\drawable\\selector_common_state_pressed_bg.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\drawable\\selector_common_state_pressed_bg.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_ratingbar_small_material.xml.flat",
@@ -1785,7 +1785,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\anim_dialog_top_out.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\anim\\dialog_top_out.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\anim\\dialog_top_out.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\interpolator-v21_mtrl_linear_out_slow_in.xml.flat",
@@ -1817,7 +1817,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\color_selector_text_red_to_wihte.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\color\\selector_text_red_to_wihte.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\color\\selector_text_red_to_wihte.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_btn_borderless_material.xml.flat",
@@ -1853,7 +1853,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_ic_more_menu.png.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\ic_more_menu.png"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\ic_more_menu.png"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_list_selector_disabled_holo_light.9.png.flat",
@@ -1893,7 +1893,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_ic_delete_gray.png.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\ic_delete_gray.png"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\ic_delete_gray.png"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\color_switch_thumb_material_light.xml.flat",
@@ -1909,7 +1909,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\color_selector_text_red_to_gray.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\color\\selector_text_red_to_gray.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\color\\selector_text_red_to_gray.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_tabs_icon_color_selector_colored.xml.flat",
@@ -1945,7 +1945,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_dialog_shape_button_corners_right_15dp.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\drawable\\dialog_shape_button_corners_right_15dp.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\drawable\\dialog_shape_button_corners_right_15dp.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media_custom.xml.flat",
@@ -2013,7 +2013,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\anim_start_enter.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\anim\\start_enter.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\anim\\start_enter.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_loading.png.flat",
@@ -2041,7 +2041,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\anim_view_scale.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\anim\\view_scale.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\anim\\view_scale.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_scrubber_control_to_pressed_mtrl_005.png.flat",
@@ -2061,7 +2061,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_dialog_update_version.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\layout\\dialog_update_version.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\layout\\dialog_update_version.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_star_half_black_48dp.png.flat",
@@ -2069,7 +2069,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_ic_small_jump_gray.png.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\ic_small_jump_gray.png"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\ic_small_jump_gray.png"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_chuck_fragment_transaction_payload.xml.flat",
@@ -2105,7 +2105,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_toast.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\layout\\layout_toast.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\layout\\layout_toast.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\animator_mtrl_fab_transformation_sheet_collapse_spec.xml.flat",
@@ -2129,7 +2129,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_ic_load_fail_def_nothing.png.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\ic_load_fail_def_nothing.png"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\ic_load_fail_def_nothing.png"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\layout-watch-v20_abc_alert_dialog_title_material.xml.flat",
@@ -2189,7 +2189,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\anim_roate_180_360.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\anim\\roate_180_360.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\anim\\roate_180_360.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_bar_up_container.xml.flat",
@@ -2305,7 +2305,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_dialog_swtich_map_navigation.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\layout\\layout_dialog_swtich_map_navigation.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\layout\\layout_dialog_swtich_map_navigation.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ic_star_black_48dp.png.flat",
@@ -2413,7 +2413,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\anim_roate_0_180.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\anim\\roate_0_180.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\anim\\roate_0_180.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-hdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",
@@ -2429,7 +2429,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\anim_dialog_bottom_out.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\anim\\dialog_bottom_out.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\anim\\dialog_bottom_out.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_textfield_activated_mtrl_alpha.9.png.flat",
@@ -2485,7 +2485,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_ic_flicker_progressbar.png.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\ic_flicker_progressbar.png"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\ic_flicker_progressbar.png"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_expanded_menu_layout.xml.flat",
@@ -2525,7 +2525,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\anim_dialog_exit_top_slide.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\anim\\dialog_exit_top_slide.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\anim\\dialog_exit_top_slide.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\animator_mtrl_fab_transformation_sheet_expand_spec.xml.flat",
@@ -2561,7 +2561,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_ic_small_jump_white.png.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\ic_small_jump_white.png"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\ic_small_jump_white.png"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_list_pressed_holo_light.9.png.flat",
@@ -2653,7 +2653,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\anim_dialog_right_out.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\anim\\dialog_right_out.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\anim\\dialog_right_out.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
@@ -2661,7 +2661,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_ic_avatar_def.png.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\ic_avatar_def.png"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\drawable-xxhdpi-v4\\ic_avatar_def.png"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_scrubber_primary_mtrl_alpha.9.png.flat",
@@ -2685,7 +2685,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_dialog_shape_button_corners_left_15dp.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\drawable\\dialog_shape_button_corners_left_15dp.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\drawable\\dialog_shape_button_corners_left_15dp.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_btn_switch_to_on_mtrl_00012.9.png.flat",
@@ -2717,7 +2717,7 @@
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\anim_dialog_enter_bottom_slide_upward.xml.flat",
-        "source": "D:\\android\\project\\myBaseProject\\module_common\\build\\intermediates\\packaged_res\\debug\\anim\\dialog_enter_bottom_slide_upward.xml"
+        "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\anim\\dialog_enter_bottom_slide_upward.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_item_background_holo_light.xml.flat",
