@@ -1,6 +1,7 @@
 package com.callhh.abtool.util;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.ComponentName;
@@ -15,7 +16,6 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
 import android.telephony.TelephonyManager;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
@@ -143,12 +143,13 @@ public class AppUtils {
 
     /**
      * 处理自定义的广播接收类的相关页面跳转
-     * @param context   上下文
-     * @param clz       跳转页面
-     * @param key1      传值1的key名称
-     * @param value1    传值1的value名称
-     * @param key2      传值2的key名称
-     * @param value2    传值2的value名称
+     *
+     * @param context 上下文
+     * @param clz     跳转页面
+     * @param key1    传值1的key名称
+     * @param value1  传值1的value名称
+     * @param key2    传值2的key名称
+     * @param value2  传值2的value名称
      */
     public static void startActivityWithReceiver(Context context, Class<?> clz
             , String key1, String value1, String key2, String value2) {
@@ -234,16 +235,15 @@ public class AppUtils {
     /**
      * 获得手机的设备IMEI序列号,需要权限动态申请
      */
+    @SuppressLint("HardwareIds")
     public static String getSystemDeviceId(Context context) {
-        String deviceId = null;
+        String deviceId = "";
         try {
-            final TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
-            if (TextUtils.isEmpty(deviceId)) {
-                if (null != tm)
-                    if (PermissionUtils.checkPermission(context, Manifest.permission.READ_PHONE_STATE)) {
-                        deviceId = tm.getDeviceId();
-                    }
-            }
+            TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
+            if (null != tm)
+                if (PermissionUtils.checkPermission(context, Manifest.permission.READ_PHONE_STATE)) {
+                    deviceId = tm.getDeviceId();
+                }
         } catch (SecurityException e) {
             e.printStackTrace();
         }
@@ -253,6 +253,7 @@ public class AppUtils {
     /**
      * 获取手机系列号
      */
+    @SuppressLint("HardwareIds")
     public static String getSystemSimSerialNumber(Context context) {
         String simSerialNumber = null;
         try {
@@ -270,6 +271,7 @@ public class AppUtils {
 
     /**
      * 获取手机厂商
+     *
      * @return 手机厂商名称
      */
     public static String getSystemBrand() {
@@ -285,7 +287,7 @@ public class AppUtils {
     /**
      * 获取手机型号
      *
-     * @return  手机型号
+     * @return 手机型号
      */
     public static String getSystemModel() {
         return Build.MODEL;
@@ -294,7 +296,7 @@ public class AppUtils {
     /**
      * 获取当前手机系统版本号
      *
-     * @return  系统版本号
+     * @return 系统版本号
      */
     public static String getSystemVersion() {
         return Build.VERSION.RELEASE;
@@ -409,7 +411,7 @@ public class AppUtils {
             activity.startActivity(intent);
             activity.overridePendingTransition(R.anim.start_enter, R.anim.start_exit);
         } catch (Exception e) {
-            Log.e(Constants.TAG_LOG,e.toString());
+            Log.e(Constants.TAG_LOG, e.toString());
         }
     }
 
@@ -429,8 +431,8 @@ public class AppUtils {
                     activity.overridePendingTransition(R.anim.start_enter, R.anim.start_exit);
                 } else {
                     PermissionUtils.showToAppSettingDialog(activity
-                            ,activity.getResources().getString(R.string.permission_apply)
-                            ,activity.getResources().getString(R.string.permission_to_setting_tips));
+                            , activity.getResources().getString(R.string.permission_apply)
+                            , activity.getResources().getString(R.string.permission_to_setting_tips));
                 }
             } else {
                 Intent intent = new Intent(Intent.ACTION_CALL);
@@ -439,7 +441,7 @@ public class AppUtils {
                 activity.overridePendingTransition(R.anim.start_enter, R.anim.start_exit);
             }
         } catch (Exception e) {
-            Log.e(Constants.TAG_LOG,e.toString());
+            Log.e(Constants.TAG_LOG, e.toString());
         }
     }
 

@@ -2,11 +2,11 @@
 <paths>
 
     <external-path
-        name="tattle"
+        name="abtool"
         path="Download"/>
 
     <!--  物理路径相当于Context.getExternalFilesDir(String) + /path/  -->
-    <external-files-path name="sincetech" path="Download" />
+    <external-files-path name="abtool" path="Download" />
 
     <!--<root-path
         name="app"

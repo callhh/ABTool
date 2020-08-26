@@ -15,7 +15,7 @@ import com.lzy.okgo.model.Response;
 import java.util.Map;
 
 /**
- * 首页first fragment
+ * 首页1 first fragment
  */
 public class TabOneFragment extends BaseFragment {
 
@@ -25,16 +25,9 @@ public class TabOneFragment extends BaseFragment {
         return R.layout.fragment_tab_one;
     }
 
-//    @Override
-//    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-//        View rootView = super.onCreateView(inflater, container, savedInstanceState);
-//        unbinder = ButterKnife.bind(this, rootView);
-//        return rootView;
-//    }
-
     @Override
     protected void initView() {
-        MyLogUtils.logI("start TabMyFragment- 首页 ");
+        MyLogUtils.logI("start TabOneFragment- 首页1 ");
         findView(mView, R.id.tvOnClick).setOnClickListener(view -> {
             loadData();
         });

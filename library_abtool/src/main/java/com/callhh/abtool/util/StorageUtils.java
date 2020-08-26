@@ -48,7 +48,7 @@ public class StorageUtils {
         File appCacheDir = new File(context.getExternalCacheDir(), "update");
         //如果不存在就创建
         if (!appCacheDir.exists()) {
-            if (appCacheDir.mkdirs()) {//创建成功就返回SDCard/Android/data/com.wexiami.update/cache/update_file/
+            if (appCacheDir.mkdirs()) {
                 return appCacheDir;
             } else {
                 //创建失败就返回默认的SDCard/Android/data/com.winfo.update/cache/

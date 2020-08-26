@@ -21,7 +21,7 @@ import java.io.ObjectOutputStream;
  */
 public class SPUtils {
 
-    private static String FILE_NAME = "tattle";
+    private static String FILE_NAME = "abtool";
     /**
      * 第一个参数用于指定该文件的名称; 第二个参数指定文件的操作模式，共有四种操作模式
      * mode为操作模式，默认的模式为0或MODE_PRIVATE，还可以使用MODE_WORLD_READABLE和MODE_WORLD_WRITEABLE
@@ -29,7 +29,7 @@ public class SPUtils {
      * mode指定为MODE_WORLD_READABLE，则该配置文件除了自己访问外还可以被其它应该程序读取。
      * mode指定为MODE_WORLD_WRITEABLE，则该配置文件除了自己访问外还可以被其它应该程序读取和写入
      */
-    private static SharedPreferences sp = BaseApplication.getInstance()
+    private static SharedPreferences sp = BaseApplication.context
             .getSharedPreferences(FILE_NAME, Context.MODE_PRIVATE);
 
     /**
@@ -106,7 +106,7 @@ public class SPUtils {
      * 设置是否第一次进入App
      */
     public static void setIsFirstEnterApp(boolean isFirstEnterApp) {
-        sp.edit().putBoolean("is_first_enter_app", isFirstEnterApp).commit();
+        sp.edit().putBoolean("is_first_enter_app", isFirstEnterApp).apply();
     }
 
     public static boolean getIsFirstEnterApp() {
@@ -117,7 +117,7 @@ public class SPUtils {
      * 保存地址来源的选中状态
      */
     public static void setSourceState(int state) {
-        sp.edit().putInt("source_state", state).commit();
+        sp.edit().putInt("source_state", state).apply();
     }
 
     /**
@@ -131,7 +131,7 @@ public class SPUtils {
      * 保存用户最新的logo图片
      */
     public static void setLogo(String logo) {
-        sp.edit().putString("logo", logo).commit();
+        sp.edit().putString("logo", logo).apply();
     }
 
     public static String getLogo() {
@@ -142,7 +142,7 @@ public class SPUtils {
      * 保存设备ID
      */
     public static void setDeviceID(String device_id) {
-        sp.edit().putString("device_id", device_id).commit();
+        sp.edit().putString("device_id", device_id).apply();
     }
 
     public static String getDeviceID() {
@@ -153,7 +153,7 @@ public class SPUtils {
      * 保存城市ID
      */
     public static void setCityID(String city_id) {
-        sp.edit().putString("city_id", city_id).commit();
+        sp.edit().putString("city_id", city_id).apply();
     }
 
     public static String getCityID() {
@@ -164,7 +164,7 @@ public class SPUtils {
      * 保存用户登录状态
      */
     public static void saveIsLogin(boolean loginState) {
-        sp.edit().putBoolean(ConstUtils.KEY_IS_LOGIN, loginState).commit();
+        sp.edit().putBoolean(ConstUtils.KEY_IS_LOGIN, loginState).apply();
     }
 
     /**
@@ -178,7 +178,7 @@ public class SPUtils {
      * 保存用户登录kaiguan
      */
     public static void saveValue(boolean value) {
-        sp.edit().putBoolean(ConstUtils.KEY_OPENVALUE, value).commit();
+        sp.edit().putBoolean(ConstUtils.KEY_OPENVALUE, value).apply();
     }
 
     public static boolean getValue() {
@@ -190,7 +190,7 @@ public class SPUtils {
      */
     public static void saveUserToken(String token) {
         if (!TextUtils.isEmpty(token))
-            sp.edit().putString(ConstUtils.KEY_USER_TOKEN, token).commit();
+            sp.edit().putString(ConstUtils.KEY_USER_TOKEN, token).apply();
     }
 
     /**
@@ -219,7 +219,7 @@ public class SPUtils {
      */
     public static void saveUserPhoneNum(String phone_num) {
         if (!TextUtils.isEmpty(phone_num))
-            sp.edit().putString(ConstUtils.KEY_USER_PHONE, phone_num).commit();
+            sp.edit().putString(ConstUtils.KEY_USER_PHONE, phone_num).apply();
     }
 
     /**
@@ -233,7 +233,7 @@ public class SPUtils {
      * 保存用户头像url
      */
     public static void saveUserAvatar(String avatar) {
-        sp.edit().putString(ConstUtils.KEY_USER_AVATAR, avatar).commit();
+        sp.edit().putString(ConstUtils.KEY_USER_AVATAR, avatar).apply();
     }
 
     /**
@@ -248,7 +248,7 @@ public class SPUtils {
      */
     public static void saveUserName(String userName) {
         if (!TextUtils.isEmpty(userName))
-            sp.edit().putString(ConstUtils.KEY_USER_NAME, userName).commit();
+            sp.edit().putString(ConstUtils.KEY_USER_NAME, userName).apply();
     }
     public static String getUserName() {
         return sp.getString(ConstUtils.KEY_USER_NAME, "");
@@ -259,7 +259,7 @@ public class SPUtils {
      */
     public static void saveUserAccount(String userAccount) {
         if (!TextUtils.isEmpty(userAccount))
-            sp.edit().putString(ConstUtils.KEY_USER_ACCOUNT, userAccount).commit();
+            sp.edit().putString(ConstUtils.KEY_USER_ACCOUNT, userAccount).apply();
     }
     public static String getUserAccount() {
         return sp.getString(ConstUtils.KEY_USER_ACCOUNT, "");
@@ -270,7 +270,7 @@ public class SPUtils {
      */
     public static void saveUserLoginAccount(String userLoginAccount) {
         if (!TextUtils.isEmpty(userLoginAccount))
-            sp.edit().putString(ConstUtils.KEY_USER_LOGIN_ACCOUNT, userLoginAccount).commit();
+            sp.edit().putString(ConstUtils.KEY_USER_LOGIN_ACCOUNT, userLoginAccount).apply();
     }
     public static String getUserLoginAccount() {
         return sp.getString(ConstUtils.KEY_USER_LOGIN_ACCOUNT, "");

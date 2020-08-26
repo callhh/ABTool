@@ -41,10 +41,10 @@ android {
 
     signingConfigs {
 //        config {
-//            keyAlias 'RECEPTION'
-//            keyPassword 'APPreception123456'
-//            storeFile file('/sx_reception_keystore.jks')
-//            storePassword 'APPreception123456'
+//            keyAlias 'hh'
+//            keyPassword 'a123456'
+//            storeFile file('/hh_keystore.jks')
+//            storePassword 'a123456'
 //        }
     }
 

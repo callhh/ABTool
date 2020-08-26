@@ -396,6 +396,10 @@
         "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\anim\\dialog_slide_out_from_bottom.xml"
     },
     {
+        "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable_shape_app_color.xml.flat",
+        "source": "D:\\android\\project\\myBaseProject\\app\\src\\main\\res\\drawable\\shape_app_color.xml"
+    },
+    {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-2\\files-2.1\\390903d678a685c52880a42f8bd940db\\appcompat-1.2.0\\res\\drawable-hdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
     },
@@ -1672,6 +1676,10 @@
         "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-2\\files-2.1\\390903d678a685c52880a42f8bd940db\\appcompat-1.2.0\\res\\color-v23\\abc_tint_switch_track.xml"
     },
     {
+        "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_tab_two.xml.flat",
+        "source": "D:\\android\\project\\myBaseProject\\app\\src\\main\\res\\layout\\fragment_tab_two.xml"
+    },
+    {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_layout_loading_dialog_fullscreen.xml.flat",
         "source": "D:\\android\\project\\myBaseProject\\library_abtool\\build\\intermediates\\packaged_res\\debug\\layout\\layout_loading_dialog_fullscreen.xml"
     },
@@ -2502,6 +2510,10 @@
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_cab_background_top_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\admin\\.gradle\\caches\\transforms-2\\files-2.1\\390903d678a685c52880a42f8bd940db\\appcompat-1.2.0\\res\\drawable-xhdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_tab_three.xml.flat",
+        "source": "D:\\android\\project\\myBaseProject\\app\\src\\main\\res\\layout\\fragment_tab_three.xml"
     },
     {
         "merged": "D:\\android\\project\\myBaseProject\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldrtl-xxhdpi-v17_abc_ic_menu_copy_mtrl_am_alpha.png.flat",

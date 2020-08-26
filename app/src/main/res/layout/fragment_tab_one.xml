@@ -42,7 +42,7 @@
             android:background="@color/gray_ccc"
             android:gravity="center"
             android:padding="@dimen/space_dp_20"
-            android:text="点我点我" />
+            android:text="点我 点我" />
 
     </com.zhy.android.percent.support.PercentLinearLayout>
 

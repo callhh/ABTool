@@ -16,7 +16,7 @@
 
     <!--设置冷启动页面主体-->
     <style name="splashScreenTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
-        <item name="android:windowBackground">@drawable/img_bg_splash</item>
+        <item name="android:windowBackground">@drawable/shape_app_color</item>
         <item name="windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>
     </style>

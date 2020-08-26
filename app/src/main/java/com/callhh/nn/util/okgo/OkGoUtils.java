@@ -20,9 +20,9 @@ import java.util.Map;
 public class OkGoUtils {
 
     public static boolean isNotNetwork(){
-        if (!NetWorkUtils.isNetworkAvailable(BaseApplication.getInstance().getApplicationContext())) {
-            ToastUtil.toast(BaseApplication.getInstance().getApplicationContext()
-                    , BaseApplication.getInstance().getApplicationContext().getResources().getString(R.string.request_error_no_network));
+        if (!NetWorkUtils.isNetworkAvailable(BaseApplication.context.getApplicationContext())) {
+            ToastUtil.toast(BaseApplication.context.getApplicationContext()
+                    , BaseApplication.context.getResources().getString(R.string.request_error_no_network));
             MyLogUtils.logI("网络不给力，请检查网络后重试");
             return true;
         }else {

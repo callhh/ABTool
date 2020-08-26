@@ -11,20 +11,15 @@ public class ApiConstants {
     /**
      * 正式环境base url
      */
-    public static String BASE_URL = "http://api.wexiami.com/"; //正式环境
-//    public static String BASE_URL = "http://www.wexiami.cn/"; // 开发测试环境
-
-    /**
-     * 图片基础路径，正式环境
-     */
-    public static String BASE_IMAGE_URL = "http://www.wexiami.cn/files/";
+    public static String BASE_URL = "http://api.wxm.com/"; //正式环境
+//    public static String BASE_URL = "http://www.wxm.cn/"; // 开发测试环境
 
     /**
      * OkHttpUtlis设置编码格式
      */
     public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
 
-    /** ============== 公共模块API Start ============== */
+    /** ============== START 公共模块API ============== */
     /**
      * API 登录接口
      */
@@ -32,5 +27,6 @@ public class ApiConstants {
 
     public static final String URL_Test = "index/articleTypeList";
 
+    /** ============== END 公共模块API ============== */
 
 }
