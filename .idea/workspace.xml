@@ -23,7 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6fd37389-0d4c-4a15-a831-b69c1f8b0809" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/HHBaseProject.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -337,7 +338,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598435407755</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="测试修改3">
+      <created>1598435682058</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1598435682058</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -369,7 +377,8 @@
     <MESSAGE value="优化library，更名为library_abtool" />
     <MESSAGE value="测试修改1" />
     <MESSAGE value="测试修改2，关于bintray-release插件配置使用" />
-    <option name="LAST_COMMIT_MESSAGE" value="测试修改2，关于bintray-release插件配置使用" />
+    <MESSAGE value="测试修改3" />
+    <option name="LAST_COMMIT_MESSAGE" value="测试修改3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
