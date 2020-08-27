@@ -1,10 +1,9 @@
 # AndroidABTool
-AndroidABTool是一个Android项目开发常用的工具类封装的开源库
+AndroidABTool是一个Android项目开发常用的工具类封装的开源库。
 添加如下配置将AndroidABTool引入到你的项目中:
 ```groovy
 dependencies{
-'...'
-implementation 'com.callhh.abtool:abtool:1.0.0'
+    implementation 'com.callhh.abtool:abtool:1.0.0'
 }
 ```
 

@@ -7,7 +7,7 @@ import androidx.annotation.ColorRes
 import androidx.annotation.DrawableRes
 
 /**
- * 组建工具类
+ * 组件工具类
  */
 object WidgetUtils {
     fun px2dp(context: Context, px: Int): Float {
