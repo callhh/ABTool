@@ -22,14 +22,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="callhh" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6fd37389-0d4c-4a15-a831-b69c1f8b0809" name="Default Changelist" comment="测试修改5 优化工具类">
-      <change afterPath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/bean/BaseResponseBean.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/bean/ResponseBean.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/helper/HttpExceptionHelper.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/helper/TimeCountdownHelper.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/listener/HttpImageCallBackListener.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/listener/ResultCallBack.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/Constants.kt" afterDir="false" />
+    <list default="true" id="6fd37389-0d4c-4a15-a831-b69c1f8b0809" name="Default Changelist" comment="优化工具类">
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileContent/annotation-processors.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileContent/annotation-processors.bin" afterDir="false" />
@@ -42,36 +35,12 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/callhh/nn/base/BaseActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/callhh/nn/base/BaseActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/callhh/nn/base/BaseFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/callhh/nn/base/BaseFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/callhh/nn/base/BaseLazyFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/callhh/nn/base/BaseLazyFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/callhh/nn/helper/pickerview/PickerViewHelpers.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/callhh/nn/helper/pickerview/PickerViewHelpers.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/callhh/nn/ui/SplashActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/callhh/nn/ui/SplashActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/callhh/nn/ui/common/WebActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/callhh/nn/ui/common/WebActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/callhh/nn/ui/fragment/TabOneFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/callhh/nn/ui/fragment/TabOneFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/callhh/nn/util/okgo/callbck/JsonCallback.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/callhh/nn/util/okgo/callbck/JsonCallback.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/callhh/nn/util/okgo/callbck/JsonConvert.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/callhh/nn/util/okgo/callbck/JsonConvert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library_abtool/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/library_abtool/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/bean/BaseResponseBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/bean/ResponseBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/helper/HttpExceptionHelper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/helper/TimeCountdownHelper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/listener/ApiResultCallBack.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/listener/HttpCallBackListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/listener/ResultCallBack.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/AppUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/MyAppUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/Constants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/FormatCurrentData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/MySystemUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/MySystemUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/NetWorkUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/NetWorkUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/PermissionUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/PermissionUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/image/ImageTools.java" beforeDir="false" afterPath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/image/ImageTools.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/security/AESUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/security/AESUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library_abtool/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/library_abtool/.gitignore" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -407,7 +376,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598508120265</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="优化工具类-6">
+      <created>1599015612686</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1599015612686</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -442,7 +418,8 @@
     <MESSAGE value="测试修改3" />
     <MESSAGE value="测试修改4 更新README" />
     <MESSAGE value="测试修改5 优化工具类" />
-    <option name="LAST_COMMIT_MESSAGE" value="测试修改5 优化工具类" />
+    <MESSAGE value="优化工具类-6" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化工具类-6" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
