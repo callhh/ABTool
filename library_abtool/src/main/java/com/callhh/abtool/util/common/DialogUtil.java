@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Point;
-import android.os.Handler;
 import android.text.TextUtils;
 import android.view.Display;
 import android.view.Gravity;
@@ -28,12 +27,12 @@ import com.callhh.abtool.widget.RxProgressBar;
  */
 public class DialogUtil {
 
-    private static Handler mHandler = new Handler();
     /**
      * Dialog宽度：设置为屏幕宽度的75%
      */
     private static double SCREEN_WIDTH_PER_75 = 0.75f;
     public static double SCREEN_WIDTH_PER_80 = 0.80f;
+    public static double SCREEN_WIDTH_PER_90 = 0.90f;
     private static Dialog mLoadingDialog;
     private static Dialog commonTips;
     // 请求权限
@@ -58,18 +57,21 @@ public class DialogUtil {
      * 宽度为80%屏幕，高度为适应屏幕，布局显示在中心位置
      * 可配置是否选择Dialog显影的动画
      *
-     * @param dialog    对话框
-     * @param animStyle 动画文件
+     * @param dialog     对话框
+     * @param gravity    Gravity.CENTER
+     * @param percent    屏幕显示的宽度百分比:如0.80f
+     * @param isShowAnim 是否显示动画
+     * @param animStyle  动画文件
      */
-    public static void setDialogStyle(Dialog dialog, double percent
-            , boolean isShowAnim, int animStyle) {
+    public static void setDialogStyle(Dialog dialog, int gravity, double percent,
+                                      boolean isShowAnim, int animStyle) {
         if (null == dialog) return;
         Window window = dialog.getWindow();
         if (null != window) {
             WindowManager.LayoutParams lp = window.getAttributes();
             lp.width = WindowManager.LayoutParams.MATCH_PARENT;//设置宽度充满屏幕
             lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
-            window.setGravity(Gravity.CENTER);
+            window.setGravity(gravity);
             Display display = window.getWindowManager().getDefaultDisplay();
             Point size = new Point();
             display.getSize(size);
@@ -79,28 +81,6 @@ public class DialogUtil {
             if (isShowAnim) {
                 window.setWindowAnimations(animStyle);
             }
-        }
-    }
-
-    /**
-     * @param dialog  dialog对象
-     * @param percent 百分比0.8f
-     * @param gravity Gravity.CENTER
-     */
-    public static void setDialogStyle(Dialog dialog, double percent
-            , int gravity) {
-        if (null == dialog) return;
-        Window window = dialog.getWindow();
-        if (null != window) {
-            WindowManager.LayoutParams lp = window.getAttributes();
-            lp.width = WindowManager.LayoutParams.MATCH_PARENT;
-            lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
-            window.setGravity(gravity);
-            Display display = window.getWindowManager().getDefaultDisplay();
-            Point size = new Point();
-            display.getSize(size);
-            lp.width = (int) (size.x * percent);
-            window.setAttributes(lp);
         }
     }
 
@@ -118,13 +98,48 @@ public class DialogUtil {
             WindowManager.LayoutParams lp = window.getAttributes();
             lp.width = WindowManager.LayoutParams.MATCH_PARENT;//设置宽度充满屏幕
             lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
-            window.setGravity(Gravity.CENTER);
+            window.setGravity(Gravity.CENTER);//显示在中间
             Display display = window.getWindowManager().getDefaultDisplay();
             Point size = new Point();
             display.getSize(size);
             lp.width = (int) (size.x * 0.80);
             window.setAttributes(lp);
-//        window.setWindowAnimations(R.style.AnimDialog);
+        }
+    }
+
+    /**
+     * 设置简单的对话框显示风格
+     * 场景：弹出对话框Dialog充满屏幕宽度、显示底部
+     */
+    public static void setDialogSimpleStyle(Dialog dialog) {
+        if (null == dialog) return;
+        Window window = dialog.getWindow();
+        if (null != window) {
+            window.setGravity(Gravity.BOTTOM);  //显示在底部
+            window.setWindowAnimations(R.style.dialog_get_pic_style);
+            window.getDecorView().setPadding(0, 0, 0, 0);
+            WindowManager.LayoutParams lp = window.getAttributes();
+            lp.width = WindowManager.LayoutParams.MATCH_PARENT;
+            lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
+            window.setAttributes(lp);
+        }
+    }
+
+    /**
+     * 设置对话框Dialog从右边滑入
+     * 场景：Tattle首页 "更多筛选条件"
+     */
+    public static void setDialogRightStyle(Dialog dialog) {
+        if (null == dialog) return;
+        Window window = dialog.getWindow();
+        if (null != window) {
+            window.setGravity(Gravity.END); //显示在右边
+            window.getDecorView().setPadding(0, 0, 0, 0);
+            WindowManager.LayoutParams lp = window.getAttributes();
+            lp.width = 900;//1080的标准宽屏，设置为
+            lp.height = WindowManager.LayoutParams.MATCH_PARENT;
+            dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+            window.setAttributes(lp);
         }
     }
 
@@ -185,7 +200,7 @@ public class DialogUtil {
         tvCancle.setOnClickListener((view) ->
                 commonTips.dismiss());
         //设置弹窗显示样式
-        setDialogStyle(commonTips, DialogUtil.SCREEN_WIDTH_PER_80, false, 0);
+        setDialogStyle(commonTips, Gravity.CENTER, DialogUtil.SCREEN_WIDTH_PER_80, false, 0);
         commonTips.setCanceledOnTouchOutside(false);
         commonTips.show();
     }
@@ -249,7 +264,7 @@ public class DialogUtil {
                 reqPerTips.dismiss()
         );
         //设置弹窗显示样式
-        setDialogStyle(reqPerTips, DialogUtil.SCREEN_WIDTH_PER_80, false, -1);
+        setDialogStyle(reqPerTips, Gravity.CENTER, DialogUtil.SCREEN_WIDTH_PER_80, false, -1);
         reqPerTips.setCanceledOnTouchOutside(false);
         reqPerTips.show();
 //        LogUtils.logI("dialog被调用了！");
@@ -263,41 +278,6 @@ public class DialogUtil {
             reqPerTips.dismiss();
         }
     }
-
-    /**
-     * 修改性别Dialog
-     *
-     * @param activity 上下文
-     * @param listener 监听事件
-     */
-    public static void selectGender(Activity activity, View.OnClickListener listener) {
-//        sexDialog = new Dialog(activity, R.style.myDialog);
-//        sexDialog.setContentView(R.layout.dialog_sex_select);
-//        setDialogWidth(activity, sexDialog, 17, 18);
-//        Button btnSelectOne = sexDialog.findViewById(R.id.btnSelectOne);// 男
-//        Button btnSelectTwo = sexDialog.findViewById(R.id.btnSelectTwo);// 女
-//        sexDialog.findViewById(R.id.btnCancle).setOnClickListener(view ->
-//                sexDialog.dismiss()
-//        );
-//        btnSelectOne.setOnClickListener(listener);
-//        btnSelectTwo.setOnClickListener(listener);
-//        sexDialog.setCanceledOnTouchOutside(true);
-//        Window window = sexDialog.getWindow();
-//        if (null != window) {
-//            window.setGravity(Gravity.BOTTOM);  //显示在底部
-//            window.setWindowAnimations(R.style.dialog_get_pic_style);
-//        }
-//        sexDialog.show();
-    }
-
-    /**
-     * 取消修改性别dialog
-     */
-//    public static void cancleSelectGender() {
-//        if (sexDialog != null) {
-//            sexDialog.dismiss();
-//        }
-//    }
 
     /**
      * 创建对话框：下载进度条

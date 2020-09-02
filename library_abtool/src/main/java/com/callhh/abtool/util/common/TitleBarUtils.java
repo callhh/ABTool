@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.callhh.abtool.R;
@@ -16,6 +17,26 @@ import com.callhh.abtool.R;
 public class TitleBarUtils {
 
     /**
+     * 初始化view,设置通用的标题和返回键监听处理
+     *
+     * @param activity 上下文
+     * @param title    标题内容
+     */
+    private static void initView(Activity activity, int bgColor, String title) {
+        LinearLayout llTitleBar = activity.findViewById(R.id.llTitleBar);
+        llTitleBar.setBackgroundColor(bgColor);
+        ImageView ivBackBtn = activity.findViewById(R.id.ivBackBtn);
+        TextView tvTitle = activity.findViewById(R.id.tvTitlebarTitle);
+        MyTextUtil.setText(tvTitle, title);
+        //返回键监听处理
+        ivBackBtn.setOnClickListener(view -> {
+            activity.setResult(Activity.RESULT_OK);
+            activity.overridePendingTransition(R.anim.start_enter, R.anim.start_exit);
+            activity.finish();
+        });
+    }
+
+    /**
      * 设置标题栏，右边的显示按钮是文本
      *
      * @param activity      上下文
@@ -23,12 +44,12 @@ public class TitleBarUtils {
      * @param rightTitle    右边显示的文本内容
      * @param rightListener 右边的文本监听事件
      */
-    public static void setCommonTitle(final Activity activity, String title,
+    public static void setCommonTitle(Activity activity, int bgColor, String title,
                                       String rightTitle, OnClickListener rightListener) {
         try {
-            initView(activity, title);
-            activity.findViewById(R.id.ivRightButton).setVisibility(View.GONE);
-            TextView tvRightBtn = activity.findViewById(R.id.tvRightButton);
+            initView(activity, bgColor, title);
+            activity.findViewById(R.id.ivRightBtn).setVisibility(View.GONE);
+            TextView tvRightBtn = activity.findViewById(R.id.tvRightBtn);
             MyTextUtil.setText(tvRightBtn, rightTitle);
             if (null != rightListener) {
                 tvRightBtn.setOnClickListener(rightListener);
@@ -46,18 +67,18 @@ public class TitleBarUtils {
      * @param imageId       图标本地资源Id
      * @param rightListener 监听器
      */
-    public static void setCommonIconTitle(final Activity activity, String title,
+    public static void setCommonIconTitle(Activity activity, int bgColor, String title,
                                           int imageId, OnClickListener rightListener) {
         try {
-            initView(activity, title);
+            initView(activity, bgColor, title);
             //影藏右边的文本控件，显示ImageView图标控件
-            activity.findViewById(R.id.tvRightButton).setVisibility(View.GONE);
-            ImageView imgRightBtn = activity.findViewById(R.id.ivRightButton);
-            imgRightBtn.setVisibility(View.VISIBLE);
+            activity.findViewById(R.id.tvRightBtn).setVisibility(View.GONE);
+            ImageView ivRightBtn = activity.findViewById(R.id.ivRightBtn);
+            ivRightBtn.setVisibility(View.VISIBLE);
             if (imageId != -1)
-                imgRightBtn.setImageResource(imageId);
+                ivRightBtn.setImageResource(imageId);
             if (null != rightListener) {
-                imgRightBtn.setOnClickListener(rightListener);
+                ivRightBtn.setOnClickListener(rightListener);
             }
         } catch (Exception e) {
             MyLogUtils.logI(e.toString());
@@ -75,25 +96,25 @@ public class TitleBarUtils {
      * @param rightTitle    右边显示的文本内容
      * @param rightListener 右边的文本监听事件
      */
-    public static void setTitleBarAndHideButton(final Activity activity, String title,
+    public static void setTitleBarAndHideButton(Activity activity, String title,
                                                 boolean leftIsHide, boolean rightIsHide, String rightTitle,
                                                 OnClickListener rightListener) {
         try {
-            ImageView imgBack = activity.findViewById(R.id.imgBackButton);
+            ImageView ivBackBtn = activity.findViewById(R.id.ivBackBtn);
             TextView tvTitle = activity.findViewById(R.id.tvTitlebarTitle);
-            activity.findViewById(R.id.ivRightButton).setVisibility(View.GONE);
-            TextView tvRightBtn = activity.findViewById(R.id.tvRightButton);
+            activity.findViewById(R.id.ivRightBtn).setVisibility(View.GONE);
+            TextView tvRightBtn = activity.findViewById(R.id.tvRightBtn);
             MyTextUtil.setText(tvTitle, title);
             if (leftIsHide) {
-                imgBack.setVisibility(View.VISIBLE);
+                ivBackBtn.setVisibility(View.VISIBLE);
                 //返回键监听处理
-                imgBack.setOnClickListener(view -> {
+                ivBackBtn.setOnClickListener(view -> {
                     activity.setResult(Activity.RESULT_OK);
                     activity.overridePendingTransition(R.anim.start_enter, R.anim.start_exit);
                     activity.finish();
                 });
             } else {
-                imgBack.setVisibility(View.GONE);
+                ivBackBtn.setVisibility(View.GONE);
             }
             if (rightIsHide) {
                 tvRightBtn.setVisibility(View.VISIBLE);
@@ -107,24 +128,6 @@ public class TitleBarUtils {
         } catch (Exception e) {
             MyLogUtils.logI(e.toString());
         }
-    }
-
-    /**
-     * 初始化view,设置通用的标题和返回键监听处理
-     *
-     * @param activity 上下文
-     * @param title    标题内容
-     */
-    private static void initView(final Activity activity, String title) {
-        ImageView imgBack = activity.findViewById(R.id.imgBackButton);
-        TextView tvTitle = activity.findViewById(R.id.tvTitlebarTitle);
-        MyTextUtil.setText(tvTitle, title);
-        //返回键监听处理
-        imgBack.setOnClickListener(view -> {
-            activity.setResult(Activity.RESULT_OK);
-            activity.overridePendingTransition(R.anim.start_enter, R.anim.start_exit);
-            activity.finish();
-        });
     }
 
 }

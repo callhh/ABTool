@@ -68,7 +68,7 @@ publish{
     userOrg = 'callhh'
     groupId = 'com.callhh.abtool'
     artifactId = 'abtool'
-    publishVersion = '1.0.1'
+    publishVersion = '1.0.2'
     desc = 'Make Android Basic Module Tool'
     website = 'https://github.com/callhh/ABTool'
 }

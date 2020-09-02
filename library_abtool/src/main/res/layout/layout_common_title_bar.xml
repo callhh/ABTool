@@ -9,7 +9,7 @@
     android:orientation="horizontal">
 
     <ImageView
-        android:id="@+id/imgBackButton"
+        android:id="@+id/ivBackBtn"
         android:layout_width="50dp"
         android:layout_height="match_parent"
         android:contentDescription="@string/img_desc"
@@ -30,7 +30,7 @@
         tools:text="标题" />
 
     <TextView
-        android:id="@+id/tvRightButton"
+        android:id="@+id/tvRightBtn"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:gravity="center"
@@ -39,7 +39,7 @@
         android:visibility="visible" />
 
     <ImageView
-        android:id="@+id/ivRightButton"
+        android:id="@+id/ivRightBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="@dimen/space_dp_5"

@@ -23,6 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6fd37389-0d4c-4a15-a831-b69c1f8b0809" name="Default Changelist" comment="优化工具类">
+      <change afterPath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/adapter/MyFragmentPagerAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/widget/SwitchButtonView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileContent/annotation-processors.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileContent/annotation-processors.bin" afterDir="false" />
@@ -35,12 +37,32 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/debug.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi-v2/values.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library_abtool/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/library_abtool/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_web.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_web.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_layout_common_title_bar.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_layout_common_title_bar.xml.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values_values.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values_values.arsc.flat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/callhh/nn/ui/common/WebActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/callhh/nn/ui/common/WebActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library_abtool/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/library_abtool/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/helper/SimpleDateFormatHelper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/helper/SimpleDateFormatHelper.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/listener/ResultCallBack.kt" beforeDir="false" afterPath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/listener/ResultCallBack.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/MyAppUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/MyAppUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/TimeOrDateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/TimeOrDateUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/common/DialogUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/common/DialogUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/common/MyStringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/common/MyStringUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/common/TitleBarUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/common/TitleBarUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/image/GlideUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/image/GlideUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library_abtool/src/main/res/layout/layout_common_title_bar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library_abtool/src/main/res/layout/layout_common_title_bar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library_abtool/src/main/res/values/attrs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library_abtool/src/main/res/values/attrs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library_abtool/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library_abtool/src/main/res/values/styles.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -107,33 +129,33 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/test/java/com" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/library_abtool" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/adapter" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\android\project\myBaseProject\module_common\src\main\java\com\callhh\module_common\extension" />
-      <recent name="D:\android\project\myBaseProject\module_common\src\main\res\drawable-xxhdpi" />
-      <recent name="D:\android\project\myBaseProject\module_common\src\main\res\drawable" />
-      <recent name="D:\android\project\myBaseProject\module_common\src\main\res\layout" />
-    </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
       <recent name="com.callhh.abtool.listener" />
       <recent name="com.callhh.module_common.helper" />
       <recent name="com.callhh.nn.bean.base" />
       <recent name="com.callhh.nn.util.http" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\android\project\myBaseProject\library_abtool\src\main\java\com\callhh\abtool\adapter" />
+      <recent name="D:\android\project\myBaseProject\library_abtool\src\main\java\com\callhh\abtool\widget" />
+      <recent name="D:\android\project\myBaseProject\library_abtool" />
+      <recent name="D:\android\project\myBaseProject\app\src\main\res" />
+      <recent name="D:\android\project\myBaseProject\app\src\main\res\layout" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.callhh.abtool.util" />
       <recent name="com.callhh.module_common.view" />
       <recent name="com.callhh.nn.util.okgo.callbck" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\android\project\myBaseProject\library_abtool" />
-      <recent name="D:\android\project\myBaseProject\app\src\main\res" />
-      <recent name="D:\android\project\myBaseProject\app\src\main\res\layout" />
-      <recent name="D:\android\project\myBaseProject\app\src\main\res\drawable" />
-      <recent name="D:\android\project\myBaseProject\module_common\src\main\java\com\callhh\module_common" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\android\project\myBaseProject\module_common\src\main\java\com\callhh\module_common\extension" />
+      <recent name="D:\android\project\myBaseProject\module_common\src\main\res\drawable-xxhdpi" />
+      <recent name="D:\android\project\myBaseProject\module_common\src\main\res\drawable" />
+      <recent name="D:\android\project\myBaseProject\module_common\src\main\res\layout" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -383,7 +405,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599015612686</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="更新版本号 -7">
+      <created>1599016486824</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1599016486824</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -419,7 +448,8 @@
     <MESSAGE value="测试修改4 更新README" />
     <MESSAGE value="测试修改5 优化工具类" />
     <MESSAGE value="优化工具类-6" />
-    <option name="LAST_COMMIT_MESSAGE" value="优化工具类-6" />
+    <MESSAGE value="更新版本号 -7" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新版本号 -7" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

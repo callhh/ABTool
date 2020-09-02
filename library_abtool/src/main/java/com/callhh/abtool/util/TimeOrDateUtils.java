@@ -11,6 +11,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
+import java.util.concurrent.TimeUnit;
 
 /**
  * 时间或日期处理工具类
@@ -18,6 +19,10 @@ import java.util.Locale;
 public class TimeOrDateUtils {
 
     public static String FORMAT_D = "yyyy-MM-dd";
+    private static SimpleDateFormat msFormat = new SimpleDateFormat("mm:ss");
+    public static final String TYPE_DAY = "day";
+    public static final String TYPE_HOUR = "hour";
+    public static final String TYPE_MINUTE = "minute";
 
     /**
      * 获取当前时间精确到毫秒
@@ -122,6 +127,15 @@ public class TimeOrDateUtils {
     public static String mileToString(long dateTime) {
         Date date = new Date(dateTime);
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+        return sdf.format(date);
+    }
+
+    /**
+     * 秒转换为日期+时间字符串-转到小时-分钟
+     */
+    public static String secondToString_minute(long dateTime) {
+        Date date = new Date(dateTime * 1000);
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm", Locale.getDefault());
         return sdf.format(date);
     }
 
@@ -513,15 +527,6 @@ public class TimeOrDateUtils {
     }
 
 
-	/*public static double formatDoubleBy2(String x){
-        DecimalFormat df = new DecimalFormat("0.##");
-		String y = df.format(x);
-		if(".".equals(y.subSequence(0, 1))){
-			y = "0"+y;
-		}
-		return Double.parseDouble(y);
-	}*/
-
     /**
      * Double类型转字符串
      */
@@ -533,6 +538,55 @@ public class TimeOrDateUtils {
             y = "0" + y;
         }
         return y;
+    }
+
+    /**
+     * 计算时间差
+     *
+     * @param returnType 返回类型:day/hour/minute
+     * @param startDate  创建时间
+     * @param endDate    结束时间
+     * @return           通过值类型，输出返回值：xx天\xx小时\xx分钟
+     */
+    public static int computeTimeDifference(String returnType, String startDate, String endDate) {
+        //初始化时间格式，如2016-08-10 20:40
+        SimpleDateFormat simpleFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm");
+        try {
+            long startTimeL = simpleFormat.parse(startDate).getTime();
+            long endTimeL = simpleFormat.parse(endDate).getTime();
+            int intValue = 0;
+            //通过值类型，输出返回值
+            switch (returnType) {
+                case TYPE_DAY:
+                    intValue = (int) ((endTimeL - startTimeL) / (1000 * 60 * 60 * 24)); //计算天数差
+                    break;
+                case TYPE_HOUR:
+                    intValue = (int) ((endTimeL - startTimeL) / (1000 * 60 * 60));//计算小时差
+                    break;
+                case TYPE_MINUTE:
+                    intValue = (int) ((endTimeL - startTimeL) / (1000 * 60)); //计算分钟差
+                    break;
+            }
+            return intValue;
+        } catch (ParseException e) {
+            e.printStackTrace();
+            return 0;
+        }
+    }
+
+    /**
+     * MS turn every minute
+     *
+     * @param duration Millisecond
+     * @return Every minute
+     */
+    public static String timeParseMinute(long duration) {
+        try {
+            return msFormat.format(duration);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "0:00";
+        }
     }
 
     /**
@@ -558,8 +612,6 @@ public class TimeOrDateUtils {
         }
     }
 
-    private static SimpleDateFormat msFormat = new SimpleDateFormat("mm:ss");
-
     /**
      * MS turn every minute
      *
@@ -584,21 +636,6 @@ public class TimeOrDateUtils {
             time += second;
         }
         return time;
-    }
-
-    /**
-     * MS turn every minute
-     *
-     * @param duration Millisecond
-     * @return Every minute
-     */
-    public static String timeParseMinute(long duration) {
-        try {
-            return msFormat.format(duration);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return "0:00";
-        }
     }
 
     /**
@@ -629,4 +666,18 @@ public class TimeOrDateUtils {
         long diff = eTime - sTime;
         return diff > 1000 ? diff / 1000 + "秒" : diff + "毫秒";
     }
+
+    /**
+     * 时间戳转换成时间格式
+     *
+     * @param duration
+     * @return
+     */
+    public static String formatDurationTime(long duration) {
+        return String.format(Locale.getDefault(), "%02d:%02d",
+                TimeUnit.MILLISECONDS.toMinutes(duration),
+                TimeUnit.MILLISECONDS.toSeconds(duration)
+                        - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(duration)));
+    }
+
 }

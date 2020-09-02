@@ -32,7 +32,6 @@ import com.callhh.abtool.widget.MyLoadingLayout;
 import org.apache.commons.lang3.StringUtils;
 
 import butterknife.BindView;
-import butterknife.OnClick;
 
 /**
  * 通用的h5页面
@@ -41,8 +40,8 @@ public class WebActivity extends BaseActivity {
 
     @BindView(R.id.tvTitlebarTitle)
     TextView mTvTitlebarTitle;
-    @BindView(R.id.ivRightButton)
-    ImageView mIvRightButton;
+    @BindView(R.id.ivRightBtn)
+    ImageView mIvRightBtn;
     @BindView(R.id.progressBar)
     ProgressBar mProgressBar;
     @BindView(R.id.webView)
@@ -76,10 +75,10 @@ public class WebActivity extends BaseActivity {
         if (null != getIntent()) {
             mWebUrl = getIntent().getStringExtra(ConstUtils.WEB_URL);
             mWebTitle = getIntent().getStringExtra(ConstUtils.WEB_TITLE);
-            TitleBarUtils.setCommonIconTitle(mActivity, mWebTitle
-                    , -1, this);
+            TitleBarUtils.setCommonIconTitle(mActivity, getResources().getColor(R.color.app_color),
+                    mWebTitle, -1, this);
         }
-        mIvRightButton.setVisibility(View.GONE);
+        mIvRightBtn.setVisibility(View.GONE);
         MyLogUtils.logI("WebActivity  webUrl: " + mWebUrl);
         setWebListener();
     }
@@ -193,13 +192,4 @@ public class WebActivity extends BaseActivity {
         MyWebViewUtils.destroyWebView(mWebView);
     }
 
-    @OnClick({R.id.ivRightButton})
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.ivRightButton:
-                //分享
-//                DialogUtil.shareDialog(mActivity,WebActivity.this);
-                break;
-        }
-    }
 }

@@ -27,7 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
 
-        <Myl
+        <com.callhh.abtool.widget.MyLoadingLayout
             android:id="@+id/myLoading"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>

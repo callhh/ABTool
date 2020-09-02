@@ -5,8 +5,8 @@ package com.callhh.abtool.listener
  */
 interface ResultCallBack<T> {
 
-    fun onResponse(response: String)
+    fun onResponse(response: String?)
 
-    fun onError(e: Exception)
+    fun onError(e: Exception?)
 
 }

@@ -3,6 +3,7 @@ package com.callhh.abtool.util.image;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.text.TextUtils;
 import android.widget.ImageView;
 
@@ -115,7 +116,7 @@ public class GlideUtil {
     public void showLocalImage(Context context, ImageView imageView, int resourceId, int errorImage) {
         RequestOptions requestOptions = new RequestOptions()
                 .placeholder(errorImage)
-                .error(errorImage)//异常占位图
+                .error(errorImage)
                 .diskCacheStrategy(DiskCacheStrategy.ALL);
         Glide.with(context)
                 .load(resourceId)
@@ -159,7 +160,6 @@ public class GlideUtil {
         Glide.with(context)
                 .load(urlPath)
                 .apply(requestOptions)
-//                .transition(GenericTransitionOptions.with(viewAnimationId))//自定义动画，但是展示较生硬
                 .transition(withCrossFade())//自定义动画
                 .into(imageView);
     }
@@ -277,6 +277,29 @@ public class GlideUtil {
     }
 
     /**
+     * 加载图片路径，并设置图片圆角xx(dp)
+     * @param context   上下文
+     * @param imageView 图片控件
+     * @param path      图片路径
+     * @param radius_dp 圆角半径
+     * @param type      圆角类型
+     */
+    public void showRoundCornerImageWithPath(Context context, ImageView imageView
+            , String path, int radius_dp, GlideRoundCornersTransUtils.CornerType type) {
+        RequestOptions options = new RequestOptions()
+                .centerCrop()
+//                .placeholder(R.drawable.img_loading_def_168x168)
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .transform(new GlideRoundCornersTransUtils(dip2px(context, radius_dp)
+                        , 0, type));
+        Glide.with(context)
+                .load(path)
+                .apply(options)
+                .transition(withCrossFade())
+                .into(imageView);
+    }
+
+    /**
      * 显示加载本地的圆角图片
      */
     public void showLocalRoundCornerImage(Context context, ImageView imageView
@@ -287,7 +310,6 @@ public class GlideUtil {
                 .skipMemoryCache(false)
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .priority(Priority.HIGH)
-//                .override(imageWidthSize,imageHeightSize)
                 .transform(new GlideRoundCornersTransUtils(dip2px(context, radius_dp)
                         , 0, type));
         Glide.with(context)
@@ -295,6 +317,69 @@ public class GlideUtil {
                 .apply(requestOptions)
                 .transition(withCrossFade())
                 .into(imageView);
+    }
+
+    /**
+     * GlideEngine辅助方法1
+     */
+    public void loadImageMatisse(Context context, ImageView imgeView,
+                                 Uri uriStr, Drawable drawable) {
+        RequestOptions requestOptions = new RequestOptions()
+                .placeholder(drawable)
+                .priority(Priority.HIGH)
+                .fitCenter();
+        Glide.with(context)
+                .load(uriStr)
+                .apply(requestOptions)
+                .into(imgeView);
+    }
+
+    /**
+     * GlideEngine辅助方法2
+     */
+    public void loadImageMatisse(Context context, ImageView imgeView,
+                                 Uri uriStr, Drawable drawable, int imageWidthSize, int imageHeightSize) {
+        RequestOptions requestOptions = new RequestOptions()
+                .placeholder(drawable)
+                .priority(Priority.HIGH)
+                .fitCenter()
+                .override(imageWidthSize, imageHeightSize);
+        Glide.with(context)
+                .load(uriStr)
+                .apply(requestOptions)
+                .into(imgeView);
+    }
+
+    /**
+     * GlideEngine辅助方法3
+     */
+    public void loadGifImageMatisse(Context context, ImageView imgeView,
+                                    Uri uriStr, int imageWidthSize, int imageHeightSize) {
+        RequestOptions requestOptions = new RequestOptions()
+                .priority(Priority.HIGH)
+                .override(imageWidthSize, imageHeightSize);
+        Glide.with(context)
+                .asGif()
+                .load(uriStr)
+                .apply(requestOptions)
+                .into(imgeView);
+    }
+
+    /**
+     * GlideEngine辅助方法4
+     */
+    public void loadGifThumbnailMatisse(Context context, ImageView imgeView,
+                                        Uri uriStr, Drawable drawable, int imageWidthSize, int imageHeightSize) {
+        RequestOptions requestOptions = new RequestOptions()
+                .placeholder(drawable)
+                .priority(Priority.HIGH)
+                .override(imageWidthSize, imageHeightSize)
+                .centerCrop();
+        Glide.with(context)
+                .asBitmap()
+                .load(uriStr)
+                .apply(requestOptions)
+                .into(imgeView);
     }
 
     public static int dip2px(Context context, float dpValue) {

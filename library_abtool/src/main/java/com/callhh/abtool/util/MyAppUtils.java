@@ -30,11 +30,9 @@ import java.util.List;
  */
 public class MyAppUtils {
 
-    /**
-     * 系统中有两个定义好的Activity跳转动画：fade_in、fade_out、slide_in_left、slide_out_right
-     * overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
-     * overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
-     */
+    // 系统中有两个定义好的Activity跳转动画：fade_in、fade_out、slide_in_left、slide_out_right
+    // overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+    // overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
 
     /**
      * 单纯的跳转Activity
@@ -79,7 +77,6 @@ public class MyAppUtils {
      */
     public static void startActivityNoAnimation(Activity activity, Class<?> clz) {
         activity.startActivity(new Intent(activity, clz));
-//		activity.overridePendingTransition(0, 0);
         activity.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }
 
@@ -100,7 +97,6 @@ public class MyAppUtils {
      */
     public static void startActivityDataWithIntent(Activity activity, Class<?> clz, Intent intent) {
         activity.startActivity(new Intent(activity, clz).putExtras(intent));
-//		activity.overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
         activity.overridePendingTransition(R.anim.start_enter, R.anim.start_exit);
 
     }
@@ -189,8 +185,8 @@ public class MyAppUtils {
      * 记得在清单文件加这句属性:android:windowSoftInputMode="adjustUnspecified|stateHidden"
      * Activity销毁,跳转新的Activity 将已经打开的软键盘 关闭 在onPause()方法中调用
      */
-    public static void hideIputKeyboard(final Context context) {
-        final Activity activity = (Activity) context;
+    public static void hideSoftKeyboard(Context context) {
+        Activity activity = (Activity) context;
         activity.runOnUiThread(() -> {
             InputMethodManager mInputKeyBoard = (InputMethodManager) context.getSystemService(Context.INPUT_METHOD_SERVICE);
             if (activity.getCurrentFocus() != null) {
@@ -218,12 +214,28 @@ public class MyAppUtils {
     }
 
     /**
-     * EditText获取焦点并显示软键盘
+     * 隐藏软键盘 取消 EditText 焦点
      */
-    public static void showSoftInputFromWindow(Activity activity, EditText editText) {
+    public static void hideSoftKeyboard(Activity activity, EditText editText) {
+        editText.clearFocus(); // 取消焦点
+        if (activity.getCurrentFocus() != null) {
+            if (activity.getCurrentFocus().getWindowToken() != null) {
+                InputMethodManager imm = (InputMethodManager) activity.getSystemService(Context.INPUT_METHOD_SERVICE);
+                if (imm !=null){
+                    imm.hideSoftInputFromWindow(activity.getCurrentFocus().getWindowToken(),
+                            InputMethodManager.HIDE_NOT_ALWAYS);
+                }
+            }
+        }
+    }
+
+    /**
+     * 显示软键盘 并获取 EditText 焦点
+     */
+    public static void showSoftKeyboardFromWindow(Activity activity, EditText editText) {
         editText.setFocusable(true);
         editText.setFocusableInTouchMode(true);
-        editText.requestFocus();
+        editText.requestFocus();// 获取焦点
         activity.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
     }
 

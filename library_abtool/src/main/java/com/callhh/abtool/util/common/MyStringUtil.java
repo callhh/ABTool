@@ -11,6 +11,7 @@ import android.text.style.StyleSpan;
 import android.widget.TextView;
 import com.google.gson.JsonObject;
 
+import org.apache.commons.lang3.StringUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -26,6 +27,24 @@ import java.util.regex.Pattern;
  */
 
 public class MyStringUtil {
+
+    /**
+     * 字符串防止为null的处理
+     *
+     * @param strObject 字符串对象
+     * @return 为null返回空串""
+     */
+    public static String stringNullConversion(Object strObject) {
+        String result;
+        if (strObject == null) {
+            result = "";
+        } else if ("null".equals(strObject.toString())) {
+            result = "";
+        } else {
+            result = strObject.toString();
+        }
+        return result;
+    }
 
     /**
      * 把字符串中的指定位置的内容，变为指定的颜色
@@ -155,6 +174,38 @@ public class MyStringUtil {
     }
 
     /**
+     * 获取抽佣后的价格，经过计算公式算出的价格整数
+     * @param priceStr  priceStr输入的价格x, 平台佣金抽成 15%, 显示总价格: y = x / 0.85
+     */
+    public static String getIntValue(String priceStr) {
+        try {
+            if (TextUtils.isEmpty(priceStr)) return "";
+            double dPrice = Integer.parseInt(priceStr) / 0.85;
+            int iPrice = new Double(dPrice).intValue();
+            return String.valueOf(iPrice);
+        }catch (Exception e){
+            MyLogUtils.logI(e.toString());
+            return "";
+        }
+    }
+
+    /**
+     * 获取原价，经过计算公式算出的价格整数
+     * @param priceStr  priceStr输出的价格x, 平台佣金扣除 15%, 显示总价格: y = x * 0.85 (四舍五入法)
+     */
+    public static String getIntOriginalPriceValue(String priceStr) {
+        try {
+            if (TextUtils.isEmpty(priceStr)) return "0";
+            double dPrice = Integer.parseInt(priceStr) * 0.85;
+            long lPrice = Math.round(dPrice);
+            return String.valueOf(lPrice);
+        }catch (Exception e){
+            MyLogUtils.logI(e.toString());
+            return "";
+        }
+    }
+
+    /**
      * 校验密码的完整性，设置密码必须符合由数字,大写字母,小写字母,特殊符,至少其中三种组成密码并校验
      * [A-Za-z]+$ 表示字符串是由大写字母和小写字母组成
      * ![A-Za-z]+$ 表示字符串不全是大写字母和小写字母组成
@@ -257,11 +308,36 @@ public class MyStringUtil {
     /**
      * 银行卡号，保留最后4位，其他星号替换
      *
-     * @param cardId 卡号
+     * @param cardNo 卡号
      * @return 星号替换的银行卡号
      */
-    public static String cardIdHide(String cardId) {
-        return cardId.replaceAll("\\d{15}(\\d{3})", "**** **** **** **** $1");
+    public static String hideBankCardNo1(String cardNo) {
+        return cardNo.replaceAll("\\d{15}(\\d{3})", "**** **** **** **** $1");
+    }
+
+    /**
+     * 隐藏银行卡号中间的字符串（使用*号），显示前四后四
+     *
+     * @param cardNo 卡号
+     */
+    public static String hideBankCardNo2(String cardNo) {
+        StringBuffer stringBuffer = new StringBuffer();
+        if (StringUtils.isBlank(cardNo)) {
+            return stringBuffer.toString();
+        }
+        int length = cardNo.length();
+        int beforeLength = 4;
+        int afterLength = 4;
+        //替换字符串，当前使用“*”
+        String replaceSymbol = "*";
+        for (int i = 0; i < length; i++) {
+            if (i < beforeLength || i >= (length - afterLength)) {
+                stringBuffer.append(cardNo.charAt(i));
+            } else {
+                stringBuffer.append(replaceSymbol);
+            }
+        }
+        return stringBuffer.toString();
     }
 
     /**
@@ -298,6 +374,22 @@ public class MyStringUtil {
     }
 
     /**
+     * 验证urlPath是否是视频文件类型
+     *
+     * @param urlPath 字符串路径
+     * @return false=否；true=是
+     */
+    public static boolean isVideoUrlType(String urlPath) {
+        if (StringUtils.isNotBlank(urlPath)) {
+            return urlPath.contains("mp4") || urlPath.contains("avi") || urlPath.contains("mpg")
+                    || urlPath.contains("wmv") || urlPath.contains("mov") || urlPath.contains("mkv")
+                    || urlPath.contains("flv") || urlPath.contains("asf") || urlPath.contains("asx");
+        } else {
+            return false;
+        }
+    }
+
+    /**
      * 使用String的split方法,将一段逗号分割的字符串转换成一个数组
      */
     public static String[] convertStringToArray(String str) {
@@ -322,7 +414,8 @@ public class MyStringUtil {
     }
 
     /**
-     * 获取指定字符串内容：截取该字符串中"symbolString"【符号后】的所有内容
+     * 获取指定字符串内容：截取指定符号后的内容
+     * 如：字符串："中国 +86" ,传符号为"+"，则截取+号之后的内容，最终获取内容为86
      *
      * @param string    原字符串
      * @param strSymbol 指定标志，符号等
@@ -330,9 +423,24 @@ public class MyStringUtil {
      */
     public static String getSpecifiedStringAfter(String string, String strSymbol) {
         if (TextUtils.isEmpty(string)) {
-            return null;
+            return "";
         } else {
             return string.substring(string.indexOf(strSymbol) + 1);
+        }
+    }
+
+    /**
+     * 替换String里面的某个符号
+     *
+     * @param string    字符串
+     * @param strSymbol 符号
+     */
+    public static String getReplaceTheSymbol(String string, String strSymbol) {
+        if (TextUtils.isEmpty(string)) {
+            return "";
+        } else {
+            if (string.contains(string)) string = string.replace(strSymbol, "");
+            return string;
         }
     }
 
