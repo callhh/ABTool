@@ -14,7 +14,8 @@ import android.os.Environment;
 import android.text.TextUtils;
 import android.view.View;
 
-import com.callhh.abtool.listener.HttpCallBackListener;
+
+import com.callhh.abtool.listener.HttpImageCallBackListener;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -80,10 +81,10 @@ public class ImageTools {
      * @param listener   图片处理结果回调的监听器
      */
     public static void getImage(final String path, final boolean isCompress
-            , final HttpCallBackListener listener) {
+            , final HttpImageCallBackListener listener) {
         if (TextUtils.isEmpty(path)) {
             if (listener != null) {
-                listener.onFinish(null);
+                listener.onSuccess(null);
                 return;
             }
         }
@@ -109,17 +110,17 @@ public class ImageTools {
                             newBitmap = bitmap;
                         }
                         if (listener != null) {
-                            listener.onFinish(newBitmap);
+                            listener.onSuccess(newBitmap);
                         }
                         is.close();
                     }else {
                         if (listener != null) {
-                            listener.onFinish(null);
+                            listener.onSuccess(null);
                         }
                     }
                 } catch (Exception e) {
                     if (listener != null) {
-                        listener.onError(e);
+                        listener.onFailure(e);
                     }
                 }
             }

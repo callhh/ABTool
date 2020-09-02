@@ -30,6 +30,7 @@ public class MySystemUtils {
 
     /**
      * 防止快速点击，连续点击间隔不小于3s
+     * @return true = 快速双击则拦截, false = 非快速双击则放行代码执行
      */
     public static boolean isFastClick() {
         boolean flag = true;

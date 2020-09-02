@@ -7,7 +7,7 @@ import com.bigkoo.pickerview.builder.OptionsPickerBuilder
 import com.bigkoo.pickerview.builder.TimePickerBuilder
 import com.bigkoo.pickerview.view.OptionsPickerView
 import com.bigkoo.pickerview.view.TimePickerView
-import com.callhh.abtool.util.AppUtils
+import com.callhh.abtool.util.MyAppUtils
 import com.callhh.abtool.util.common.WidgetUtils
 import com.callhh.nn.R
 import java.util.*
@@ -89,10 +89,10 @@ object PickerViewHelpers {
     private fun hideSoftInput(activity: Activity?, context: Context) {
         if (activity == null) {
             if (context is Activity) {
-                AppUtils.hideSoftKeyboard(context)
+                MyAppUtils.hideSoftKeyboard(context)
             }
         } else {
-            AppUtils.hideSoftKeyboard(activity)
+            MyAppUtils.hideSoftKeyboard(activity)
         }
     }
 }

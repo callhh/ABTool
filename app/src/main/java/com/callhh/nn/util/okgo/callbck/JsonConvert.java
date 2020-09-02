@@ -129,8 +129,8 @@ public class JsonConvert<T> implements Converter<T> {
                 // 泛型格式如下： new JsonCallback<ResponseBean<内层JavaBean>>(this)
                 ResponseBean responseBean = Convert.fromJson(jsonReader, type);
                 response.close();
-                int code = responseBean.code;
-                String msg = responseBean.msg;
+                int code = responseBean.getCode();
+                String msg = responseBean.getMsg();
                 if (code == HttpResponseStatus.REQUEST_SUCCESS_CODE) { //与服务端约定的正确返回码
                     return (T) responseBean;
                 } else{

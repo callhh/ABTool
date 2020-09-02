@@ -28,7 +28,6 @@ import javax.crypto.spec.SecretKeySpec;
  * 使用方式：String encrypt = AESCBCUtil.encrypt("wy");
  * String decrypt = AESCBCUtil.decrypt(encrypt);
  * 验证方式：http://tool.chacuo.net/cryptaes（在线AES加密解密）
- *
  */
 public class AESUtil {
     /**
@@ -54,7 +53,7 @@ public class AESUtil {
     /**
      * 服务端约定的盐值
      */
-    private static final String AES_SALT = "One@-!Sports123G";
+    private static final String AES_SALT = "XXX@-!XMSH123G";
 
     /**
      * 获取密钥信息
@@ -70,25 +69,25 @@ public class AESUtil {
 
     /**
      * 加密：对字符串进行加密
-     * SECRET_KEY   密钥
-     * IV_OFFSET    iv偏移量
      *
      * @param encryptStr 需要加密的字符串
+     * @param secretKey  密钥
+     * @param ivOffset   iv偏移量
      * @return 加密后的十六进制字符串(hex)
      */
-    public static String encrypt(String encryptStr) {
+    public static String encrypt(String encryptStr, String secretKey, String ivOffset) {
         String resultStr = "";
         try {
             //创建AES秘钥
-            SecretKeySpec skeySpec = new SecretKeySpec(SECRET_KEY.getBytes(ENCODING), ALGORITHM);
+            SecretKeySpec skeySpec = new SecretKeySpec(secretKey.getBytes(ENCODING), ALGORITHM);
             // 创建密码器
             Cipher cipher = Cipher.getInstance(CIPHER_MODE_PADDING);
-            IvParameterSpec ivParameterSpec = new IvParameterSpec(IV_OFFSET.getBytes(ENCODING));
+            IvParameterSpec ivParameterSpec = new IvParameterSpec(ivOffset.getBytes(ENCODING));
             cipher.init(Cipher.ENCRYPT_MODE, skeySpec, ivParameterSpec);
             // 加密
             byte[] encrypted = cipher.doFinal(encryptStr.getBytes());
             resultStr = Base64Encoder.encode(encrypted);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return resultStr;
@@ -98,24 +97,26 @@ public class AESUtil {
      * 解密：对加密后的十六进制字符串(hex)进行解密，并返回字符串
      *
      * @param encryptedStr 需要解密的字符串
+     * @param secretKey    密钥
+     * @param ivOffset     iv偏移量
      * @return 解密后的字符串
      */
-    public static String decrypt(String encryptedStr) {
+    public static String decrypt(String encryptedStr, String secretKey, String ivOffset) {
         String resultStr = "";
         try {
             // 创建AES秘钥
-            SecretKeySpec skeySpec = new SecretKeySpec(SECRET_KEY.getBytes(ENCODING), ALGORITHM);
+            SecretKeySpec skeySpec = new SecretKeySpec(secretKey.getBytes(ENCODING), ALGORITHM);
             // 创建密码器
             Cipher cipher = Cipher.getInstance(CIPHER_MODE_PADDING);
             // 使用CBC模式，需要一个向量iv，可增加加密算法的强度
-            IvParameterSpec ivParameterSpec = new IvParameterSpec(IV_OFFSET.getBytes(ENCODING));
+            IvParameterSpec ivParameterSpec = new IvParameterSpec(ivOffset.getBytes(ENCODING));
             cipher.init(Cipher.DECRYPT_MODE, skeySpec, ivParameterSpec);
             // 解密
 //            byte[] bytes = hexStr2Bytes(encryptedStr);
             byte[] bytes = Base64Decoder.decodeToBytes(encryptedStr);
             byte[] encrypted = cipher.doFinal(bytes);
             resultStr = new String(encrypted, ENCODING);//此处使用BASE64做转码
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return resultStr;

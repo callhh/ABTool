@@ -42,8 +42,8 @@ public class TabOneFragment extends BaseFragment {
                     @Override
                     public void onSuccess(Response<ResponseBean<DemoBean>> response) {
                         ResponseBean<DemoBean> body = response.body();
-                        DemoBean result = body.data;
-                        MyLogUtils.logI(body.msg);
+                        DemoBean result = body.getData();
+                        MyLogUtils.logI(body.getMsg());
                     }
 
                     @Override

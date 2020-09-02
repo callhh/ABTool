@@ -25,7 +25,7 @@ public class PermissionUtils {
     /**
      * 判断某个权限是否打开
      *
-     * @return
+     * @return true = 已允许打开， false=未打开
      */
     public static boolean isLocationPermissionOpen(Context context,String packageName) {
 
@@ -39,7 +39,7 @@ public class PermissionUtils {
     /**
      * 检测权限
      *
-     * @return true：已授权； false：未授权；
+     * @return true = 已授权； false = 未授权；
      */
     public static boolean checkPermission(Context context, String permission) {
         if (ContextCompat.checkSelfPermission(context, permission) == PackageManager.PERMISSION_GRANTED) {

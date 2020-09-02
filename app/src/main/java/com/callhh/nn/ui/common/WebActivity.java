@@ -18,7 +18,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 
-import com.callhh.abtool.util.AppUtils;
+import com.callhh.abtool.util.MyAppUtils;
 import com.callhh.abtool.util.MyWebViewUtils;
 import com.callhh.abtool.util.NetWorkUtils;
 import com.callhh.abtool.util.common.MyLogUtils;
@@ -63,7 +63,7 @@ public class WebActivity extends BaseActivity {
         Intent intent = new Intent();
         intent.putExtra(ConstUtils.WEB_URL, url);
         intent.putExtra(ConstUtils.WEB_TITLE, title);
-        AppUtils.startActivityDataWithIntent(activity, WebActivity.class, intent);
+        MyAppUtils.startActivityDataWithIntent(activity, WebActivity.class, intent);
     }
 
     @Override

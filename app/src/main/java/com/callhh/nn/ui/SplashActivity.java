@@ -10,7 +10,7 @@ import android.view.View;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.callhh.abtool.util.AppUtils;
+import com.callhh.abtool.util.MyAppUtils;
 import com.callhh.abtool.util.Constants;
 import com.callhh.abtool.util.PermissionUtils;
 import com.callhh.abtool.util.common.DialogUtil;
@@ -62,7 +62,7 @@ public class SplashActivity extends AppCompatActivity implements View.OnClickLis
     private void toStartActivity() {
 //        if (!SPUtils.getValue()) return;
         MyLogUtils.logI("isLogined: " + SPUtils.getIslogin());
-        AppUtils.startActivityNoAnimation(mActivity, MainActivity.class);
+        MyAppUtils.startActivityNoAnimation(mActivity, MainActivity.class);
         mActivity.finish();
     }
 

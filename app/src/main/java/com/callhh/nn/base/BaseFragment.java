@@ -10,7 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.callhh.abtool.util.AppUtils;
+import com.callhh.abtool.util.MyAppUtils;
 import com.callhh.abtool.util.common.MyLogUtils;
 import com.callhh.abtool.util.common.ToastUtil;
 
@@ -99,7 +99,7 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
      * @param clz 对应Activity页面
      */
     protected void jumpPage(Class<?> clz) {
-        AppUtils.startActivity(mActivity, clz);
+        MyAppUtils.startActivity(mActivity, clz);
     }
 
     /**
