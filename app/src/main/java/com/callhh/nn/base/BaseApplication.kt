@@ -5,6 +5,8 @@ import android.app.Application
 import android.content.Context
 import androidx.multidex.MultiDex
 import com.callhh.abtool.util.Density
+import com.callhh.abtool.util.common.MyLogUtils
+import com.callhh.nn.BuildConfig
 import com.callhh.nn.util.ConstUtils
 import com.callhh.nn.util.SPUtils
 import com.callhh.nn.util.http.HttpLoggingInterceptor
@@ -29,7 +31,7 @@ class BaseApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         context = applicationContext
-        setDensity()
+        MyLogUtils.setLogEnabled(BuildConfig.DEBUG)
         initOkHttp()
         initOkgoHttp()
         initJPush()

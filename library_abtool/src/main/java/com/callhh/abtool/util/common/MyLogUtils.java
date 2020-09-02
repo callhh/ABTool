@@ -2,6 +2,7 @@ package com.callhh.abtool.util.common;
 
 import android.text.TextUtils;
 import android.util.Log;
+
 import com.callhh.abtool.BuildConfig;
 import com.callhh.abtool.util.Constants;
 
@@ -15,10 +16,15 @@ public class MyLogUtils {
     private static String CLASS_NAME;
     private static String METHOD_NAME;
     private static int LINE_NUMBER;
+    private static boolean mIsEnableLog;
 
-    /* Protect from instantiations */
-    private MyLogUtils() {
-
+    /**
+     * 初始化 是否开启日志打印
+     *
+     * @param enableLog true=是；false=否
+     */
+    public static void setLogEnabled(boolean enableLog) {
+        mIsEnableLog = enableLog;
     }
 
     /**
@@ -56,7 +62,7 @@ public class MyLogUtils {
      * 设置TAG=callhh,快速过滤msg
      */
     public static void logI(String message) {
-        if (isDebuggable()) {
+        if (mIsEnableLog) {
             getMethodNames(new Throwable().getStackTrace());
             printLogI(TAG, CLASS_NAME + createLog(MyStringUtil.decodeUnicode(message)));
         }
@@ -64,7 +70,7 @@ public class MyLogUtils {
 
 
     public static void logI(String tag, Object content) {
-        if (isDebuggable()) {
+        if (mIsEnableLog) {
             if (content == null) {
                 Log.i(tag, "值为null");
             } else {
@@ -97,7 +103,7 @@ public class MyLogUtils {
      * 以级别为 d 的形式输出LOG,输出debug调试信息
      */
     public static void d(String message) {
-        if (isDebuggable()) {
+        if (mIsEnableLog) {
             getMethodNames(new Throwable().getStackTrace());
             Log.d(TAG, CLASS_NAME + createLog(message));
         }
@@ -107,7 +113,7 @@ public class MyLogUtils {
      * 以级别为 v 的形式输出LOG ，verbose啰嗦的意思
      */
     public static void v(String message) {
-        if (isDebuggable()) {
+        if (mIsEnableLog) {
             getMethodNames(new Throwable().getStackTrace());
             Log.v(TAG, CLASS_NAME + createLog(message));
         }
@@ -117,7 +123,7 @@ public class MyLogUtils {
      * 以级别为 w 的形式输出LOG,显示warning警告，一般是需要我们注意优化Android代码
      */
     public static void w(String message) {
-        if (isDebuggable()) {
+        if (mIsEnableLog) {
             getMethodNames(new Throwable().getStackTrace());
             Log.w(TAG, CLASS_NAME + createLog(message));
         }
@@ -130,7 +136,7 @@ public class MyLogUtils {
      * @param msg 异常信息
      */
     public static void logE(String tag, String msg) {
-        if (isDebuggable()) {
+        if (mIsEnableLog) {
             if (TextUtils.isEmpty(tag)) tag = TAG;
             Log.e(tag, msg);
         }
@@ -140,7 +146,7 @@ public class MyLogUtils {
      * 以级别为 e 的形式输出LOG ，红色的错误信息，查看错误源的关键
      */
     public static void e(String message) {
-        if (isDebuggable()) {
+        if (mIsEnableLog) {
             // Throwable instance must be created before any methods
             getMethodNames(new Throwable().getStackTrace());
             StringBuilder buffer = new StringBuilder();

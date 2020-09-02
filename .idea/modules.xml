@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/HHBaseProject.iml" filepath="$PROJECT_DIR$/HHBaseProject.iml" group="HHBaseProject" />
       <module fileurl="file://$PROJECT_DIR$/android-project-myBaseProject-HHBaseProject.iml" filepath="$PROJECT_DIR$/android-project-myBaseProject-HHBaseProject.iml" group="HHBaseProject" />
+      <module fileurl="file://$PROJECT_DIR$/android-project-myBaseProject-HHBaseProject~1.iml" filepath="$PROJECT_DIR$/android-project-myBaseProject-HHBaseProject~1.iml" group="HHBaseProject" />
+      <module fileurl="file://$PROJECT_DIR$/android-project-myBaseProject-HHBaseProject~2.iml" filepath="$PROJECT_DIR$/android-project-myBaseProject-HHBaseProject~2.iml" group="HHBaseProject" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="HHBaseProject/app" />
       <module fileurl="file://$PROJECT_DIR$/library_abtool/library_abtool.iml" filepath="$PROJECT_DIR$/library_abtool/library_abtool.iml" group="HHBaseProject/library_abtool" />
       <module fileurl="file://$PROJECT_DIR$/.idea/myBaseProject.iml" filepath="$PROJECT_DIR$/.idea/myBaseProject.iml" />

@@ -23,8 +23,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6fd37389-0d4c-4a15-a831-b69c1f8b0809" name="Default Changelist" comment="优化工具类">
-      <change afterPath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/adapter/MyFragmentPagerAdapter.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/widget/SwitchButtonView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileContent/annotation-processors.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileContent/annotation-processors.bin" afterDir="false" />
@@ -49,20 +47,10 @@
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_web.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_activity_web.xml.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_layout_common_title_bar.xml.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout_layout_common_title_bar.xml.flat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values_values.arsc.flat" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values_values.arsc.flat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/callhh/nn/ui/common/WebActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/callhh/nn/ui/common/WebActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/callhh/nn/base/BaseApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/callhh/nn/base/BaseApplication.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/library_abtool/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/library_abtool/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/helper/SimpleDateFormatHelper.kt" beforeDir="false" afterPath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/helper/SimpleDateFormatHelper.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/listener/ResultCallBack.kt" beforeDir="false" afterPath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/listener/ResultCallBack.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/MyAppUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/MyAppUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/TimeOrDateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/TimeOrDateUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/common/DialogUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/common/DialogUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/common/MyStringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/common/MyStringUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/common/TitleBarUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/common/TitleBarUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/image/GlideUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/image/GlideUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library_abtool/src/main/res/layout/layout_common_title_bar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library_abtool/src/main/res/layout/layout_common_title_bar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library_abtool/src/main/res/values/attrs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library_abtool/src/main/res/values/attrs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library_abtool/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library_abtool/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/common/MyLogUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/library_abtool/src/main/java/com/callhh/abtool/util/common/MyLogUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library_abtool/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/library_abtool/src/main/res/values/colors.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +58,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_3a_XL_API_29-1080x2160" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="emulator-5554" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -412,7 +400,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599016486824</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="优化工具类 -8">
+      <created>1599030770304</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1599030770304</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -449,7 +444,8 @@
     <MESSAGE value="测试修改5 优化工具类" />
     <MESSAGE value="优化工具类-6" />
     <MESSAGE value="更新版本号 -7" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新版本号 -7" />
+    <MESSAGE value="优化工具类 -8" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化工具类 -8" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
