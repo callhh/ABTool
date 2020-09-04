@@ -11,6 +11,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
+import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -19,7 +20,7 @@ import java.util.concurrent.TimeUnit;
 public class TimeOrDateUtils {
 
     public static String FORMAT_D = "yyyy-MM-dd";
-    private static SimpleDateFormat msFormat = new SimpleDateFormat("mm:ss");
+    private static SimpleDateFormat msFormat = new SimpleDateFormat("mm:ss", Locale.getDefault());
     public static final String TYPE_DAY = "day";
     public static final String TYPE_HOUR = "hour";
     public static final String TYPE_MINUTE = "minute";
@@ -32,7 +33,7 @@ public class TimeOrDateUtils {
     public static String getCurrentTime() {
         // 2016-04-28 09:09:22
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(
-                "yyyy-MM-dd HH:mm:ss");
+                "yyyy-MM-dd HH:mm:ss", Locale.getDefault());
         return simpleDateFormat.format(new Date());
     }
 
@@ -42,7 +43,7 @@ public class TimeOrDateUtils {
     public static String getCurrentTime2() {
         // 2016-04-28 09:09:22
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(
-                "yyyyMMddHHmmssSSS");
+                "yyyyMMddHHmmssSSS", Locale.getDefault());
         return simpleDateFormat.format(new Date());
     }
 
@@ -51,7 +52,7 @@ public class TimeOrDateUtils {
      */
     public static String getCurrentHour() {
         // 2016-04-28 09:09:22
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(" HH:mm:ss");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(" HH:mm:ss", Locale.getDefault());
         return simpleDateFormat.format(new Date());
     }
 
@@ -108,10 +109,10 @@ public class TimeOrDateUtils {
      */
     public static long nowTimeToMile() {
         try {
-            String dateTime = new SimpleDateFormat("yyyyMMddHHmmss")
+            String dateTime = new SimpleDateFormat("yyyyMMddHHmmss", Locale.getDefault())
                     .format(new Date());
             Calendar c = Calendar.getInstance();
-            c.setTime(new SimpleDateFormat("yyyyMMddHHmmss").parse(dateTime));
+            c.setTime(new SimpleDateFormat("yyyyMMddHHmmss", Locale.getDefault()).parse(dateTime));
             return c.getTimeInMillis();
         } catch (ParseException e) {
             e.printStackTrace();
@@ -192,7 +193,7 @@ public class TimeOrDateUtils {
      */
     @SuppressLint("SimpleDateFormat")
     public static String createStringDate(Date dt) {
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd", Locale.getDefault());
         String date = simpleDateFormat.format(dt);
         String y = date.substring(0, 4);
         String m = date.substring(4, 6);
@@ -209,7 +210,7 @@ public class TimeOrDateUtils {
      */
     @SuppressLint("SimpleDateFormat")
     public static long getTimeDifference(String nowTime, String targetTime) {
-        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
         Date now;
         try {
             now = df.parse(nowTime);
@@ -227,7 +228,7 @@ public class TimeOrDateUtils {
      */
     @SuppressLint("SimpleDateFormat")
     public static long getTimeDifferenceHour(String nowTime, String targetTime) {
-        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
         Date now;
         try {
             now = df.parse(nowTime);
@@ -246,7 +247,7 @@ public class TimeOrDateUtils {
      */
     @SuppressLint("SimpleDateFormat")
     public static long getTimeStampToLongTypeA(String timeStamp) {
-        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
         try {
             Date date = df.parse(timeStamp);
             long longDate = date.getTime();
@@ -263,7 +264,7 @@ public class TimeOrDateUtils {
      */
     @SuppressLint("SimpleDateFormat")
     public static long getTimeStampToLongTypeB(String timeStamp) {
-        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
         try {
             Date date = df.parse(timeStamp);
             long longDate = date.getTime();
@@ -356,15 +357,15 @@ public class TimeOrDateUtils {
      *
      * @param timeStr 字符串时分,03:12
      */
-    @SuppressLint("SimpleDateFormat")
     public static Date parseStringToDate3(String timeStr) {
         try {
-            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm");
-//            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm", Locale.getDefault());
             Date date = simpleDateFormat.parse(timeStr);
-            long dateTime = date.getTime();
+            long dateTime = 0;
+            if (date != null) {
+                dateTime = date.getTime();
+            }
             return new Date(dateTime * 1000L);
-//            return date;
         } catch (ParseException e) {
             e.printStackTrace();
             return null;
@@ -412,9 +413,8 @@ public class TimeOrDateUtils {
     /**
      * 日期转换字符串="yyyy/MM/dd"
      */
-    @SuppressLint("SimpleDateFormat")
     public static String formatDateToString2(Date date) {
-        return new SimpleDateFormat("yyyy/MM/dd").format(date);
+        return new SimpleDateFormat("yyyy/MM/dd", Locale.getDefault()).format(date);
     }
 
     @SuppressLint("SimpleDateFormat")
@@ -436,8 +436,8 @@ public class TimeOrDateUtils {
     public static String getDateAndTimes1(String time) {
         try {
             String res;
-            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy年MM月dd日HH时mm分ss秒");
-            long lt = Long.valueOf(time);
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy年MM月dd日HH时mm分ss秒", Locale.getDefault());
+            long lt = Long.parseLong(time);
             Date date = new Date(lt);
             res = simpleDateFormat.format(date);
             return res;
@@ -454,7 +454,7 @@ public class TimeOrDateUtils {
     public static String getDateAndTimes2(String time) {
         try {
             String res;
-            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
             long lt = new Long(time);
             Date date = new Date(lt);
             res = simpleDateFormat.format(date);
@@ -471,7 +471,7 @@ public class TimeOrDateUtils {
     public static String getDataAndTimes3(String time) {
         try {
             String res;
-            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy年MM月dd日  HH:mm");
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy年MM月dd日  HH:mm", Locale.getDefault());
             long lt = Long.valueOf(time);
             Date date = new Date(lt);
             res = simpleDateFormat.format(date);
@@ -491,7 +491,7 @@ public class TimeOrDateUtils {
      */
     public static Date stringToDate(String strTime)
             throws ParseException {
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
         Date date;
         date = formatter.parse(strTime);
         return date;
@@ -550,10 +550,10 @@ public class TimeOrDateUtils {
      */
     public static int computeTimeDifference(String returnType, String startDate, String endDate) {
         //初始化时间格式，如2016-08-10 20:40
-        SimpleDateFormat simpleFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm");
+        SimpleDateFormat simpleFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm", Locale.getDefault());
         try {
-            long startTimeL = simpleFormat.parse(startDate).getTime();
-            long endTimeL = simpleFormat.parse(endDate).getTime();
+            long startTimeL = Objects.requireNonNull(simpleFormat.parse(startDate)).getTime();
+            long endTimeL = Objects.requireNonNull(simpleFormat.parse(endDate)).getTime();
             int intValue = 0;
             //通过值类型，输出返回值
             switch (returnType) {
@@ -598,10 +598,10 @@ public class TimeOrDateUtils {
      */
     public static int computeTimeDifference(String fromDate, String toDate) {
         //初始化时间格式，如2016-08-10 20:40
-        SimpleDateFormat simpleFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm");
+        SimpleDateFormat simpleFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm", Locale.getDefault());
         try {
-            long from = simpleFormat.parse(fromDate).getTime();
-            long to = simpleFormat.parse(toDate).getTime();
+            long from = Objects.requireNonNull(simpleFormat.parse(fromDate)).getTime();
+            long to = Objects.requireNonNull(simpleFormat.parse(toDate)).getTime();
 //            int days = (int) ((to - from)/(1000 * 60 * 60 * 24)); //计算天数差
 //            int minutes = (int) ((to - from)/(1000 * 60)); //计算分钟差
 //            return minutes;
@@ -670,14 +670,56 @@ public class TimeOrDateUtils {
     /**
      * 时间戳转换成时间格式
      *
-     * @param duration
-     * @return
      */
     public static String formatDurationTime(long duration) {
         return String.format(Locale.getDefault(), "%02d:%02d",
                 TimeUnit.MILLISECONDS.toMinutes(duration),
                 TimeUnit.MILLISECONDS.toSeconds(duration)
                         - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(duration)));
+    }
+
+    /**
+     * 获取符合标准日期（YYYYMMDD）
+     *
+     * @param date 传入的日期格式为: yyyy-M-d
+     * @return 返回的日期格式为yyyyMMdd：20201101
+     */
+    public static String getYYYYMMddDate(String date) {
+        String result = "";
+        try {
+            if (isValidDateAsYYYYMMdd(date)){
+                result = date;
+                return result;
+            }
+            // 格式最好是有 “ - ”间隔的  不然会有问题,如 2020111 到底是 2020-11-1  还是 2020-1-11
+            SimpleDateFormat oldSimpleDateFormat = new SimpleDateFormat("yyyy-M-d", Locale.getDefault());
+            Date parseDate = oldSimpleDateFormat.parse(date);
+            if (null != parseDate){
+                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyyMMdd", Locale.getDefault());
+                result = simpleDateFormat.format(parseDate);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return result;
+    }
+
+    /**
+     * 判断日期时间格式是否为“YYYYMMdd”
+     * @return true 格式一致为YYYYMMdd; false 格式不一致
+     */
+    public static boolean isValidDateAsYYYYMMdd(String str) {
+        try {
+            DateFormat formatter = new SimpleDateFormat("yyyyMMdd", Locale.getDefault());
+            String formatStr = "";
+            Date date = formatter.parse(str);
+            if (date != null) {
+                formatStr = formatter.format(date);
+            }
+            return str.equals(formatStr);
+        } catch (Exception e) {
+            return false;
+        }
     }
 
 }
