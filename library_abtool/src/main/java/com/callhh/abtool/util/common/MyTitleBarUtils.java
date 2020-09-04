@@ -3,6 +3,7 @@ package com.callhh.abtool.util.common;
 
 import android.app.Activity;
 import android.graphics.Color;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
@@ -15,7 +16,7 @@ import com.callhh.abtool.R;
 /**
  * 标题栏工具类
  */
-public class TitleBarUtils {
+public class MyTitleBarUtils {
 
     /**
      * 初始化view,设置通用的标题和返回键监听处理
@@ -25,7 +26,7 @@ public class TitleBarUtils {
      */
     private static void initView(Activity activity, String bgColor, String title) {
         LinearLayout llTitleBar = activity.findViewById(R.id.llTitleBar);
-        llTitleBar.setBackgroundColor(Color.parseColor(bgColor));
+        if (!TextUtils.isEmpty(bgColor)) llTitleBar.setBackgroundColor(Color.parseColor(bgColor));
         ImageView ivBackBtn = activity.findViewById(R.id.ivBackBtn);
         TextView tvTitle = activity.findViewById(R.id.tvTitlebarTitle);
         MyTextUtil.setText(tvTitle, title);

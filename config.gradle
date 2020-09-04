@@ -11,7 +11,7 @@ ext {
             applicationId             : "com.callhh.nn",
             //APP version info
             versionCode               : 1,
-            versionName               : "1.0.0",
+            versionName               : "1.0.1",
 
             // SDK And Tools
             compileSdkVersion         : 29,

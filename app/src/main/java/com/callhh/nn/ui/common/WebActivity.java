@@ -23,7 +23,7 @@ import com.callhh.abtool.util.MyWebViewUtils;
 import com.callhh.abtool.util.NetWorkUtils;
 import com.callhh.abtool.util.common.MyLogUtils;
 import com.callhh.abtool.util.common.MyTextUtil;
-import com.callhh.abtool.util.common.TitleBarUtils;
+import com.callhh.abtool.util.common.MyTitleBarUtils;
 import com.callhh.nn.R;
 import com.callhh.nn.base.BaseActivity;
 import com.callhh.nn.util.ConstUtils;
@@ -75,7 +75,7 @@ public class WebActivity extends BaseActivity {
         if (null != getIntent()) {
             mWebUrl = getIntent().getStringExtra(ConstUtils.WEB_URL);
             mWebTitle = getIntent().getStringExtra(ConstUtils.WEB_TITLE);
-            TitleBarUtils.setCommonIconTitle(mActivity, "#008577",
+            MyTitleBarUtils.setCommonIconTitle(mActivity, "#008577",
                     mWebTitle, -1, this);
         }
         mIvRightBtn.setVisibility(View.GONE);
