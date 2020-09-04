@@ -2,6 +2,7 @@ package com.callhh.abtool.util.common;
 
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
@@ -22,9 +23,9 @@ public class TitleBarUtils {
      * @param activity 上下文
      * @param title    标题内容
      */
-    private static void initView(Activity activity, int bgColor, String title) {
+    private static void initView(Activity activity, String bgColor, String title) {
         LinearLayout llTitleBar = activity.findViewById(R.id.llTitleBar);
-        llTitleBar.setBackgroundColor(bgColor);
+        llTitleBar.setBackgroundColor(Color.parseColor(bgColor));
         ImageView ivBackBtn = activity.findViewById(R.id.ivBackBtn);
         TextView tvTitle = activity.findViewById(R.id.tvTitlebarTitle);
         MyTextUtil.setText(tvTitle, title);
@@ -44,7 +45,7 @@ public class TitleBarUtils {
      * @param rightTitle    右边显示的文本内容
      * @param rightListener 右边的文本监听事件
      */
-    public static void setCommonTitle(Activity activity, int bgColor, String title,
+    public static void setCommonTitle(Activity activity, String bgColor, String title,
                                       String rightTitle, OnClickListener rightListener) {
         try {
             initView(activity, bgColor, title);
@@ -67,7 +68,7 @@ public class TitleBarUtils {
      * @param imageId       图标本地资源Id
      * @param rightListener 监听器
      */
-    public static void setCommonIconTitle(Activity activity, int bgColor, String title,
+    public static void setCommonIconTitle(Activity activity, String bgColor, String title,
                                           int imageId, OnClickListener rightListener) {
         try {
             initView(activity, bgColor, title);

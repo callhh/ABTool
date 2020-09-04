@@ -75,7 +75,7 @@ public class WebActivity extends BaseActivity {
         if (null != getIntent()) {
             mWebUrl = getIntent().getStringExtra(ConstUtils.WEB_URL);
             mWebTitle = getIntent().getStringExtra(ConstUtils.WEB_TITLE);
-            TitleBarUtils.setCommonIconTitle(mActivity, getResources().getColor(R.color.app_color),
+            TitleBarUtils.setCommonIconTitle(mActivity, "#008577",
                     mWebTitle, -1, this);
         }
         mIvRightBtn.setVisibility(View.GONE);
