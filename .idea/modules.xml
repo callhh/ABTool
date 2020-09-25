@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/myBaseProject.iml" filepath="$PROJECT_DIR$/.idea/myBaseProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/myBaseProject-HHBaseProject.iml" filepath="$PROJECT_DIR$/myBaseProject-HHBaseProject.iml" group="HHBaseProject" />
       <module fileurl="file://$PROJECT_DIR$/library_abtool/myBaseProject-library_abtool.iml" filepath="$PROJECT_DIR$/library_abtool/myBaseProject-library_abtool.iml" group="HHBaseProject/library_abtool" />
+      <module fileurl="file://$PROJECT_DIR$/null.iml" filepath="$PROJECT_DIR$/null.iml" group="HHBaseProject" />
       <module fileurl="file://$PROJECT_DIR$/project-myBaseProject-HHBaseProject.iml" filepath="$PROJECT_DIR$/project-myBaseProject-HHBaseProject.iml" group="HHBaseProject" />
     </modules>
   </component>

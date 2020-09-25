@@ -26,7 +26,7 @@ public class MyTitleBarUtils {
      */
     private static void initView(Activity activity, String bgColor, String title) {
         LinearLayout llTitleBar = activity.findViewById(R.id.llTitleBar);
-        if (!TextUtils.isEmpty(bgColor)) llTitleBar.setBackgroundColor(Color.parseColor(bgColor));
+        if (!TextUtils.isEmpty(bgColor) && bgColor.contains("#")) llTitleBar.setBackgroundColor(Color.parseColor(bgColor));
         ImageView ivBackBtn = activity.findViewById(R.id.ivBackBtn);
         TextView tvTitle = activity.findViewById(R.id.tvTitlebarTitle);
         MyTextUtil.setText(tvTitle, title);

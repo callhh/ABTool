@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.app.Application
 import android.content.Context
 import androidx.multidex.MultiDex
-import com.callhh.abtool.util.Density
 import com.callhh.abtool.util.common.MyLogUtils
 import com.callhh.nn.BuildConfig
 import com.callhh.nn.util.ConstUtils
@@ -37,22 +36,6 @@ class BaseApplication : Application() {
         initJPush()
         initTencentMTA()
         initRefreshViewLayout()
-    }
-
-    /*
- * 设置 屏幕  适配
- */
-    private fun setDensity() {
-        val appDisplayMetrics = context.resources.displayMetrics
-        if (Density.isPad(applicationContext)) {
-            Density.setDensity(this, 750f)
-        } else {
-            if (appDisplayMetrics != null && appDisplayMetrics.widthPixels <= 720) {
-                Density.setDensity(this, 325f)
-            } else {
-                Density.setDensity(this, 350f)
-            }
-        }
     }
 
     /**
