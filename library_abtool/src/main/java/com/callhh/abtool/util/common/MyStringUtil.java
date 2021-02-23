@@ -174,15 +174,16 @@ public class MyStringUtil {
     }
 
     /**
-     * 获取抽佣后的价格，经过计算公式算出的价格整数
-     * @param priceStr  priceStr输入的价格x, 平台佣金抽成 15%, 显示总价格: y = x / 0.85
+     * 获取抽佣后的价格，经公式算法算出总价
+     * 平台佣金抽成为15%换算比例为1.15, 外网显示总价==y。总价y = x * 1.15
+     * 总价 = 输入价格 * 佣金比例
+     * @param priceStr  priceStr输入价格x
      */
     public static String getIntValue(String priceStr) {
         try {
             if (TextUtils.isEmpty(priceStr)) return "";
-            double dPrice = Integer.parseInt(priceStr) / 0.85;
-            int iPrice = new Double(dPrice).intValue();
-            return String.valueOf(iPrice);
+            double dPrice = Double.parseDouble(priceStr) * 1.15;
+            return getDoubleValue(dPrice);
         }catch (Exception e){
             MyLogUtils.logI(e.toString());
             return "";
@@ -190,15 +191,17 @@ public class MyStringUtil {
     }
 
     /**
-     * 获取原价，经过计算公式算出的价格整数
-     * @param priceStr  priceStr输出的价格x, 平台佣金扣除 15%, 显示总价格: y = x * 0.85 (四舍五入法)
+     * 获取原价格，经公式算法算出原价
+     * 平台佣金抽成为15% 换算比例为1.15, 原价==y。原价y = x / 1.15
+     * 原价 = 总价 / 佣金比例
+     * @param priceStr  priceStr输入价格x
      */
     public static String getIntOriginalPriceValue(String priceStr) {
         try {
             if (TextUtils.isEmpty(priceStr)) return "0";
-            double dPrice = Integer.parseInt(priceStr) * 0.85;
-            long lPrice = Math.round(dPrice);
-            return String.valueOf(lPrice);
+            double dPrice = Double.parseDouble(priceStr) / 1.15;
+//            long lPrice = Math.round(dPrice);//四舍五入
+            return getDoubleValue(dPrice);
         }catch (Exception e){
             MyLogUtils.logI(e.toString());
             return "";

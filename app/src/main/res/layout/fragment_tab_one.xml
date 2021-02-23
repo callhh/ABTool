@@ -19,7 +19,7 @@
             android:ellipsize="end"
             android:gravity="center"
             android:maxLines="1"
-            android:text=""
+            android:text="看我72变"
             android:textColor="@color/white"
             android:textSize="@dimen/textsize_18" />
 

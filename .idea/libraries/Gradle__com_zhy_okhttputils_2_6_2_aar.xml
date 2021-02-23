@@ -3,6 +3,7 @@
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/40489bc02b459ddeba8e3e5e3ca6607e/okhttputils-2.6.2/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/40489bc02b459ddeba8e3e5e3ca6607e/okhttputils-2.6.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/40489bc02b459ddeba8e3e5e3ca6607e/okhttputils-2.6.2/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.zhy/okhttputils/2.6.2/cb703a1f90cb621feef7fb85793cd631e97813b/okhttputils-2.6.2-javadoc.jar!/" />

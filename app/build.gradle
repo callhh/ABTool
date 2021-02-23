@@ -122,9 +122,12 @@ dependencies {
     implementation 'com.jakewharton.rxbinding:rxbinding:0.4.0'
     implementation 'com.squareup.okhttp3:okhttp:4.4.0'
     implementation 'com.squareup.okio:okio:2.4.3'
+    //network
     implementation 'com.zhy:okhttputils:2.6.2'
     implementation 'com.lzy.net:okgo:3.0.4'
     implementation 'com.readystatesoftware.chuck:library:1.0.4'
+    implementation 'com.squareup.retrofit2:retrofit:2.6.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.0'
 
     implementation 'com.zhy:percent-support-extends:1.1.1'
     implementation 'com.github.tbruyelle:rxpermissions:0.10.2'

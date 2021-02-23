@@ -20,7 +20,7 @@ import java.util.List;
 public class MyCommonListAdapter extends BaseAdapter {
 
     private Context context;
-    private List<CommonListBean.DataBean.RecordBean> mListBeans = new ArrayList<>();
+    private List<CommonListBean.DataBean.RecordBean> mListBeans;
 
 
     public MyCommonListAdapter(Context context, List<CommonListBean.DataBean.RecordBean> listPage) {

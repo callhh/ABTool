@@ -38,9 +38,6 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
         if (mView == null) {
             mView = inflater.inflate(setLayoutId(), container, false);
             mUnbinder = ButterKnife.bind(this, mView);
-            initView();
-            addListener();
-            initData();
         } else {
             ViewGroup parent = (ViewGroup) mView.getParent();
             if (parent != null) {
@@ -54,7 +51,9 @@ public abstract class BaseFragment extends Fragment implements View.OnClickListe
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 //		StatusBarUtil.setStatusBarColor(activityContext,R.color.white);
-//		StatusBarUtil.StatusBarLightMode(activityContext);
+        initView();
+        addListener();
+        initData();
     }
 
     /**

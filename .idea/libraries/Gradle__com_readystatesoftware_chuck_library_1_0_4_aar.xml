@@ -1,8 +1,17 @@
 <component name="libraryTable">
   <library name="Gradle: com.readystatesoftware.chuck:library:1.0.4@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2e4da548b221a8066ddcc342a63b9122/jetified-library-1.0.4/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2e4da548b221a8066ddcc342a63b9122/jetified-library-1.0.4/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/21e4f01f9252e5fec37156baf6fc373e/jetified-library-1.0.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/21e4f01f9252e5fec37156baf6fc373e/jetified-library-1.0.4/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/51268da6c779d3929585625e6014e026/jetified-library-1.0.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/51268da6c779d3929585625e6014e026/jetified-library-1.0.4/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/51268da6c779d3929585625e6014e026/jetified-library-1.0.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/34bdcba8890601c292ec6744e11754cf/jetified-library-1.0.4/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/34bdcba8890601c292ec6744e11754cf/jetified-library-1.0.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/34bdcba8890601c292ec6744e11754cf/jetified-library-1.0.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/67922b1d7c46c6417551954c5c3135e8/jetified-library-1.0.4/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/67922b1d7c46c6417551954c5c3135e8/jetified-library-1.0.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/67922b1d7c46c6417551954c5c3135e8/jetified-library-1.0.4/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.readystatesoftware.chuck/library/1.0.4/1c529e2cc2a2ead5fff76aa31b82871fdcb88e0e/library-1.0.4-javadoc.jar!/" />

@@ -3,9 +3,9 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/app_color</item>
+        <item name="colorPrimaryDark">@color/app_color</item>
+        <item name="colorAccent">@color/app_color</item>
         <item name="android:windowContentOverlay">@null</item>
     </style>
 
@@ -17,8 +17,8 @@
     <!--设置冷启动页面主体-->
     <style name="splashScreenTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowBackground">@drawable/shape_app_color</item>
-        <item name="windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>
+<!--        <item name="windowNoTitle">true</item>-->
     </style>
 
     <style name="AppLoginTheme" parent="Theme.AppCompat.Light.NoActionBar">
@@ -28,8 +28,8 @@
 
     <!--设置状态栏透明-->
     <style name="AppTheme.NoActionBar" parent="AppTheme">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
+<!--        <item name="windowActionBar">false</item>-->
+<!--        <item name="windowNoTitle">true</item>-->
     </style>
 
     <style name="AppTheme.NoActionBar.FullScreen" parent="AppTheme">

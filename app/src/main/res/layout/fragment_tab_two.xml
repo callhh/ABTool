@@ -1,43 +1,42 @@
-<com.callhh.abtool.widget.MyScrollViewSlidingRebound xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/gray_f7f7f7"
-    android:fitsSystemWindows="true">
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
 
-    <com.zhy.android.percent.support.PercentLinearLayout
+    <TextView
+        android:id="@+id/tvTitlebarTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_dp_48"
+        android:background="@color/app_color"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="搜索"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textsize_18" />
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/tvTitlebarTitle"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/space_dp_48"
-            android:background="@color/app_color"
-            android:ellipsize="end"
-            android:gravity="center"
-            android:maxLines="1"
-            android:text=""
-            android:textColor="@color/white"
-            android:textSize="@dimen/textsize_18" />
-
-        <TextView
-            android:id="@+id/tvTestBtn1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/space_dp_20"
-            android:background="@color/gray_ccc"
-            android:gravity="center"
-            android:padding="@dimen/space_dp_20"
-            android:text="测试-指纹识别" />
+        android:layout_marginTop="@dimen/space_dp_10"
+        android:orientation="horizontal">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:id="@+id/rvPrimary"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:overScrollMode="never" />
 
-    </com.zhy.android.percent.support.PercentLinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSecondary"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:overScrollMode="never" />
 
-</com.callhh.abtool.widget.MyScrollViewSlidingRebound>
+    </LinearLayout>
+
+</LinearLayout>

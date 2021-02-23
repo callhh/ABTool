@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--app 主色调-->
-    <color name="app_color">#008577</color>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#008577</color>
+    <color name="app_color">#20a5fc</color>
+    <color name="colorPrimary">#20a5fc</color>
+    <color name="colorPrimaryDark">#20a5fc</color>
     <color name="red_FEAA00_50">#50FEAA00</color>
     <color name="red">#f0443b</color>
     <color name="red_fd561d">#fd561d</color>
@@ -26,14 +26,14 @@
     <color name="orange">#EE6413</color>
     <color name="orange_FFAA01">#FFAA01</color>
     <color name="orange_ff7903">#ff7903</color>
-    <color name="blue_5f9cf9">#5f9cf9</color>
     <color name="blue_00DEFF">#00DEFF</color>
+    <color name="blue_20a5fc">#20a5fc</color>
     <color name="blue_2395FF">#2395FF</color>
     <color name="blue_1189FF">#1189ff</color>
     <color name="blue_128ef9">#128ef9</color>
+    <color name="blue_5f9cf9">#5f9cf9</color>
     <color name="blue_549df9">#549df9</color>
     <color name="blue_43ABE7">#43ABE7</color>
-    <color name="blue_20a5fc">#20a5fc</color>
     <color name="blue_4f8fc0">#4f8fc0</color>
     <color name="green">#008000</color>
     <color name="yellow">#FFFF00</color>

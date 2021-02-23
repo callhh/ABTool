@@ -15,7 +15,8 @@ import com.lzy.okgo.model.Response;
 import java.util.Map;
 
 /**
- * 首页1 first fragment
+ * 首页Tab1 first fragment
+ * 【首页】
  */
 public class TabOneFragment extends BaseFragment {
 
@@ -27,7 +28,7 @@ public class TabOneFragment extends BaseFragment {
 
     @Override
     protected void initView() {
-        MyLogUtils.logI("start TabOneFragment- 首页1 ");
+        MyLogUtils.logI("start TabOneFragment- 首页tab1 ");
         findView(mView, R.id.tvOnClick).setOnClickListener(view -> {
             loadData();
         });

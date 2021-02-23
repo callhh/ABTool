@@ -3,6 +3,7 @@
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/73a48d3bf7d91b8fec1170cd05388aea/Android-PickerView-4.1.6/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/73a48d3bf7d91b8fec1170cd05388aea/Android-PickerView-4.1.6/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/73a48d3bf7d91b8fec1170cd05388aea/Android-PickerView-4.1.6/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.contrarywind/Android-PickerView/4.1.6/8e10ede6cdf83ad3a3e6694dcd4be2b46def8d9e/Android-PickerView-4.1.6-javadoc.jar!/" />
